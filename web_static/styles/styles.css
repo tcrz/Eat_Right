@@ -1,0 +1,316 @@
+/* --------------------------------
+/*BASIC SET-UP*/
+/*--------------------------------*/
+* {
+
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+html {
+    overflow-x:hidden
+}
+
+h1 {font-size: 300%;}
+
+li {list-style: none;}
+
+a{
+    color:black;
+    text-decoration: none
+}
+
+body{
+    margin-top: 15px;
+    font-family: 'poppins';
+    overflow-x:hidden
+}
+
+button {
+    cursor:pointer
+}
+
+/*--------------------------------*/
+/*LANDING SECTION */
+/*--------------------------------*/
+header{
+    width:100%;
+    height: 100vh;
+    /* background: red; */
+    border-bottom: 1px solid #5db85d;
+}
+
+nav {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background: orange; */
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 15%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+ul {
+    display:flex;
+}
+
+li {
+    padding:0 20px;
+    border-bottom: 2px solid transparent;
+}
+
+li:hover {
+    padding-bottom:1px;
+    border-bottom: 2px solid #5db85d;
+}
+
+.menu-icons > ion-icon{
+    font-size: 130%;
+    border: 1px solid black;
+    padding:6px;
+    border-radius: 50%;
+    background: black;
+    color:white
+}
+
+.landing{
+    display:flex;
+    justify-content: space-around;
+    max-width: 1150px;
+    background:linear-gradient(#e6e9e3,#cecfc79d);
+    /* background-color: grey; */
+    margin: 0 auto;
+    border-radius: 30px;
+    height: 80%;
+    /* position:relative; */
+    /* overflow: hidden; */
+    /* background: orange; */
+    /* padding-top:40px; */
+}
+
+.hero-text-box{
+    /* background: white; */
+    /* position: absolute; */
+    width: 600px;
+    /* top: 18%; */
+    /* left: 3%; */
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    padding-top:60px;
+    margin-left: 20px;
+    /* background:red */
+}
+
+.landing .hero-text-box h1{
+    font-size: 300%;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    color: black;
+    letter-spacing: 0px;
+    margin-bottom:5px;
+    line-height:50px;
+}
+.hero-text-box p{
+    /* width: 600px; */
+    margin-bottom:5px;
+}
+
+.hero-img{
+    /* background:green; */
+    /* position:relative; */
+    /* padding:30px 20px; */
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+    padding: 50px 25px;
+}
+
+.hero-img img{
+    /* position: absolute;  */
+    /* right: 5%; */
+    /* top: 5%; */
+    /* margin: 20px 40px auto 0; */
+    /* float: left; */
+    /* background: red; */
+    width:90%;
+    /* height:30% */
+    border-radius: 50%;
+    /* margin-left:20px; */
+    box-shadow: rgba(10, 10, 10, 0.534) -5px 5px 9px;
+    
+}
+
+.landing button{
+    /* color: green; */
+    font-size: 120%;
+    border: 1px solid #5db85d;;
+    border-radius: 150px;
+    margin-top:20px;
+    margin-right:20px;
+    padding:15px 40px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.2s;
+    /* background: none; */
+}
+
+.CC-btn{
+    background: #5db85d;
+    color:white;
+}
+
+.recipes-btn{
+    background: none;
+    color:#5db85d;
+}
+
+.recipes-btn:hover{
+    background:#5db85d;
+    color:white
+}
+
+.CC-btn:hover{
+    background: transparent;
+    color: #5db85d;
+}
+
+/*--------------------------------*/
+/*CALORIE COUNTER SECTION         */
+/*--------------------------------*/
+
+.calorie-section{
+    background: rgba(204, 245, 221, 0.219);
+    padding-bottom: 20px;
+    border-bottom: 1px solid #5db85d;
+}
+
+.calorie-counter{
+    max-width: 1150px;
+    margin: 0 auto;
+    /* height:100vh; */
+    /* margin-bottom: 50px; */
+    /* background:yellow; */
+}
+
+.heading {
+    text-align: center;
+    /* border-bottom: 1px solid #5db85d; */
+}
+
+.subtext{
+    text-align:center;
+    margin: 0 auto;
+    width:60%;
+    margin-bottom: 20px;
+}
+
+.calorie-counter > h2 {
+    padding-bottom: 10px;
+    margin-left:100px
+}
+
+table{
+    margin-top: 5px;
+    width: 76%;
+    border-collapse: collapse;
+    background: #e6e9e3;
+    border:1px solid #5db85d;
+    margin: 0 auto;
+    margin-bottom:30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /* padding: 30px */
+}
+
+tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tr:last-of-type {
+    border-bottom: 2px solid #5db85d;
+}
+
+td, th {
+    border: 1px solid #5db85d;
+    text-align: left;
+     padding: 10px;
+}
+
+td{
+    font-size: 110%;
+    /* font-weight: bold; */
+}
+
+th{
+    background: #5db85d;
+    color:white;
+    font-size: 110%;
+}
+
+th.food-col {
+    width:75%
+}
+
+td.food .serving{
+    font-size:70%;
+    padding:0
+}
+
+td.add-item{
+    background:none;
+    border-width:0px 0px;
+    display:inline-flex;
+    font-weight: 500;
+    color: #5da6b8
+}
+
+
+td.add-item ion-icon{
+    font-size: 130%;
+    /* border: 1px solid yellow; */
+    text-align: center;
+}
+
+td.add-item:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*--------------------------------*/
+/*RECIPES SECTION                 */
+/*--------------------------------*/
+.recipe-section{
+    /* background: red; */
+}
+
+.recipes{
+    /* max-width: 1150px; */
+    margin: 0 auto;
+    background: white;
+}
+
+.recipes_list {
+    background: yellow;
+    margin:25px 100px;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-gap: 30px;
+    justify-content: space-around;
+}
+
+article {
+    width: 250px;
+    border:1px solid #d4cece;
+    background:white;
+    margin-bottom: 20px;
+    box-shadow: #5db85db0 -5px 5px
+}
+
+article img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.content {
+    margin: 0px 10px;
+}

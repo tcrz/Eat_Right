@@ -1,0 +1,33 @@
+.recipes_list {
+    margin:85px 100px;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-gap: 30px;
+    justify-content: space-around;
+}
+
+article {
+    width: 250px;
+    border:1px solid #d4cece;
+    background:white;
+    margin-bottom: 20px;
+    box-shadow: rgba(221, 103, 56, 0.103) -5px 5px,
+    rgba(238, 188, 173, 0.226) -5px 5px;
+}
+
+article img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.content {
+    margin: 0px 10px;
+}
+
+/* user overflow here */
+.content > .details {
+    /* height:60px; */
+    /* background-color: red; */
+}
+
+
