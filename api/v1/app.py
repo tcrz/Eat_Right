@@ -20,5 +20,5 @@ def close(exception):
 
 
 if __name__ == "__main__":
-    app.run(host=os.getenv('host'), port=os.getenv('port'), threaded=True)
+    app.run(host=os.getenv('api_host'), port=os.getenv('port'), threaded=True)
     
