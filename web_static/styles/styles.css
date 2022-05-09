@@ -2,7 +2,8 @@
 /*BASIC SET-UP*/
 /*--------------------------------*/
 * {
-
+    padding:0;
+    margin:0;
     box-sizing: border-box;
     /* overflow: hidden; */
 }
@@ -80,6 +81,7 @@ li:hover {
     justify-content: space-around;
     max-width: 1150px;
     background:linear-gradient(#e6e9e3,#cecfc79d);
+    background-color: rgb(199, 240, 208);
     /* background-color: grey; */
     margin: 0 auto;
     border-radius: 30px;
@@ -98,8 +100,8 @@ li:hover {
     /* left: 3%; */
     letter-spacing: 1px;
     word-spacing: 3px;
-    padding-top:60px;
-    margin-left: 20px;
+    padding-top:100px;
+    /* margin-left: 20px; */
     /* background:red */
 }
 
@@ -113,8 +115,8 @@ li:hover {
     line-height:50px;
 }
 .hero-text-box p{
-    /* width: 600px; */
-    margin-bottom:5px;
+    width: 550px;
+    margin-bottom:35px;
 }
 
 .hero-img{
@@ -124,7 +126,7 @@ li:hover {
     /* margin: 0 auto; */
     display: flex;
     justify-content: center;
-    padding: 50px 25px;
+    padding: 50px 0px;
 }
 
 .hero-img img{
@@ -134,7 +136,7 @@ li:hover {
     /* margin: 20px 40px auto 0; */
     /* float: left; */
     /* background: red; */
-    width:90%;
+    width:100%;
     /* height:30% */
     border-radius: 50%;
     /* margin-left:20px; */
@@ -142,12 +144,12 @@ li:hover {
     
 }
 
-.landing button{
+.hero-text-box a{
     /* color: green; */
     font-size: 120%;
     border: 1px solid #5db85d;;
     border-radius: 150px;
-    margin-top:20px;
+    /* margin-top:20px; */
     margin-right:20px;
     padding:15px 40px;
     font-weight: 600;
@@ -180,7 +182,7 @@ li:hover {
 /*--------------------------------*/
 
 .calorie-section{
-    background: rgba(204, 245, 221, 0.219);
+    background: #ccf5dd38;
     padding-bottom: 20px;
     border-bottom: 1px solid #5db85d;
 }
@@ -233,7 +235,7 @@ tr:last-of-type {
 td, th {
     border: 1px solid #5db85d;
     text-align: left;
-     padding: 10px;
+    padding: 10px;
 }
 
 td{
@@ -253,7 +255,8 @@ th.food-col {
 
 td.food .serving{
     font-size:70%;
-    padding:0
+    padding:0;
+    margin: 0
 }
 
 td.add-item{
@@ -290,7 +293,7 @@ td.add-item:hover{
 }
 
 .recipes_list {
-    background: yellow;
+    /* background: yellow; */
     margin:25px 100px;
     display: grid;
     grid-template-columns: 250px 250px 250px 250px;
@@ -298,19 +301,169 @@ td.add-item:hover{
     justify-content: space-around;
 }
 
-article {
+.recipe{
     width: 250px;
     border:1px solid #d4cece;
+    border-radius: 15px;
     background:white;
     margin-bottom: 20px;
-    box-shadow: #5db85db0 -5px 5px
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    /* box-shadow: #5db85db0 -5px 5px */
+    border-bottom: 2px solid #5db85d;
 }
 
-article img {
+.recipe:hover {
+    /* width: 270px; */
+    /* box-shadow: #5db85db0 -5px 5px; */
+    cursor: pointer;
+}
+
+.recipe img {
     width: 100%;
-    object-fit: contain;
+    /* height:200px; */
+    /* object-fit: fill; */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .content {
     margin: 0px 10px;
+}
+
+.details p {
+    font-size: 95%;
+    margin: 8px 0;
+}
+
+.author p{
+    /* font-weight: 500; */
+    margin: 10px 0;
+}
+
+.add-recipe{
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(#e6e9e3,#cecfc79d);
+    background-color: rgba(102, 102, 102, 0.76);
+    width: 250px;
+    border:1px solid #d4cece;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    /* box-shadow: #5db85db0 -5px 5px */
+    border-bottom: 2px solid #5db85d;
+}
+
+.add-recipe h2{
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    font-size: 200%;
+    /* color:grey; */
+    color: #333;
+  text-shadow: 0px 1px 0px rgba(255,255,255,.5);
+    /* background: green; */
+}
+
+.add-recipe ion-icon{
+    font-size: 200%;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding:5px;
+}
+
+/* RECIPE SUBMISSION POP-UP */
+
+.popup-bg{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(170, 192, 167, 0.486);
+    width: 100%;
+    height: 100%;
+    display: none;
+    backdrop-filter: blur(5px);
+    z-index:9999;
+}
+
+.recipe-view-popup-bg{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(170, 192, 167, 0.486);
+    width: 100%;
+    height: 100%;
+    display: none;
+    backdrop-filter: blur(5px);
+    z-index:9999;
+}
+
+.recipe-submission, .recipe-view {
+    background:white;
+    width: 1000px;
+    height:95%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    margin-top: 15px;
+    position: relative;
+    overflow-y: scroll;
+    /* border: 3px solid #5db85d; */
+    /* border-radius: 20px; */
+}
+
+.recipe-submission ion-icon,
+.recipe-view ion-icon{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size:200%;
+    cursor:pointer
+}
+
+.recipe-submission ion-icon:hover,
+.recipe-view ion-icon:hover{
+   color:#70cf70
+}
+
+form {
+    /* background:red; */
+}
+
+form input, textarea{
+    margin-bottom: 10px;
+    outline:none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 25px 0px;    
+}
+
+input[type=submit]{
+    background: #5db85d;
+    color:white;
+    font-size: 120%;
+    border: 1px solid #5db85d;;
+    border-radius: 150px;
+    /* margin-top:20px; */
+    margin-right:20px;
+    padding:10px 15px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.2s;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background: #70cf70
+}
+
+label{
+    /* padding:10px 0; */
+}
+textarea {
+    width: 100%;
+    resize:none;
+}
+
+textarea:focus, input:focus{
+    box-shadow: 0 0 5px #5db85d;
+    border: 1px solid #5db85d;
 }
