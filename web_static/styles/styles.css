@@ -216,7 +216,7 @@ table{
     margin-top: 5px;
     width: 76%;
     border-collapse: collapse;
-    background: #e6e9e3;
+    background: #f3f3f3;
     border:1px solid #5db85d;
     margin: 0 auto;
     margin-bottom:30px;
@@ -225,11 +225,12 @@ table{
 }
 
 tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+    /* background-color: #f3f3f3; */
 }
 
 tr:last-of-type {
     border-bottom: 2px solid #5db85d;
+    background-color: #e6e9e3;
 }
 
 td, th {
@@ -264,7 +265,8 @@ td.add-item{
     border-width:0px 0px;
     display:inline-flex;
     font-weight: 500;
-    color: #5da6b8
+    color: #5da6b8;
+    width: 100%
 }
 
 
@@ -279,6 +281,52 @@ td.add-item:hover{
     cursor: pointer;
 }
 
+/*****************
+FOOD SEARCH FIELD 
+******************/
+tr.hide{
+    display:none;
+    background:red
+}
+
+td.search{
+    padding:5px;
+    border-right:0;
+}
+
+td.search label{
+    font-size:70%;
+}
+
+td.search input[type='text'],
+td.search input[type='number'],
+td.search select,
+td button{
+    padding:5px
+    /* background: red; */
+}
+
+td.search input[type='text']{
+    width: 30%
+}
+
+td.search input[type='number']{
+    width:10%
+}
+
+td.search select{ width: 29%}
+
+td.search-btn{
+    padding:auto 0%;
+    text-align:center;
+    border-width:0px 0px 1px;
+    /* margin:0 auto */
+}
+
+td button{
+    
+    width: 70%;
+}
 /*--------------------------------*/
 /*RECIPES SECTION                 */
 /*--------------------------------*/

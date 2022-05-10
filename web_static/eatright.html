@@ -55,11 +55,30 @@
                 <th>Calories</th>
             </tr>
             <tr>
-                <td class="food">Oats and Pancakes <br> <span class="serving"><p>1 bowl</p></span></td>
-                <td>220</td>
             </tr>
+            <tr class="search-field hide">
+                <td class="search">
+                    <label style="font-size:70%">Foodname:</label>
+                     <input type="text">
+                      <label>Quantity:</label>
+                     <input type="number" min="1" value="1" required>
+                     <label for="cars">Serving:</label>
+                    <select name="serving" id="serving">
+                        <option value="cup">cup</option>
+                        <option value="tsp">tsp</option>
+                        <option value="lb">lb</option>
+                        <option value="gram">gram</option>
+                        <option value="unit">unit</option>
+                    </select>
+                </td>
+                <td class="search-btn">
+                    <button>Search</button>
+                </td>
+            </tr>
+            
             <tr>
-                <td class="add-item"><ion-icon name="add-outline"></ion-icon> Add Item</td>
+                <td class="add-item"><ion-icon name="add-outline"></ion-icon><p>Add Item</p></td>
+                <td style="border-width:0px 0px;">&nbsp;</td>
             </tr>
         </table>
         <h2>Lunch</h2>
@@ -69,32 +88,69 @@
                 <th>Calories</th>
             </tr>
             <tr>
-                <td class="food">Oats and Pancakes <br> <span class="serving"><p>1 bowl</p></span></td>
-                <td>220</td>
             </tr>
+            <tr class="search-field hide">
+                <td class="search">
+                    <label style="font-size:70%">Foodname:</label>
+                     <input type="text">
+                      <label>Quantity:</label>
+                     <input type="number" min="1" value="1" required>
+                     <label for="cars">Serving:</label>
+                    <select name="serving" id="serving">
+                        <option value="cup">cup</option>
+                        <option value="tsp">tsp</option>
+                        <option value="lb">lb</option>
+                        <option value="gram">gram</option>
+                        <option value="unit">unit</option>
+                    </select>
+                </td>
+                <td class="search-btn">
+                    <button>Search</button>
+                </td>
+            </tr>
+            
             <tr>
-                <td class="add-item"><ion-icon name="add-outline"></ion-icon> Add Item</td>
+                <td class="add-item"><ion-icon name="add-outline"></ion-icon><p>Add Item</p></td>
+                <td style="border-width:0px 0px;">&nbsp;</td>
             </tr>
         </table>
-        <h2>Dinner</h2>
+        <h2>Supper</h2>
         <table>
             <tr>
                 <th class="food-col">Food</th>
                 <th>Calories</th>
             </tr>
             <tr>
-                <td class="food">Oats and Pancakes <br> <span class="serving"><p>1 bowl</p></span></td>
-                <td>220</td>
+            </tr>
+            <tr class="search-field hide">
+                <td class="search">
+                    <label style="font-size:70%">Foodname:</label>
+                     <input type="text">
+                      <label>Quantity:</label>
+                     <input type="number" min="1" value="1" required>
+                     <label for="cars">Serving:</label>
+                    <select name="serving" id="serving">
+                        <option value="cup">cup</option>
+                        <option value="tsp">tsp</option>
+                        <option value="lb">lb</option>
+                        <option value="gram">gram</option>
+                        <option value="unit">unit</option>
+                    </select>
+                </td>
+                <td class="search-btn">
+                    <button>Search</button>
+                </td>
             </tr>
             <tr>
-                <td class="add-item"><ion-icon name="add-outline"></ion-icon> Add Item</td>
+                <td class="add-item"><ion-icon name="add-outline"></ion-icon><p>Add Item</p></td>
+                <td style="border-width:0px 0px;">&nbsp;</td>
             </tr>
         </table>
         <h2>Total Calories</h2>
-        <table>
+        <table class="total">
             <tr>
                 <th style="text-align: right;width:75%">Total:</th>
-                <th style=> 420 Calories</th>
+                <th class="total-value"> 0 Calories</th>
             </tr>
         </table>
         </div>
