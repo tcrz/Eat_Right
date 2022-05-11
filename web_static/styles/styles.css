@@ -318,8 +318,8 @@ td.search select{ width: 29%}
 
 td.search-btn{
     padding:auto 0%;
-    text-align:center;
-    border-width:0px 0px 1px;
+    text-align:left;
+    border-width:0px 1px 1px;
     /* margin:0 auto */
 }
 

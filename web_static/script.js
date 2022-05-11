@@ -39,7 +39,6 @@ $(document).ready(function () {
   /**************************
         CALORIE-API CALL       
    ***************************/
-  let calories_list = []
   $('.search-btn > button').click(function(){
     let quantity = $(this).closest('.search-field').find('.search > input[type="number"]').val()
     let serving = $(this).closest('.search-field').find('.search > select').val()
@@ -60,15 +59,16 @@ $(document).ready(function () {
         else {
           const calories = result['items'][0]['calories'];
           const name = result['items'][0]['name'];
-          let row = '<tr><td class="food">' + name.toUpperCase() + ' <br> <span class="serving"><p>' + quantity + ' ' + serving +
-          '</p></span></td>' + '<td>' + calories + '</td></tr>'
+          let row = '<tr class="food-query"><td class="food">' + name.toUpperCase() + ' <br> <span class="serving"><p>' +
+          quantity + ' ' + serving + '</p></span></td>' + '<td class=calories>' + '<div style="display:flex;justify-content:space-between;">' +
+          '<p>' + calories + '</p>' + '<ion-icon name="close-outline" style="color:red"></ion-icon></div></td></tr>'
           $(row).insertBefore(searchField)
-          calories_list.push(calories)
-          // console.log(t)
-          let sum = 0;
-          for (let i = 0; i < calories_list.length; i++) {
-              sum += calories_list[i];
-          }
+          // calories_list.push(calories)
+          let sum = $('.total .total-value').text().split(' ')[0]
+          sum = parseFloat(sum)
+          console.log(sum)
+          sum += calories;
+          sum = sum.toFixed(1) * 1
           $('.total .total-value ').text(sum + ' Calories')
         }
       },
@@ -78,4 +78,13 @@ $(document).ready(function () {
       });
     })
 
+  // DELETE FOOD ROW AND UPDATE CALORIES
+  $('table').on('click', '.calories > div > ion-icon', function() {
+    let foodCal = $(this).closest('.food-query').find('.calories p ').text().split(' ')[0]
+    let totalCal = $('.total .total-value').text().split(' ')[0]
+    $(this).closest('.food-query').remove()
+    totalCal = (parseFloat(totalCal) - parseFloat(foodCal)).toFixed(1)
+    console.log('total:', totalCal)
+    $('.total .total-value ').text(totalCal + ' Calories')
+  })
 })
