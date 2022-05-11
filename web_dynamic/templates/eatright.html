@@ -161,13 +161,13 @@
             <div class="recipe-submission">
                 <h1 style="text-align:center">Submit Recipe</h1>
                 <ion-icon name="close-outline"></ion-icon>
-                <form action="http://192.168.33.10:5001/api/v1/recipe/" enctype="multipart/form-data" method="POST">
+                <form action="http://127.0.0.1:5001/api/v1/recipe/" enctype="multipart/form-data" method="POST">
                     <label for="username">Username:</label><br>
                     <input type="text" name="username" required><br>
                     <label for="recipe-name">Recipe name:</label><br>
                     <input type="text" name="recipe-name" required><br>
                     <label for="img">Upload photo of the meal:</label><br>
-		    <input type="file" id="img" name="img" accept="image/*"><br>
+		    <input type="file" id="img" name="img" accept="image/*" required><br>
                     <label for="ingredients">Ingredients:</label><br>
                     <textarea name="ingredients" rows="8" placeholder="1 cup of rice.
 1tsp of salt." required></textarea>

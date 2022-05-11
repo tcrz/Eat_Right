@@ -3,7 +3,7 @@
 
 from api.v1.views import views
 from api.v1.app import app
-from flask import jsonify, abort, make_response, request, send_from_directory
+from flask import jsonify, abort, make_response, request, send_from_directory, redirect
 from tables import storage
 from tables.recipe import Recipe
 from werkzeug.utils import secure_filename
@@ -66,4 +66,5 @@ def add_recipe():
     new_dict = {'name': name, 'user_name': user_name, 'ingredients': ingredients, 'preparation': preparation, 'filename': filename, 'mimetype': mimetype}
     recipe = Recipe(**new_dict)
     recipe.save()
-    return jsonify('Result has been submitted'), 201
+    recipe_section = request.referrer +'#recipes'
+    return redirect(recipe_section)
