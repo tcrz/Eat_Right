@@ -172,22 +172,45 @@
                     <textarea name="ingredients" rows="8" placeholder="1 cup of rice.
 1tsp of salt." required></textarea>
                     <label for="preparation">Preparation:</label><br>
-                    <textarea name="preparation" rows="8" placeholder="Put the rice in the bowl.
-Add water and some salt. Stir quickly" required></textarea>
+                    <textarea name="preparation" rows="8" placeholder="1. Put the rice in the bowl.
+2. Add water and some salt. Stir quickly" required></textarea>
                     <input type="submit">
                 </form>
             </div>
         </div>
 
-        <!-- RECIPE VIEW POPUP -->
+        <!-- RECIPE VIEW POPUP
         <div class="recipe-view-popup-bg">
             <div class="recipe-view">
-                <h1 class="recipe-name" style="text-align:center">Fried rice with fish sauce</h1>
+		    <div class="head">
+		        <h1 class="recipe-name">Chocolate Pudding</h1>
+		        <img src="../static/images/Chocolate_pudding.png" alt="recipe images">
+		    </div>
+		    <div class="ingredients">
+		    	<h2>Ingredients</h2>
+			<ul>
+		    	    <li>1 Cup Sugar</li>
+			    <li>1/2 Cup Cocoa Powder</li>
+			    <li>1/4 Cup Corn Starch</li>
+			    <li>300 ml Milk</li>
+			    <li>1 TBSP Vanilla</li>
+
+			</ul>
+		    </div>
+		    <div class="preparation">
+		        <h2>Preparation</h2>
+			<ol>
+			    <li>Add the sugar, cocoa powder and corn starch on a pot, stir over medium heat for 10 minutes.</li>
+			    <li>Add milk to the pot and stir constantly until it thickens.</li>
+			    <li>Remove from heat after it starts boiling, or let it boil for a minute.</li>
+			    <li>Add Vanilla and stir.</li>
+			    <li>Serve after 4 hrs of refrigeration.</li>
+			</ol>
+		    </div>
+		    <h3>By Samra Solomon</h3>
                 <ion-icon name="close-outline"></ion-icon>
-                <p>Ingredients</p>
-                <p>Preparation</p>
             </div>
-        </div>    
+	</div> -->
 
         <!-- RECIPES ARTICLES -->
         <div class="recipes">
@@ -200,9 +223,15 @@ Add water and some salt. Stir quickly" required></textarea>
 			<img src="..{{url_for('static', filename='images/' + recipe.filename)}}" alt="recipe images">
                     <div class="content">
 			    <div class="food_name"><h2>{{ recipe.name }}</h2></div>
-                        <!-- <div class="details"> <p>African-inspired spices infuse the peanut
-                            butter and tomato base of this</p></div> -->
 		            <div class="author"> <p>By {{ recipe.user_name }}</p></div>
+			    <div class="ingredients">
+                        	<b>Ingredients</b>
+                        	<p>{{ recipe.ingredients }}</p>
+                    	    </div>
+			    <div class="preparation">
+                        	<b>Preparation</b>
+                        	<p>{{ recipe.preparation }}</p>
+                    	    </div></br></br>
                     </div>
                 </article>
 		{% endfor %}
