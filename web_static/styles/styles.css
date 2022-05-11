@@ -360,7 +360,7 @@ td button{
     border-bottom: 2px solid #5db85d;
 }
 
-.recipe:hover {
+.recipe:hover, .add-recipe {
     /* width: 270px; */
     /* box-shadow: #5db85db0 -5px 5px; */
     cursor: pointer;
