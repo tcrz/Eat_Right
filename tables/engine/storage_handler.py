@@ -30,6 +30,10 @@ class StorageHandler:
             key = recipe.name
             dic[key] = recipe
         return dic
+    
+    def new(self, obj):
+        """THis function will add new value to database"""
+        self.__session.add(obj)
 	
     def save(self):
         """THis will save a new value to database"""

@@ -11,3 +11,5 @@ class Recipe(BaseModel, Base):
     user_name = Column(String(128), nullable=False)
     ingredients = Column(String(32000), nullable=False)
     preparation = Column(String(32000), nullable=False)
+    filename = Column(String(200), nullable=False)
+    mimetype = Column(String(10), nullable=False)

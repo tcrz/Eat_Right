@@ -13,10 +13,19 @@ class BaseModel:
     id = Column(String(60), nullable=False, primary_key=True)
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """Instatntiates a new model"""
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
+        if len(kwargs) != 0:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def save(self):
+        """This function will save the instance in storage"""
+        from tables import storage
+        storage.new(self)
+        storage.save()
 
     def make_dict(self):
         """THis function will change the content of dict value of instance"""

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat Right</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../static/script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2> <ion-icon name="leaf-outline"></ion-icon>Eat Right</h2>
+            <ul class="menu-nav">
+                <li><a href='#calorie-counter'>Calorie counter</a></li>
+                <li><a href='#recipes'>Recipes</a></li>
+                <li><a href='#features'>Features</a> </li>
+                <li><a href='#about'>About</a> </li>
+            </ul>
+            <div class="menu-icons">
+                <ion-icon name="fast-food-outline"></ion-icon>
+                <ion-icon name="pizza-outline"></ion-icon>
+            </div>
+        </nav>
+        <div class="landing">
+            <div class="hero-text-box">
+                <h1>Hooked On Junk Food? <br>Eat Right, Stay Healthy<br> We Are Here To Help</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta augue libero, eget tempus velit eleifend nec.
+                    Donec elementum ligula.
+                </p>
+                <!-- <button class="CC-btn">Calorie counter</button> -->
+                <a class="CC-btn" href="#calorie-counter">Calorie counter</a>
+                <a class="recipes-btn" href="#recipes">Recipes</a>
+            </div>
+            <div class="hero-img">
+                <img src="../static/images/FOOD.png" alt="healthy food">
+            </div>
+        </div>
+    </header>
+    <section class="calorie-section" id="calorie-counter">
+        <div class="calorie-counter">
+        <h1 class="heading">Calorie counter</h1>
+        <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta augue libero, eget tempus velit eleifend nec.
+            Donec elementum ligula.</p>
+        <h2>Breakfast</h2>
+        <table>
+            <tr>
+                <th class="food-col">Food</th>
+                <th>Calories</th>
+            </tr>
+            <tr>
+            </tr>
+            <tr class="search-field hide">
+                <td class="search">
+                    <label style="font-size:70%">Foodname:</label>
+                     <input type="text">
+                      <label>Quantity:</label>
+                     <input type="number" min="1" value="1" required>
+                     <label for="cars">Serving:</label>
+                    <select name="serving" id="serving">
+                        <option value="cup">cup</option>
+                        <option value="tsp">tsp</option>
+                        <option value="lb">lb</option>
+                        <option value="gram">gram</option>
+                        <option value="unit">unit</option>
+                    </select>
+                </td>
+                <td class="search-btn">
+                    <button>Search</button>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="add-item"><ion-icon name="add-outline"></ion-icon><p>Add Item</p></td>
+                <td style="border-width:0px 0px;">&nbsp;</td>
+            </tr>
+        </table>
+        <h2>Lunch</h2>
+        <table>
+            <tr>
+                <th class="food-col">Food</th>
+                <th>Calories</th>
+            </tr>
+            <tr>
+            </tr>
+            <tr class="search-field hide">
+                <td class="search">
+                    <label style="font-size:70%">Foodname:</label>
+                     <input type="text">
+                      <label>Quantity:</label>
+                     <input type="number" min="1" value="1" required>
+                     <label for="cars">Serving:</label>
+                    <select name="serving" id="serving">
+                        <option value="cup">cup</option>
+                        <option value="tsp">tsp</option>
+                        <option value="lb">lb</option>
+                        <option value="gram">gram</option>
+                        <option value="unit">unit</option>
+                    </select>
+                </td>
+                <td class="search-btn">
+                    <button>Search</button>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="add-item"><ion-icon name="add-outline"></ion-icon><p>Add Item</p></td>
+                <td style="border-width:0px 0px;">&nbsp;</td>
+            </tr>
+        </table>
+        <h2>Supper</h2>
+        <table>
+            <tr>
+                <th class="food-col">Food</th>
+                <th>Calories</th>
+            </tr>
+            <tr>
+            </tr>
+            <tr class="search-field hide">
+                <td class="search">
+                    <label style="font-size:70%">Foodname:</label>
+                     <input type="text">
+                      <label>Quantity:</label>
+                     <input type="number" min="1" value="1" required>
+                     <label for="cars">Serving:</label>
+                    <select name="serving" id="serving">
+                        <option value="cup">cup</option>
+                        <option value="tsp">tsp</option>
+                        <option value="lb">lb</option>
+                        <option value="gram">gram</option>
+                        <option value="unit">unit</option>
+                    </select>
+                </td>
+                <td class="search-btn">
+                    <button>Search</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="add-item"><ion-icon name="add-outline"></ion-icon><p>Add Item</p></td>
+                <td style="border-width:0px 0px;">&nbsp;</td>
+            </tr>
+        </table>
+        <h2>Total Calories</h2>
+        <table class="total">
+            <tr>
+                <th style="text-align: right;width:75%">Total:</th>
+                <th class="total-value"> 0 Calories</th>
+            </tr>
+        </table>
+        </div>
+    </section>
+    <section class="recipe-section" id="recipes">
+        <!-- RECIPE SUBMISSION POPUP -->
+        <div class="popup-bg" id="popup1">
+            <div class="recipe-submission">
+                <h1 style="text-align:center">Submit Recipe</h1>
+                <ion-icon name="close-outline"></ion-icon>
+                <form action="http://192.168.33.10:5001/api/v1/recipe/" enctype="multipart/form-data" method="POST">
+                    <label for="username">Username:</label><br>
+                    <input type="text" name="username" required><br>
+                    <label for="recipe-name">Recipe name:</label><br>
+                    <input type="text" name="recipe-name" required><br>
+                    <label for="img">Upload photo of the meal:</label><br>
+		    <input type="file" id="img" name="img" accept="image/*"><br>
+                    <label for="ingredients">Ingredients:</label><br>
+                    <textarea name="ingredients" rows="8" placeholder="1 cup of rice.
+1tsp of salt." required></textarea>
+                    <label for="preparation">Preparation:</label><br>
+                    <textarea name="preparation" rows="8" placeholder="Put the rice in the bowl.
+Add water and some salt. Stir quickly" required></textarea>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+
+        <!-- RECIPE VIEW POPUP -->
+        <div class="recipe-view-popup-bg">
+            <div class="recipe-view">
+                <h1 class="recipe-name" style="text-align:center">Fried rice with fish sauce</h1>
+                <ion-icon name="close-outline"></ion-icon>
+                <p>Ingredients</p>
+                <p>Preparation</p>
+            </div>
+        </div>    
+
+        <!-- RECIPES ARTICLES -->
+        <div class="recipes">
+            <h1 class="heading">Recipes</h1>
+            <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta augue libero, eget tempus velit eleifend nec.
+            Donec elementum ligula.</p>
+            <div class="recipes_list">
+		{% for recipe in recipes.values() %}
+                <article class="recipe">
+			<img src="..{{url_for('static', filename='images/' + recipe.filename)}}" alt="recipe images">
+                    <div class="content">
+			    <div class="food_name"><h2>{{ recipe.name }}</h2></div>
+                        <!-- <div class="details"> <p>African-inspired spices infuse the peanut
+                            butter and tomato base of this</p></div> -->
+		            <div class="author"> <p>By {{ recipe.user_name }}</p></div>
+                    </div>
+                </article>
+		{% endfor %}
+                <article class="add-recipe">
+                    <h2> <ion-icon name="add-outline"></ion-icon>Add recipe</h2>
+                </article>
+            </div>
+        </div>
+        
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
