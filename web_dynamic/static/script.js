@@ -10,11 +10,34 @@ $(document).ready(function () {
 
   // RECIPE VIEW POP-UP
   $('.recipe').click(function() {
-    console.log('recipeview clicked too!')
+    $('.recipe-view-popup-bg').empty()
+    id = $(this).attr('id')
+    console.log(id)
+    $.get('http://0.0.0.0:5001/api/v1/recipe/' + id, function (data) {
+      ingr_template = ''
+      ingredients_list = data.ingredients.split('\n')
+      ingredients_list.forEach(function(item){
+        li = '<li>' + item + '</li>\n'
+        ingr_template += li
+      })
+      prepr_template = ''
+      prepartion = data.preparation.split('\n')
+      prepartion.forEach(function(step){
+        li = '<li>' + step + '</li>\n'
+        prepr_template += li
+      })
+      imgpath = '../static/images/' + data.filename
+      popup_template = '<div class="recipe-view"><div class="head">' + '<h1 class="recipe-name">' + data.name + '</h1>' +
+      '<img src=' + imgpath + ' alt="recipe-image">' + '</div>' + '<div class="ingredients">' + '<h2>Ingredients</h2>' +
+      '<ul>' + ingr_template + '</ul>' + '</div>' + '<div class="preparation">' + '<h2>Preparation</h2>' + '<ol>' + prepr_template +
+      '</ol>' + '</div>' + '<h4>' + 'By ' + data.user_name +'</h4>' + '<ion-icon name="close-outline"></ion-icon>' + '</div>'
+      $('.recipe-view-popup-bg').append(popup_template)
+    });
     $('.recipe-view-popup-bg').fadeIn(200)
   });
 
-  $('.recipe-view ion-icon').click(function() {
+  // RECIPE VIEW POP-UP EXIT
+  $('.recipe-view-popup-bg').on('click', '.recipe-view ion-icon',function() {
     $('.recipe-view-popup-bg').fadeOut(100)
   });
 

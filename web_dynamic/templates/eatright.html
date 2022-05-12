@@ -180,38 +180,10 @@
             </div>
         </div>
 
-        <!-- RECIPE VIEW POPUP
+        <!-- RECIPE VIEW POPUP -->
         <div class="recipe-view-popup-bg">
-            <div class="recipe-view">
-		    <div class="head">
-		        <h1 class="recipe-name">Chocolate Pudding</h1>
-		        <img src="../static/images/Chocolate_pudding.png" alt="recipe images">
-		    </div>
-		    <div class="ingredients">
-		    	<h2>Ingredients</h2>
-			<ul>
-		    	    <li>1 Cup Sugar</li>
-			    <li>1/2 Cup Cocoa Powder</li>
-			    <li>1/4 Cup Corn Starch</li>
-			    <li>300 ml Milk</li>
-			    <li>1 TBSP Vanilla</li>
-
-			</ul>
-		    </div>
-		    <div class="preparation">
-		        <h2>Preparation</h2>
-			<ol>
-			    <li>Add the sugar, cocoa powder and corn starch on a pot, stir over medium heat for 10 minutes.</li>
-			    <li>Add milk to the pot and stir constantly until it thickens.</li>
-			    <li>Remove from heat after it starts boiling, or let it boil for a minute.</li>
-			    <li>Add Vanilla and stir.</li>
-			    <li>Serve after 4 hrs of refrigeration.</li>
-			</ol>
-		    </div>
-		    <h3>By Samra Solomon</h3>
-                <ion-icon name="close-outline"></ion-icon>
-            </div>
-	</div> -->
+            
+	    </div> 
 
         <!-- RECIPES ARTICLES -->
         <div class="recipes">
@@ -220,12 +192,12 @@
             Donec elementum ligula.</p>
             <div class="recipes_list">
 		{% for recipe in recipes.values() %}
-                <article class="recipe">
+            <article class="recipe" id="{{ recipe.id }}">
 			<img src="..{{url_for('static', filename='images/' + recipe.filename)}}" alt="recipe images">
                     <div class="content">
 			    <div class="food_name"><h2>{{ recipe.name }}</h2></div>
 		            <div class="author"> <p>By {{ recipe.user_name }}</p></div>
-			    <div class="ingredients">
+			    <!-- <div class="ingredients">
                         	<b>Ingredients</b>
                         	<p>{{ recipe.ingredients }}</p>
                     	    </div>
@@ -233,8 +205,8 @@
                         	<b>Preparation</b>
                         	<p>{{ recipe.preparation }}</p>
                     	    </div></br></br>
-                    </div>
-                </article>
+                    </div> -->
+            </article>
 		{% endfor %}
                 <article class="add-recipe">
                     <h2> <ion-icon name="add-outline"></ion-icon>Add recipe</h2>

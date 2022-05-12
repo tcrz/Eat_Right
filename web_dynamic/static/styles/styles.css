@@ -9,12 +9,13 @@
 }
 
 html {
-    overflow-x:hidden
+    overflow-x:hidden;
+    scroll-behavior: smooth;
 }
 
 h1 {font-size: 300%;}
 
-li {list-style: none;}
+/* li {list-style: none;} */
 
 a{
     color:black;
@@ -53,16 +54,17 @@ nav {
     margin-bottom: 20px;
 }
 
-ul {
+.menu-nav{
     display:flex;
 }
 
-li {
+.menu-nav li {
     padding:0 20px;
     border-bottom: 2px solid transparent;
+    list-style: none;
 }
 
-li:hover {
+.menu-nav li:hover {
     padding-bottom:1px;
     border-bottom: 2px solid #5db85d;
 }
@@ -368,7 +370,7 @@ td button{
 
 .recipe img {
     width: 100%;
-    /* height:200px; */
+    height:200px;
     /* object-fit: fill; */
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -423,18 +425,7 @@ td button{
 
 /* RECIPE SUBMISSION POP-UP */
 
-.popup-bg{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    background: rgba(170, 192, 167, 0.486);
-    width: 100%;
-    height: 100%;
-    display: none;
-    backdrop-filter: blur(5px);
-    z-index:9999;
-}
-
+.popup-bg,
 .recipe-view-popup-bg{
     position: fixed;
     top: 0px;
@@ -446,6 +437,18 @@ td button{
     backdrop-filter: blur(5px);
     z-index:9999;
 }
+
+/* .recipe-view-popup-bg{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(170, 192, 167, 0.486);
+    width: 100%;
+    height: 100%;
+    display: none;
+    backdrop-filter: blur(5px);
+    z-index:9999;
+} */
 
 .recipe-submission, .recipe-view {
     background:white;
@@ -465,6 +468,8 @@ td button{
     position: absolute;
     top: 1%;
     right: 1%;
+    /* margin-top:1%;
+    margin-left:60%; */
     font-size:200%;
     cursor:pointer
 }
