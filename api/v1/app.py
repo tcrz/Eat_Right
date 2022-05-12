@@ -3,10 +3,12 @@
 from flask import Flask, make_response, jsonify
 from tables import storage
 from api.v1.views import views
+from flask_cors import CORS, cross_origin
 import os
 
 app = Flask(__name__)
 app.register_blueprint(views)
+CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 @app.errorhandler(404)
 def error(error):
@@ -20,5 +22,4 @@ def close(exception):
 
 
 if __name__ == "__main__":
-    app.run(host=os.getenv('api_host'), port=os.getenv('port'), threaded=True)
-    
+    app.run(host=os.getenv('api_host'), port=os.getenv('port'), threaded=True, debug=True)
