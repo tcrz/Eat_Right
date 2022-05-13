@@ -2,48 +2,50 @@
 /*BASIC SET-UP*/
 /*--------------------------------*/
 * {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     /* overflow: hidden; */
 }
 
 html {
-    overflow-x:hidden;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-h1 {font-size: 300%;}
+h1 {
+    font-size: 300%;
+}
 
 /* li {list-style: none;} */
 
-a{
-    color:black;
+a {
+    color: black;
     text-decoration: none
 }
 
-body{
+body {
     margin-top: 15px;
     font-family: 'poppins';
-    overflow-x:hidden
+    overflow-x: hidden
 }
 
 button {
-    cursor:pointer
+    cursor: pointer
 }
 
 /*--------------------------------*/
 /*LANDING SECTION */
 /*--------------------------------*/
-header{
-    width:100%;
+header {
+    width: 100%;
     height: 100vh;
     /* background: red; */
     border-bottom: 1px solid #5db85d;
 }
 
 nav {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-around;
     /* background: orange; */
@@ -54,35 +56,35 @@ nav {
     margin-bottom: 20px;
 }
 
-.menu-nav{
-    display:flex;
+.menu-nav {
+    display: flex;
 }
 
 .menu-nav li {
-    padding:0 20px;
+    padding: 0 20px;
     border-bottom: 2px solid transparent;
     list-style: none;
 }
 
 .menu-nav li:hover {
-    padding-bottom:1px;
+    padding-bottom: 1px;
     border-bottom: 2px solid #5db85d;
 }
 
-.menu-icons > ion-icon{
+.menu-icons>ion-icon {
     font-size: 130%;
     border: 1px solid black;
-    padding:6px;
+    padding: 6px;
     border-radius: 50%;
     background: black;
-    color:white
+    color: white
 }
 
-.landing{
-    display:flex;
+.landing {
+    display: flex;
     justify-content: space-around;
     max-width: 1150px;
-    background:linear-gradient(#e6e9e3,#cecfc79d);
+    background: linear-gradient(#e6e9e3, #cecfc79d);
     background-color: rgb(199, 240, 208);
     /* background-color: grey; */
     margin: 0 auto;
@@ -94,7 +96,7 @@ nav {
     /* padding-top:40px; */
 }
 
-.hero-text-box{
+.hero-text-box {
     /* background: white; */
     /* position: absolute; */
     width: 600px;
@@ -102,26 +104,27 @@ nav {
     /* left: 3%; */
     letter-spacing: 1px;
     word-spacing: 3px;
-    padding-top:100px;
+    padding-top: 100px;
     /* margin-left: 20px; */
     /* background:red */
 }
 
-.landing .hero-text-box h1{
+.landing .hero-text-box h1 {
     font-size: 300%;
     font-weight: 600;
     /* text-transform: uppercase; */
     color: black;
     letter-spacing: 0px;
-    margin-bottom:5px;
-    line-height:50px;
-}
-.hero-text-box p{
-    width: 550px;
-    margin-bottom:35px;
+    margin-bottom: 5px;
+    line-height: 50px;
 }
 
-.hero-img{
+.hero-text-box p {
+    width: 550px;
+    margin-bottom: 35px;
+}
+
+.hero-img {
     /* background:green; */
     /* position:relative; */
     /* padding:30px 20px; */
@@ -131,50 +134,51 @@ nav {
     padding: 50px 0px;
 }
 
-.hero-img img{
+.hero-img img {
     /* position: absolute;  */
     /* right: 5%; */
     /* top: 5%; */
     /* margin: 20px 40px auto 0; */
     /* float: left; */
     /* background: red; */
-    width:100%;
+    width: 100%;
     /* height:30% */
     border-radius: 50%;
     /* margin-left:20px; */
     box-shadow: rgba(10, 10, 10, 0.534) -5px 5px 9px;
-    
+
 }
 
-.hero-text-box a{
+.hero-text-box a {
     /* color: green; */
     font-size: 120%;
-    border: 1px solid #5db85d;;
+    border: 1px solid #5db85d;
+    ;
     border-radius: 150px;
     /* margin-top:20px; */
-    margin-right:20px;
-    padding:15px 40px;
+    margin-right: 20px;
+    padding: 15px 40px;
     font-weight: 600;
     transition: background-color 0.3s, color 0.2s;
     /* background: none; */
 }
 
-.CC-btn{
+.CC-btn {
     background: #5db85d;
-    color:white;
+    color: white;
 }
 
-.recipes-btn{
+.recipes-btn {
     background: none;
-    color:#5db85d;
+    color: #5db85d;
 }
 
-.recipes-btn:hover{
-    background:#5db85d;
-    color:white
+.recipes-btn:hover {
+    background: #5db85d;
+    color: white
 }
 
-.CC-btn:hover{
+.CC-btn:hover {
     background: transparent;
     color: #5db85d;
 }
@@ -183,13 +187,13 @@ nav {
 /*CALORIE COUNTER SECTION         */
 /*--------------------------------*/
 
-.calorie-section{
+.calorie-section {
     background: #ccf5dd38;
     padding-bottom: 20px;
     border-bottom: 1px solid #5db85d;
 }
 
-.calorie-counter{
+.calorie-counter {
     max-width: 1150px;
     margin: 0 auto;
     /* height:100vh; */
@@ -202,26 +206,26 @@ nav {
     /* border-bottom: 1px solid #5db85d; */
 }
 
-.subtext{
-    text-align:center;
+.subtext {
+    text-align: center;
     margin: 0 auto;
-    width:60%;
+    width: 60%;
     margin-bottom: 20px;
 }
 
-.calorie-counter > h2 {
+.calorie-counter>h2 {
     padding-bottom: 10px;
-    margin-left:100px
+    margin-left: 100px
 }
 
-table{
+table {
     margin-top: 5px;
     width: 76%;
     border-collapse: collapse;
     background: #f3f3f3;
-    border:1px solid #5db85d;
+    border: 1px solid #5db85d;
     margin: 0 auto;
-    margin-bottom:30px;
+    margin-bottom: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     /* padding: 30px */
 }
@@ -235,50 +239,51 @@ tr:last-of-type {
     background-color: #e6e9e3;
 }
 
-td, th {
+td,
+th {
     border: 1px solid #5db85d;
     text-align: left;
     padding: 10px;
 }
 
-td{
+td {
     font-size: 110%;
     /* font-weight: bold; */
 }
 
-th{
+th {
     background: #5db85d;
-    color:white;
+    color: white;
     font-size: 110%;
 }
 
 th.food-col {
-    width:75%
+    width: 75%
 }
 
-td.food .serving{
-    font-size:70%;
-    padding:0;
+td.food .serving {
+    font-size: 70%;
+    padding: 0;
     margin: 0
 }
 
-td.add-item{
-    background:none;
-    border-width:0px 0px;
-    display:inline-flex;
+td.add-item {
+    background: none;
+    border-width: 0px 0px;
+    display: inline-flex;
     font-weight: 500;
     color: #5da6b8;
     width: 100%
 }
 
 
-td.add-item ion-icon{
+td.add-item ion-icon {
     font-size: 130%;
     /* border: 1px solid yellow; */
     text-align: center;
 }
 
-td.add-item:hover{
+td.add-item:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -286,57 +291,60 @@ td.add-item:hover{
 /*****************
 FOOD SEARCH FIELD 
 ******************/
-tr.hide{
-    display:none;
-    background:red
+tr.hide {
+    display: none;
+    background: red
 }
 
-td.search{
-    padding:5px;
-    border-right:0;
+td.search {
+    padding: 5px;
+    border-right: 0;
 }
 
-td.search label{
-    font-size:70%;
+td.search label {
+    font-size: 70%;
 }
 
 td.search input[type='text'],
 td.search input[type='number'],
 td.search select,
-td button{
-    padding:5px
-    /* background: red; */
+td button {
+    padding: 5px
+        /* background: red; */
 }
 
-td.search input[type='text']{
+td.search input[type='text'] {
     width: 30%
 }
 
-td.search input[type='number']{
-    width:10%
+td.search input[type='number'] {
+    width: 10%
 }
 
-td.search select{ width: 29%}
+td.search select {
+    width: 29%
+}
 
-td.search-btn{
-    padding:auto 0%;
-    text-align:center;
-    border-width:0px 0px 1px;
+td.search-btn {
+    padding: auto 0%;
+    text-align: center;
+    border-width: 0px 0px 1px;
     /* margin:0 auto */
 }
 
-td button{
-    
+td button {
+
     width: 70%;
 }
+
 /*--------------------------------*/
 /*RECIPES SECTION                 */
 /*--------------------------------*/
-.recipe-section{
+.recipe-section {
     /* background: red; */
 }
 
-.recipes{
+.recipes {
     /* max-width: 1150px; */
     margin: 0 auto;
     background: white;
@@ -344,23 +352,24 @@ td button{
 
 .recipes_list {
     /* background: yellow; */
-    margin:25px 100px;
+    margin: 25px 100px;
     display: grid;
     grid-template-columns: 250px 250px 250px 250px;
     grid-gap: 30px;
     justify-content: space-around;
 }
 
-.recipe{
+.recipe {
     width: 250px;
-    border:1px solid #d4cece;
+    border: 1px solid #d4cece;
     border-radius: 15px;
-    background:white;
+    background: white;
     margin-bottom: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     /* box-shadow: #5db85db0 -5px 5px */
     border-bottom: 2px solid #5db85d;
 }
+
 .recipe:hover {
     /* width: 270px; */
     /* box-shadow: #5db85db0 -5px 5px; */
@@ -369,7 +378,7 @@ td button{
 
 .recipe img {
     width: 100%;
-    height:200px;
+    height: 200px;
     /* object-fit: fill; */
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -384,18 +393,18 @@ td button{
     margin: 8px 0;
 }
 
-.author p{
+.author p {
     /* font-weight: 500; */
     margin: 10px 0;
 }
 
-.add-recipe{
+.add-recipe {
     display: flex;
     justify-content: space-around;
-    background: linear-gradient(#e6e9e3,#cecfc79d);
+    background: linear-gradient(#e6e9e3, #cecfc79d);
     background-color: rgba(102, 102, 102, 0.76);
     width: 250px;
-    border:1px solid #d4cece;
+    border: 1px solid #d4cece;
     border-radius: 15px;
     margin-bottom: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
@@ -403,29 +412,30 @@ td button{
     border-bottom: 2px solid #5db85d;
 }
 
-.add-recipe h2{
+.add-recipe h2 {
     display: flex;
     flex-direction: column;
     margin: auto 0;
     font-size: 200%;
     /* color:grey; */
     color: #333;
-  text-shadow: 0px 1px 0px rgba(255,255,255,.5);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, .5);
     /* background: green; */
 }
 
-.add-recipe ion-icon{
+.add-recipe ion-icon {
     font-size: 200%;
     border: 2px solid black;
     border-radius: 50%;
     margin: 0 auto;
-    padding:5px;
+    padding: 5px;
 }
+
 /****************************
  * RECIPE SUBMISSION POP-UP *
 *****************************/
 .popup-bg,
-.recipe-view-popup-bg{
+.recipe-view-popup-bg {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -434,7 +444,7 @@ td button{
     height: 100%;
     display: none;
     backdrop-filter: blur(5px);
-    z-index:9999;
+    z-index: 9999;
 }
 
 /* .recipe-view-popup-bg{
@@ -450,22 +460,22 @@ td button{
 } */
 
 .recipe-submission {
-    display:block;
-    position:relative;
+    display: block;
+    position: relative;
     width: 600px;
-    height:95%;
+    height: 95%;
     margin: 0 auto;
     padding: 20px 30px;
     margin-top: 15px;
-    border-radius:50px;
-    border:none;
+    border-radius: 50px;
+    border: none;
     background-image: url("../images/Blur.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-size:20px;
-    font-family:helvetica neue, helvetica, arial, sans-serif;
-    box-shadow:0 0 50px 5px rgba(0,0,0,.2);
+    font-size: 20px;
+    font-family: helvetica neue, helvetica, arial, sans-serif;
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .2);
     overflow-y: scroll;
 }
 
@@ -473,7 +483,7 @@ td button{
     font-size: 40px;
 }
 
-.recipe-submission::-webkit-scrollbar{
+.recipe-submission::-webkit-scrollbar {
     width: 0px;
 }
 
@@ -491,25 +501,25 @@ td button{
 }
 
 .recipe-view {
-    display:block;
-    position:relative;
+    display: block;
+    position: relative;
     width: 600px;
-    height:95%;
+    height: 95%;
     margin: 0 auto;
     padding: 20px 30px;
     margin-top: 15px;
-    border-radius:50px;
-    border:none;
+    border-radius: 50px;
+    border: none;
     background-image: url("../images/blurred.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family:helvetica neue, helvetica, arial, sans-serif;
-    box-shadow:0 0 50px 5px rgba(0,0,0,.2);
+    font-family: helvetica neue, helvetica, arial, sans-serif;
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, .2);
     overflow-y: scroll;
 }
 
-.recipe-view::-webkit-scrollbar{
+.recipe-view::-webkit-scrollbar {
     width: 0px;
 }
 
@@ -543,7 +553,7 @@ td button{
 .preparation h2 {
     font-size: 25px;
     font-weight: bold;
-    margin: 10px 0 10px 0; 
+    margin: 10px 0 10px 0;
     color: #161F47;
 }
 
@@ -563,7 +573,7 @@ td button{
 }
 
 .recipe-submission ion-icon,
-.recipe-view ion-icon{
+.recipe-view ion-icon {
     background: grey;
     border: none;
     border-radius: 50%;
@@ -574,12 +584,12 @@ td button{
     height: 52px;
     position: fixed;
     right: 400px;
-    top: 30px;   
+    top: 30px;
 }
 
 .recipe-submission ion-icon:hover,
-.recipe-view ion-icon:hover{
-   color:#70cf70
+.recipe-view ion-icon:hover {
+    color: #70cf70
 }
 
 /***********************
@@ -590,32 +600,34 @@ form {
     /* background:red; */
 }
 
-form input, textarea{
+form input,
+textarea {
     margin-bottom: 10px;
-    outline:none;
+    outline: none;
     padding: 3px 0px 3px 3px;
-    margin: 5px 1px 25px 0px;    
+    margin: 5px 1px 25px 0px;
 }
 
-input[type=submit]{
+input[type=submit] {
     background: #5db85d;
-    color:white;
+    color: white;
     font-size: 120%;
-    border: 1px solid #5db85d;;
+    border: 1px solid #5db85d;
+    ;
     border-radius: 150px;
     /* margin-top:20px; */
-    margin-right:20px;
-    padding:10px 15px;
+    margin-right: 20px;
+    padding: 10px 15px;
     font-weight: 600;
     transition: background-color 0.3s, color 0.2s;
     cursor: pointer;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover {
     background: #70cf70
 }
 
-label{
+label {
     /* padding:10px 0; */
 }
 
@@ -640,6 +652,7 @@ input[type=file]::file-selector-button {
 input[type=file]::file-selector-button:hover {
     background-color: #90A9B2;
 }
+
 textarea {
     border: 1px solid #6F7B8C;
     border-radius: 5px;
@@ -647,7 +660,76 @@ textarea {
     resize: none;
 }
 
-textarea:focus, input[type=text]:focus{
+textarea:focus,
+input[type=text]:focus {
     box-shadow: 0 0 5px #5db85d;
     border: 1px solid #5db85d;
+}
+
+/***********************
+ *   About us          *
+ **********************/
+
+.about_us {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.pic {
+    /* border: 1px solid green; */
+    position: relative;
+}
+
+.info {
+    /* border: 1px solid green; */
+    position: relative;
+    height: 600px;
+}
+
+.para {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+}
+
+.alx_pic {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-30%, -50%);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.about {
+    /* border: 1px solid red; */
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+.us {
+    /* border: 1px solid blue; */
+    margin-top: -25px;
+    margin-left: 259px;
+}
+
+.devs {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+}
+
+.addy {
+    margin-left: 40px;
 }
