@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="../static/styles/styles.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../static/script.js"></script>
+    <link rel="icon" href="../static/images/fork_knife.jpg" alt="logo">
 </head>
 <body>
     <header>
         <nav>
-            <h2> <ion-icon name="leaf-outline"></ion-icon>Eat Right</h2>
+            <h2><ion-icon name="leaf-outline"></ion-icon>Eat Right</h2>
             <ul class="menu-nav">
                 <li><a href='#calorie-counter'>Calorie counter</a></li>
                 <li><a href='#recipes'>Recipes</a></li>
@@ -34,7 +35,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta augue libero, eget tempus velit eleifend nec.
                     Donec elementum ligula.
                 </p>
-                <!-- <button class="CC-btn">Calorie counter</button> -->
+                <!-- <button class="CC-btn">Calorie counter</button> --> 
                 <a class="CC-btn" href="#calorie-counter">Calorie counter</a>
                 <a class="recipes-btn" href="#recipes">Recipes</a>
             </div>
@@ -163,18 +164,19 @@
                 <h1 style="text-align:center">Submit Recipe</h1>
                 <ion-icon name="close-outline"></ion-icon>
                 <form action="http://127.0.0.1:5001/api/v1/recipe/" enctype="multipart/form-data" method="POST">
-                    <label for="username">Username:</label><br>
-                    <input type="text" name="username" required><br>
-                    <label for="recipe-name">Recipe name:</label><br>
+			<label for="username">Username</label><br>
+		    <input type="text" name="username" required><br>
+                    <label for="recipe-name">Recipe name</label><br>
                     <input type="text" name="recipe-name" required><br>
-                    <label for="img">Upload photo of the meal:</label><br>
+                    <label for="img">Upload photo of the meal</label><br>
 		    <input type="file" id="img" name="img" accept="image/*" required><br>
-                    <label for="ingredients">Ingredients:</label><br>
-                    <textarea name="ingredients" rows="8" placeholder="1 cup of rice.
-1tsp of salt." required></textarea>
-                    <label for="preparation">Preparation:</label><br>
-                    <textarea name="preparation" rows="8" placeholder="1. Put the rice in the bowl.
-2. Add water and some salt. Stir quickly" required></textarea>
+                    <label for="ingredients">Ingredients</label><br>
+                    <textarea name="ingredients" rows="8" placeholder="1 Cup of rice
+1 TSP of salt" required></textarea>
+                    <label for="preparation">Preparation</label><br>
+                    <textarea name="preparation" rows="8" placeholder="Put the rice in the bowl
+Add water and some salt
+Stir quickly" required></textarea>
                     <input type="submit">
                 </form>
             </div>
@@ -197,15 +199,7 @@
                     <div class="content">
 			    <div class="food_name"><h2>{{ recipe.name }}</h2></div>
 		            <div class="author"> <p>By {{ recipe.user_name }}</p></div>
-			    <!-- <div class="ingredients">
-                        	<b>Ingredients</b>
-                        	<p>{{ recipe.ingredients }}</p>
-                    	    </div>
-			    <div class="preparation">
-                        	<b>Preparation</b>
-                        	<p>{{ recipe.preparation }}</p>
-                    	    </div></br></br>
-                    </div> -->
+                    </div>
             </article>
 		{% endfor %}
                 <article class="add-recipe">
