@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eat Right</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -14,10 +16,13 @@
     <script type="text/javascript" src="../static/script.js"></script>
     <link rel="icon" href="../static/images/fork_knife.jpg" alt="logo">
 </head>
+
 <body>
     <header>
         <nav>
-            <h2><ion-icon name="leaf-outline"></ion-icon>Eat Right</h2>
+            <h2>
+                <ion-icon name="leaf-outline"></ion-icon>Eat Right
+            </h2>
             <ul class="menu-nav">
                 <li><a href='#calorie-counter'>Calorie counter</a></li>
                 <li><a href='#recipes'>Recipes</a></li>
@@ -32,10 +37,11 @@
         <div class="landing">
             <div class="hero-text-box">
                 <h1>Hooked On Junk Food? <br>Eat Right, Stay Healthy<br> We Are Here To Help</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta augue libero, eget tempus velit eleifend nec.
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta augue libero, eget tempus velit
+                    eleifend nec.
                     Donec elementum ligula.
                 </p>
-                <!-- <button class="CC-btn">Calorie counter</button> --> 
+                <!-- <button class="CC-btn">Calorie counter</button> -->
                 <a class="CC-btn" href="#calorie-counter">Calorie counter</a>
                 <a class="recipes-btn" href="#recipes">Recipes</a>
             </div>
@@ -46,115 +52,125 @@
     </header>
     <section class="calorie-section" id="calorie-counter">
         <div class="calorie-counter">
-        <h1 class="heading">Calorie counter</h1>
-        <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta augue libero, eget tempus velit eleifend nec.
-            Donec elementum ligula.</p>
-        <h2>Breakfast</h2>
-        <table>
-            <tr>
-                <th class="food-col">Food</th>
-                <th>Calories</th>
-            </tr>
-            <tr class="search-field hide">
-                <td class="search">
-                    <label style="font-size:70%">Foodname:</label>
-                     <input type="text">
-                     <label>Quantity:</label>
-                     <input type="number" min="1" value="1" required>
-                     <label for="cars">Serving:</label>
-                    <select name="serving" id="serving">
-                        <option value="cup">cup</option>
-                        <option value="tsp">tsp</option>
-                        <option value="lb">lb</option>
-                        <option value="gram">gram</option>
-                        <option value="unit">unit</option>
-                        <option value="slice">slice</option>
-                    </select>
-                </td>
-                <td class="search-btn">
-                    <button>Search</button>
-                </td>
-            </tr>
-            
-            <tr>
-                <td class="add-item"><ion-icon name="add-outline"></ion-icon><p>Add Item</p></td>
-                <td style="border-width:0px 0px;">&nbsp;</td>
-            </tr>
-        </table>
-        <h2>Lunch</h2>
-        <table>
-            <tr>
-                <th class="food-col">Food</th>
-                <th>Calories</th>
-            </tr>
-            <tr>
-            </tr>
-            <tr class="search-field hide">
-                <td class="search">
-                    <label style="font-size:70%">Foodname:</label>
-                     <input type="text">
-                      <label>Quantity:</label>
-                     <input type="number" min="1" value="1" required>
-                     <label for="cars">Serving:</label>
-                    <select name="serving" id="serving">
-                        <option value="cup">cup</option>
-                        <option value="tsp">tsp</option>
-                        <option value="lb">lb</option>
-                        <option value="gram">gram</option>
-                        <option value="unit">unit</option>
-                        <option value="slice">slice</option>
-                    </select>
-                </td>
-                <td class="search-btn">
-                    <button>Search</button>
-                </td>
-            </tr>
-            
-            <tr>
-                <td class="add-item"><ion-icon name="add-outline"></ion-icon><p>Add Item</p></td>
-                <td style="border-width:0px 0px;">&nbsp;</td>
-            </tr>
-        </table>
-        <h2>Supper</h2>
-        <table>
-            <tr>
-                <th class="food-col">Food</th>
-                <th>Calories</th>
-            </tr>
-            <tr>
-            </tr>
-            <tr class="search-field hide">
-                <td class="search">
-                    <label style="font-size:70%">Foodname:</label>
-                     <input type="text">
-                      <label>Quantity:</label>
-                     <input type="number" min="1" value="1" required>
-                     <label for="cars">Serving:</label>
-                    <select name="serving" id="serving">
-                        <option value="cup">cup</option>
-                        <option value="tsp">tsp</option>
-                        <option value="lb">lb</option>
-                        <option value="gram">gram</option>
-                        <option value="unit">unit</option>
-                        <option value="slice">slice</option>
-                    </select>
-                </td>
-                <td class="search-btn">
-                    <button>Search</button>
-                </td>
-            </tr>
-            <tr>
-                <td class="add-item"><ion-icon name="add-outline"></ion-icon><p>Add Item</p></td>
-                <td style="border-width:0px 0px;">&nbsp;</td>
-            </tr>
-        </table>
-        <h2>Total Calories</h2>
-        <table class="total">
-            <tr>
-                <th style="text-align: right;width:75%">Total:</th>
-                <th class="total-value">0 Calories</th>
-            </tr>
-        </table>
+            <h1 class="heading">Calorie counter</h1>
+            <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta augue libero, eget
+                tempus velit eleifend nec.
+                Donec elementum ligula.</p>
+            <h2>Breakfast</h2>
+            <table>
+                <tr>
+                    <th class="food-col">Food</th>
+                    <th>Calories</th>
+                </tr>
+                <tr class="search-field hide">
+                    <td class="search">
+                        <label style="font-size:70%">Foodname:</label>
+                        <input type="text">
+                        <label>Quantity:</label>
+                        <input type="number" min="1" value="1" required>
+                        <label for="cars">Serving:</label>
+                        <select name="serving" id="serving">
+                            <option value="cup">cup</option>
+                            <option value="tsp">tsp</option>
+                            <option value="lb">lb</option>
+                            <option value="gram">gram</option>
+                            <option value="unit">unit</option>
+                            <option value="slice">slice</option>
+                        </select>
+                    </td>
+                    <td class="search-btn">
+                        <button>Search</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="add-item">
+                        <ion-icon name="add-outline"></ion-icon>
+                        <p>Add Item</p>
+                    </td>
+                    <td style="border-width:0px 0px;">&nbsp;</td>
+                </tr>
+            </table>
+            <h2>Lunch</h2>
+            <table>
+                <tr>
+                    <th class="food-col">Food</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                </tr>
+                <tr class="search-field hide">
+                    <td class="search">
+                        <label style="font-size:70%">Foodname:</label>
+                        <input type="text">
+                        <label>Quantity:</label>
+                        <input type="number" min="1" value="1" required>
+                        <label for="cars">Serving:</label>
+                        <select name="serving" id="serving">
+                            <option value="cup">cup</option>
+                            <option value="tsp">tsp</option>
+                            <option value="lb">lb</option>
+                            <option value="gram">gram</option>
+                            <option value="unit">unit</option>
+                            <option value="slice">slice</option>
+                        </select>
+                    </td>
+                    <td class="search-btn">
+                        <button>Search</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="add-item">
+                        <ion-icon name="add-outline"></ion-icon>
+                        <p>Add Item</p>
+                    </td>
+                    <td style="border-width:0px 0px;">&nbsp;</td>
+                </tr>
+            </table>
+            <h2>Supper</h2>
+            <table>
+                <tr>
+                    <th class="food-col">Food</th>
+                    <th>Calories</th>
+                </tr>
+                <tr>
+                </tr>
+                <tr class="search-field hide">
+                    <td class="search">
+                        <label style="font-size:70%">Foodname:</label>
+                        <input type="text">
+                        <label>Quantity:</label>
+                        <input type="number" min="1" value="1" required>
+                        <label for="cars">Serving:</label>
+                        <select name="serving" id="serving">
+                            <option value="cup">cup</option>
+                            <option value="tsp">tsp</option>
+                            <option value="lb">lb</option>
+                            <option value="gram">gram</option>
+                            <option value="unit">unit</option>
+                            <option value="slice">slice</option>
+                        </select>
+                    </td>
+                    <td class="search-btn">
+                        <button>Search</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add-item">
+                        <ion-icon name="add-outline"></ion-icon>
+                        <p>Add Item</p>
+                    </td>
+                    <td style="border-width:0px 0px;">&nbsp;</td>
+                </tr>
+            </table>
+            <h2>Total Calories</h2>
+            <table class="total">
+                <tr>
+                    <th style="text-align: right;width:75%">Total:</th>
+                    <th class="total-value">0 Calories</th>
+                </tr>
+            </table>
         </div>
     </section>
     <section class="recipe-section" id="recipes">
@@ -164,12 +180,12 @@
                 <h1 style="text-align:center">Submit Recipe</h1>
                 <ion-icon name="close-outline"></ion-icon>
                 <form action="http://127.0.0.1:5001/api/v1/recipe/" enctype="multipart/form-data" method="POST">
-			<label for="username">Username</label><br>
-		    <input type="text" name="username" required><br>
+                    <label for="username">Username</label><br>
+                    <input type="text" name="username" required><br>
                     <label for="recipe-name">Recipe name</label><br>
                     <input type="text" name="recipe-name" required><br>
                     <label for="img">Upload photo of the meal</label><br>
-		    <input type="file" id="img" name="img" accept="image/*" required><br>
+                    <input type="file" id="img" name="img" accept="image/*" required><br>
                     <label for="ingredients">Ingredients</label><br>
                     <textarea name="ingredients" rows="8" placeholder="1 Cup of rice
 1 TSP of salt" required></textarea>
@@ -184,32 +200,75 @@ Stir quickly" required></textarea>
 
         <!-- RECIPE VIEW POPUP -->
         <div class="recipe-view-popup-bg">
-            
-	    </div> 
+
+        </div>
 
         <!-- RECIPES ARTICLES -->
         <div class="recipes">
             <h1 class="heading">Recipes</h1>
-            <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta augue libero, eget tempus velit eleifend nec.
-            Donec elementum ligula.</p>
+            <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta augue libero, eget
+                tempus velit eleifend nec.
+                Donec elementum ligula.</p>
             <div class="recipes_list">
-		{% for recipe in recipes.values() %}
-            <article class="recipe" id="{{ recipe.id }}">
-			<img src="..{{url_for('static', filename='images/' + recipe.filename)}}" alt="recipe images">
+                {% for recipe in recipes.values() %}
+                <article class="recipe" id="{{ recipe.id }}">
+                    <img src="..{{url_for('static', filename='images/' + recipe.filename)}}" alt="recipe images">
                     <div class="content">
-			    <div class="food_name"><h2>{{ recipe.name }}</h2></div>
-		            <div class="author"> <p>By {{ recipe.user_name }}</p></div>
+                        <div class="food_name">
+                            <h2>{{ recipe.name }}</h2>
+                        </div>
+                        <div class="author">
+                            <p>By {{ recipe.user_name }}</p>
+                        </div>
                     </div>
-            </article>
-		{% endfor %}
+                </article>
+                {% endfor %}
                 <article class="add-recipe">
-                    <h2> <ion-icon name="add-outline"></ion-icon>Add recipe</h2>
+                    <h2>
+                        <ion-icon name="add-outline"></ion-icon>Add recipe
+                    </h2>
                 </article>
             </div>
         </div>
-        
+
+    </section>
+    <section class="about_us" id="about">
+        <div class="info">
+            <h1 class="about">About</h1>
+            <h1 class="us">Us</h1>
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+            </div>
+            <div class="devs">
+                <div class="addy">
+                    <h3>name</h3>
+                    <a href="#">twitter</a>
+                </div>
+
+                <div class="addy">
+                    <h3>name</h3>
+                    <a href="#">twitter</a>
+                </div>
+
+                <div class="addy">
+                    <h3>name</h3>
+                    <a href="#">twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="pic">
+            <img src="../static/images/share_image_2019.jpeg" alt="alx" class="alx_pic">
+        </div>
     </section>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
