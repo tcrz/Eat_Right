@@ -230,9 +230,9 @@ table {
     /* padding: 30px */
 }
 
-tr:nth-of-type(even) {
-    /* background-color: #f3f3f3; */
-}
+/* tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+} */
 
 tr:last-of-type {
     border-bottom: 2px solid #5db85d;
@@ -340,9 +340,9 @@ td button {
 /*--------------------------------*/
 /*RECIPES SECTION                 */
 /*--------------------------------*/
-.recipe-section {
-    /* background: red; */
-}
+/* .recipe-section {
+    background: red;
+} */
 
 .recipes {
     /* max-width: 1150px; */
@@ -596,9 +596,9 @@ td button {
  *   Form  content     *
  **********************/
 
-form {
-    /* background:red; */
-}
+/* form {
+    background:red;
+} */
 
 form input,
 textarea {
@@ -627,9 +627,9 @@ input[type=submit]:hover {
     background: #70cf70
 }
 
-label {
-    /* padding:10px 0; */
-}
+/* label {
+    padding:10px 0;
+} */
 
 input[type=text] {
     border: 1px solid #6F7B8C;
