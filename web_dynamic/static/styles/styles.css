@@ -671,65 +671,25 @@ input[type=text]:focus {
  **********************/
 
 .about_us {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}
-
-.pic {
-    /* border: 1px solid green; */
-    position: relative;
-}
-
-.info {
-    /* border: 1px solid green; */
-    position: relative;
-    height: 600px;
+    border: 1px solid green;
+    background: #ccf5dd38;
 }
 
 .para {
+    margin-top: 15px;
+    margin-left: 400px;
     /* border: 1px solid red; */
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-30%, -50%);
-}
-
-.alx_pic {
-    /* border: 1px solid red; */
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    transform: translate(-30%, -50%);
-}
-
-h1 {
-    font-size: 40px;
-}
-
-.about {
-    /* border: 1px solid red; */
-    margin-top: 100px;
-    margin-left: 200px;
-}
-
-.us {
-    /* border: 1px solid blue; */
-    margin-top: -25px;
-    margin-left: 259px;
+    width: 1000px;
 }
 
 .devs {
-    /* border: 1px solid black; */
+    /* border: 1px solid blue; */
+    margin-top: 40px;
     display: flex;
-    align-items: flex-start;
-    position: relative;
-    width: 400px;
-    top: 50%;
-    left: 50%;
+    justify-content: center;
 }
 
 .addy {
+    flex-basis: 100px;
     margin-left: 40px;
 }
