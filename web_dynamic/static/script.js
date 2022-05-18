@@ -9,7 +9,7 @@ $(document).ready(function () {
   });
 
   // RECIPE VIEW POP-UP
-  $('.recipe').click(function () {
+  $('.recipes_list').on('click', '.recipe', function () {
     $('.recipe-view-popup-bg').empty();
     const id = $(this).attr('id');
     console.log(id);
@@ -122,5 +122,35 @@ $(document).ready(function () {
         $('.calorie-amount').text(response.calorie_amount);
       }
     });
+  });
+
+  // SEARCH FOR RECIPE
+  $('.search_text').on("input", function () {
+    text = $('.search_text').val();
+    if (text.length > 0) {
+      $.ajax({
+        type: "POST",
+        url: "/livesearch",
+        data: { text: text },
+        success: function (response) {
+          $('.recipes_list').empty();
+          $.each(response, function (indexInArray, valueOfElement) {
+            let mimetype = '.png'
+            $('.recipes_list').append(
+              '<article class="recipe" id=' + valueOfElement.id + '>' +
+              '<div class="category">' +
+              '<img src=../static/images/' + valueOfElement.category + mimetype + ' alt="recipe logo" />' +
+              '</div>' +
+              '<img src=../static/images/' + valueOfElement.filename + ' alt="recipe imgaes">' +
+              '<div class="content"> <div class="food_name">' +
+              '<h2>' + valueOfElement.name + '</h2> </div>' +
+              '<div class="author">' +
+              '<p>' + 'By ' + valueOfElement.user_name + '</p> </div>' +
+              '</div> </article>'
+            );
+          });
+        }
+      });
+    }
   });
 });
