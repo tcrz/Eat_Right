@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """This will contain the class StorageHandler"""
 
-from tables.basemodel import BaseModel, Base
-from tables.recipe import Recipe
+from tables.basemodel import Base
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -24,13 +23,13 @@ class StorageHandler:
 
     def all(self, cls=None):
         """This function will query the dtabase and gives a dictionary"""
-        dic = {}
-        obj = self.__session.query(Recipe).all()
-        for recipe in obj:
-            key = recipe.name
-            dic[key] = recipe
-        return dic
-    
+        new_dict = {}
+        if cls:
+            for value in self.__session.query(cls).all():
+                key = type(value).__name__ + '.' + value.id
+                new_dict[key] = value
+        return new_dict
+
     def new(self, obj):
         """THis function will add new value to database"""
         self.__session.add(obj)
