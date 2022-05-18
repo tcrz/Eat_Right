@@ -711,45 +711,64 @@ td button {
   text-align: center;
 }
 
-.about_container {
-  display: grid;
+.about_container{
+  /* display: grid;
   grid-template-columns: 1fr 1.5fr;
-  grid-gap: 20px;
+  grid-gap: 20px; */
+  padding: 0 50px;
+  padding-top:20px;
+  padding-bottom:150px;
+  /* height:90vh; */
+  /* text-align:center; */
+  display:flex;
+  gap: 10%;
+  /* justify-content: space-around; */
 }
 
+.about_container h2{
+  font-size:200%
+}
+.mission, .story{
+  width: 600px
+}
 .mission {
   /* border: 1px solid green; */
-  height: 450px;
+  /* height: 450px; */
+  /* background:red */
+}
+
+.story{
+  /* background:yellow; */
 }
 
 .mission p,
 .story p {
   /* border: 1px solid red; */
-  margin-top: 20px;
-  padding-left: 100px;
+  /* margin-top: 20px;
+  padding-left: 100px; */
 }
 
 .story p {
-  padding-right: 120px;
+  /* padding-right: 120px; */
 }
 
 .our_mission1,
 .our_story1 {
   /* border: 1px solid red; */
-  margin-top: 30px;
-  margin-left: 70px;
+  /* margin-top: 30px;
+  margin-left: 70px; */
 }
 
 .our_mission2,
 .our_story2 {
   /* border: 1px solid blue; */
-  margin-top: -30px;
-  margin-left: 100px;
+  /* margin-top: -30px;
+  margin-left: 100px; */
 }
 
 .creators {
-  width: 100%;
-  padding: 100px 0px;
+  /* width: 100%; */
+  /* padding: 100px 0px; */
 }
 
 .title h2 {
@@ -763,20 +782,20 @@ td button {
 .box {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 400px;
+  align-items: flex-start;
+  /* min-height: 400px; */
 }
 
 .card {
   /* border: 1px solid red; */
-  height: 530px;
+  /* height: 530px; */
   width: 335px;
   padding: 20px 35px;
   border-radius: 20px;
   background-color: #ccf5dd38;
   margin: 15px;
-  position: relative;
-  overflow: hidden;
+  /* position: relative; */
+  /* overflow: hidden; */
   text-align: center;
 }
 
