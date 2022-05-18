@@ -243,6 +243,9 @@ Stir quickly" required></textarea><br />
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta
         augue libero, eget tempus velit eleifend nec. Donec elementum ligula.
       </p>
+      <div class="search_box">
+        <input type="text" name="search" class="search_text">
+      </div>
       <div class="recipes_list">
         {% for recipe in recipes.values() %}
         <article class="recipe" id="{{ recipe.id }}">
