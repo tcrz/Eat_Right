@@ -54,6 +54,28 @@
       </div>
     </div>
   </header>
+  <section class="calorie-predictor">
+    <div class="predictor-form">
+      <form action="http://127.0.0.1:5001/api/v1/age">
+	<h3>Gender</h3>
+        <label for="gender">Male</label>
+        <input type="radio" name="gender" id="Male" value="Male"/>
+        <label for="gender">Female</label>
+	<input type="radio" name="gender" id="Female" value="Female"/><br />
+	<h3>Age</h3>
+	<input type="number" max="100" min="4" name="digit" required />
+        <h3>Activity Level</h3>
+          <select name="activity" required>
+            <option value="" disabled selected>Select your option</option>
+            <option value="Sedentary">Sedentary</option>
+            <option value="Moderate-Activity">Moderate-Activity</option>
+            <option value="Active">Active</option>
+	  </select><br />
+        <button class="submittion">Submit</button>
+      </form>
+    </div>
+    <p class="calorie-amount"></p>
+  </section>
   <section class="calorie-section" id="calorie-counter">
     <div class="calorie-counter">
       <h1 class="heading">Calorie counter</h1>
