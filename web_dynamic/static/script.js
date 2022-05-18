@@ -13,7 +13,7 @@ $(document).ready(function () {
     $('.recipe-view-popup-bg').empty();
     const id = $(this).attr('id');
     console.log(id);
-    $.get('http://192.168.33.10:5001/api/v1/recipe/' + id, function (data) {
+    $.get('http://0.0.0.0:5001/api/v1/recipe/' + id, function (data) {
       let ingrTemplate = '';
       const ingredientsList = data.ingredients.split('\n');
       ingredientsList.forEach(function (item) {
@@ -28,9 +28,9 @@ $(document).ready(function () {
       });
       const imgpath = '../static/images/' + data.filename;
       const popupTemplate = '<div class="recipe-view"><div class="head">' + '<h1 class="recipe-name">' + data.name + '</h1>' +
-      '<img src=' + imgpath + ' alt="recipe-image">' + '</div>' + '<div class="ingredients">' + '<h2>Ingredients</h2>' +
-      '<ul>' + ingrTemplate + '</ul>' + '</div>' + '<div class="preparation">' + '<h2>Preparation</h2>' + '<ol>' + preprTemplate +
-      '</ol>' + '</div>' + '<h4>' + 'By ' + data.user_name + '</h4>' + '<ion-icon name="close-outline"></ion-icon>' + '</div>';
+        '<img src=' + imgpath + ' alt="recipe-image">' + '</div>' + '<div class="ingredients">' + '<h2>Ingredients</h2>' +
+        '<ul>' + ingrTemplate + '</ul>' + '</div>' + '<div class="preparation">' + '<h2>Preparation</h2>' + '<ol>' + preprTemplate +
+        '</ol>' + '</div>' + '<h4>' + 'By ' + data.user_name + '</h4>' + '<ion-icon name="close-outline"></ion-icon>' + '</div>';
       $('.recipe-view-popup-bg').append(popupTemplate);
     });
     $('.recipe-view-popup-bg').fadeIn(200);
@@ -80,8 +80,8 @@ $(document).ready(function () {
           const calories = result.items[0].calories;
           const name = result.items[0].name;
           const row = '<tr class="food-query"><td class="food">' + name.toUpperCase() + ' <br> <span class="serving"><p>' +
-          quantity + ' ' + serving + '</p></span></td>' + '<td class=calories>' + '<div style="display:flex;justify-content:space-between;">' +
-          '<p>' + calories + '</p>' + '<ion-icon name="remove-outline" style="color:red;cursor:pointer;"></ion-icon></div></td></tr>';
+            quantity + ' ' + serving + '</p></span></td>' + '<td class=calories>' + '<div style="display:flex;justify-content:space-between;">' +
+            '<p>' + calories + '</p>' + '<ion-icon name="remove-outline" style="color:red;cursor:pointer;"></ion-icon></div></td></tr>';
           $(row).insertBefore(searchField);
           // calories_list.push(calories)
           let sum = $('.total .total-value').text().split(' ')[0];
@@ -92,7 +92,7 @@ $(document).ready(function () {
           $('.total .total-value ').text(sum + ' Calories');
         }
       },
-      error: function ajaxError (jqXHR) {
+      error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
       }
     });
