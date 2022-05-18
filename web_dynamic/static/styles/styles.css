@@ -189,6 +189,7 @@ nav {
   padding: 20px 20px;
   border-bottom: 1px solid #5db85d;
 }
+
 .predictor-form {
   width: 33%;
   height: 500px;
@@ -205,6 +206,7 @@ nav {
 .predictor-form label {
   margin-left: 90px;
 }
+
 .predictor-form input[type="number"],
 .predictor-form select {
   width: 150px;
@@ -212,6 +214,7 @@ nav {
   border-radius: 8px;
   margin-left: 150px;
 }
+
 .predictor-form button {
   width: 70px;
   height: 35px;
@@ -224,6 +227,7 @@ nav {
   margin-top: 60px;
   margin-left: 180px;
 }
+
 /*--------------------------------*/
 /*CALORIE COUNTER SECTION         */
 /*--------------------------------*/
@@ -439,14 +443,14 @@ td button {
 }
 
 .category img {
-    width: 45px;
-    height: 45px;
-    padding: 4px;
-    background-color: #FC7C3C;
-    border-radius: 15px;
-    position: absolute;
-    top: 1%;
-    right: 1%;
+  width: 45px;
+  height: 45px;
+  padding: 4px;
+  background-color: #FC7C3C;
+  border-radius: 15px;
+  position: absolute;
+  top: 1%;
+  right: 1%;
 }
 
 .add-recipe {
@@ -883,4 +887,17 @@ td button {
   width: 20px;
   height: 20px;
   border-radius: 50%;
+}
+
+.search_box {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.search_text {
+  font-size: 20px;
+  padding-left: 13px;
+  border-radius: 20px;
 }
