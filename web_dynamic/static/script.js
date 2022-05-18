@@ -109,7 +109,7 @@ $(document).ready(function () {
   });
 
   // predictor
-  $('.enter_btn').click(function () {
+  $('.submittion').click(function () {
     let age = $('.age').val();
     let act = $('.act').children('option:selected').val()
     let gender = $('.gender:checked').val();
@@ -119,7 +119,7 @@ $(document).ready(function () {
       type: "get",
       url: url,
       success: function (response) {
-        $('.recom').text(response.calorie_amount);
+        $('.calorie-amount').text(response.calorie_amount);
       }
     });
   });
