@@ -9,8 +9,9 @@ app = Flask(__name__)
 
 @app.teardown_appcontext
 def close(error):
-    """THis function will close Session """
+    """This function will close Session """
     storage.close()
+
 
 @app.route('/', strict_slashes=False)
 def show_html():
