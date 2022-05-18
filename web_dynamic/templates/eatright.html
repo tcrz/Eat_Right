@@ -189,19 +189,31 @@
             enctype="multipart/form-data"
             method="POST"
           >
-            <label for="username">Username</label><br />
-            <input type="text" name="username" required /><br />
-            <label for="recipe-name">Recipe name</label><br />
-            <input type="text" name="recipe-name" required /><br />
-            <label for="img">Upload photo of the meal</label><br />
+            <label for="username">Username</label><br/>
+            <input type="text" name="username" required /><br/>
+            <label for="recipe-name">Recipe name</label><br/>
+            <input type="text" name="recipe-name" required /><br/>
+            <label for="img">Upload photo of the meal</label><br/>
             <input
               type="file"
               id="img"
               name="img"
               accept="image/*"
               required
-            /><br />
-            <label for="ingredients">Ingredients</label><br />
+            /><br/>
+            <label for="categorizing">Category</label><br/>
+	    <select name="category" required><br/>
+              <option value="" disabled selected>Select your option</option>
+              <option value="Dessert">Dessert</option>
+              <option value="Snack">Snack</option>
+              <option value="Dish">Dish</option>
+              <option value="Drink">Drink</option>
+              <option value="Salad">Salad</option>
+              <option value="Sauce">Sauce</option>
+              <option value="Soup">Soup</option>
+              <option value="Stew">Stew</option>
+            </select><br />
+	    <label for="ingredients">Ingredients</label><br/>
             <textarea
               name="ingredients"
               rows="8"
@@ -209,7 +221,7 @@
 1 TSP of salt"
               required
             ></textarea>
-            <label for="preparation">Preparation</label><br />
+	    <label for="preparation">Preparation</label><br/>
             <textarea
               name="preparation"
               rows="8"
@@ -217,7 +229,7 @@
 Add water and some salt
 Stir quickly"
               required
-            ></textarea>
+	    ></textarea><br/>
             <input type="submit" />
           </form>
         </div>
@@ -236,6 +248,12 @@ Stir quickly"
         <div class="recipes_list">
           {% for recipe in recipes.values() %}
           <article class="recipe" id="{{ recipe.id }}">
+            <div class="category">
+              <img
+	        src="../static/images/{{ recipe.category }}.png"
+		alt="recipe logo"
+	      />
+	    </div>
             <img
               src="..{{url_for('static', filename='images/' + recipe.filename)}}"
               alt="recipe images"

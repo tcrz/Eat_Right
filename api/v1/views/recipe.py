@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """This function will create the routes for recipe API"""
-
-from api.v1.views import views
 from api.v1.app import app
-from flask import jsonify, abort, make_response, request, send_from_directory, redirect
+from api.v1.views import views
+from flask import jsonify, abort, make_response
+from flask import request, send_from_directory, redirect
+import os
 from tables import storage
 from tables.recipe import Recipe
 from werkzeug.utils import secure_filename
-import os
 
 UPLOAD_FOLDER = 'web_dynamic/static/images'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
@@ -23,6 +23,7 @@ def all_recipes():
         recipe_list.append(recipe.make_dict())
     return jsonify(recipe_list)
 
+
 @views.route('/recipe/<ids>', methods=['GET'])
 def find_recipe(ids):
     """This function will retrieve one recipe"""
@@ -33,6 +34,7 @@ def find_recipe(ids):
             return recipe.make_dict()
     if ids not in recipe_id:
         return abort(404)
+
 
 @views.route('/recipe/<ids>', methods=['DELETE'])
 def delete_recipe(ids):
@@ -47,8 +49,11 @@ def delete_recipe(ids):
     if ids not in recipe_id:
         abort(404)
 
+
 def allowed_file(filename):
-        return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+        return '.' in filename and filename.rsplit('.', 1)[1].lower()\
+                in ALLOWED_EXTENSIONS
+
 
 @views.route('/recipe/', methods=['POST'])
 def add_recipe():
@@ -58,13 +63,17 @@ def add_recipe():
     if img and allowed_file(img.filename):
         path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         img.save(path)
+    category = request.form.get("category")
     user_name = request.form.get("username")
     name = request.form.get("recipe-name")
     ingredients = request.form.get("ingredients")
     preparation = request.form.get("preparation")
     mimetype = img.mimetype
-    new_dict = {'name': name, 'user_name': user_name, 'ingredients': ingredients, 'preparation': preparation, 'filename': filename, 'mimetype': mimetype}
+    new_dict = {'name': name, 'user_name': user_name,
+                'ingredients': ingredients, 'preparation': preparation,
+                'filename': filename, 'mimetype': mimetype,
+                'category': category}
     recipe = Recipe(**new_dict)
     recipe.save()
-    recipe_section = request.referrer +'#recipes'
+    recipe_section = request.referrer + '#recipes'
     return redirect(recipe_section)

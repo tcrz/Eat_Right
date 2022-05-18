@@ -13,3 +13,4 @@ class Recipe(BaseModel, Base):
     preparation = Column(String(32000), nullable=False)
     filename = Column(String(200), nullable=False)
     mimetype = Column(String(10), nullable=False)
+    category = Column(String(20), nullable=False)
