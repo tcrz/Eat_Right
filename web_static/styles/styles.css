@@ -71,7 +71,7 @@ li:hover {
   border-bottom: 2px solid #5db85d;
 }
 
-.menu-icons > ion-icon {
+.menu-icons>ion-icon {
   font-size: 130%;
   border: 1px solid black;
   padding: 6px;
@@ -211,7 +211,7 @@ li:hover {
   margin-bottom: 20px;
 }
 
-.calorie-counter > h2 {
+.calorie-counter>h2 {
   padding-bottom: 10px;
   margin-left: 100px;
 }
@@ -541,6 +541,10 @@ input:focus {
   text-align: center;
 }
 
+.section_title {
+  font-size: 300%;
+}
+
 .about_container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -568,6 +572,7 @@ input:focus {
   /* border: 1px solid red; */
   margin-top: 30px;
   margin-left: 70px;
+  font-size: 300%;
 }
 
 .our_mission2,
@@ -575,6 +580,8 @@ input:focus {
   /* border: 1px solid blue; */
   margin-top: -30px;
   margin-left: 100px;
+  font-size: 250%;
+
 }
 
 .creators {
