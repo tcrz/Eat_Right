@@ -2,9 +2,11 @@
 """This will contain the class StorageHandler"""
 
 from tables.basemodel import Base
+from tables.recipe import Recipe
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
+from random import shuffle
 
 
 class StorageHandler:
@@ -30,10 +32,30 @@ class StorageHandler:
                 new_dict[key] = value
         return new_dict
 
+    def shuff(self, cls=None):
+        """Return random recipes"""
+        all_data = self.all(cls)
+        keys = list(all_data.keys())
+        shuffle(keys)
+        shuffled = dict()
+        for key in keys[:3]:
+            shuffled.update({key: all_data[key]})
+        return shuffled
+
+    def search(self, key):
+        """Search a recipe"""
+        dic = {}
+        recipes = self.__session.query(Recipe).filter(
+            Recipe.name.ilike('%{}%'.format(key))).order_by(Recipe.name).all()
+        for recipe in recipes:
+            k = recipe.name
+            dic[k] = recipe.make_dict()
+        return dic
+
     def new(self, obj):
         """THis function will add new value to database"""
         self.__session.add(obj)
-	
+
     def save(self):
         """THis will save a new value to database"""
         self.__session.commit()
