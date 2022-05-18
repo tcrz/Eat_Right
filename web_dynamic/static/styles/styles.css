@@ -71,7 +71,7 @@ nav {
   border-bottom: 2px solid #5db85d;
 }
 
-.menu-icons > ion-icon {
+.menu-icons>ion-icon {
   font-size: 130%;
   border: 1px solid black;
   padding: 6px;
@@ -211,7 +211,7 @@ nav {
   margin-bottom: 20px;
 }
 
-.calorie-counter > h2 {
+.calorie-counter>h2 {
   padding-bottom: 10px;
   margin-left: 100px;
 }
@@ -396,14 +396,14 @@ td button {
 }
 
 .category img {
-    width: 50px;
-    height: 50px;
-    padding: 4px;
-    background-color: #FC7C3C;
-    border-radius: 15px;
-    position: absolute;
-    top: 1%;
-    right: 1%;
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+  background-color: #FC7C3C;
+  border-radius: 15px;
+  position: absolute;
+  top: 1%;
+  right: 1%;
 }
 
 .add-recipe {
@@ -593,19 +593,20 @@ td button {
   top: 30px;
 }
 
-.recipe-view ion-icon{
-    background: grey;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    cursor: pointer;
-    outline: none;
-    width: 45px;
-    height: 45px;
-    position: fixed;
-    right: 300px;
-    top: 30px;
+.recipe-view ion-icon {
+  background: grey;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  right: 300px;
+  top: 30px;
 }
+
 .recipe-submission ion-icon:hover,
 .recipe-view ion-icon:hover {
   color: #70cf70;
@@ -680,14 +681,14 @@ td button {
 }
 
 .recipe-submission option {
-    font-size: 15px;
-    font-family: helvetica neue, helvetica, arial, sans-serif;
+  font-size: 15px;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
 }
 
 .recipe-submission select {
-    border: 1px solid #6F7B8C;
-    border-radius: 5px;
-    width: 35%;
+  border: 1px solid #6F7B8C;
+  border-radius: 5px;
+  width: 35%;
 }
 
 .recipe-submission textarea:focus,
@@ -706,38 +707,46 @@ td button {
   background: #ccf5dd38;
 }
 
+.heading {
+  margin-top: 10px;
+  font-size: 300%;
+}
+
 .section_title,
 .section_subtitle {
   text-align: center;
 }
 
-.about_container{
+.about_container {
   /* display: grid;
   grid-template-columns: 1fr 1.5fr;
   grid-gap: 20px; */
   padding: 0 50px;
-  padding-top:20px;
-  padding-bottom:150px;
+  padding-top: 20px;
+  padding-bottom: 150px;
   /* height:90vh; */
   /* text-align:center; */
-  display:flex;
+  display: flex;
   gap: 10%;
   /* justify-content: space-around; */
 }
 
-.about_container h2{
-  font-size:200%
+.about_container h2 {
+  font-size: 200%
 }
-.mission, .story{
+
+.mission,
+.story {
   width: 600px
 }
+
 .mission {
   /* border: 1px solid green; */
   /* height: 450px; */
   /* background:red */
 }
 
-.story{
+.story {
   /* background:yellow; */
 }
 
