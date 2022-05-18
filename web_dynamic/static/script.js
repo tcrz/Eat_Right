@@ -107,4 +107,20 @@ $(document).ready(function () {
     console.log('total:', totalCal);
     $('.total .total-value ').text(totalCal + ' Calories');
   });
+
+  // predictor
+  $('.enter_btn').click(function () {
+    let age = $('.age').val();
+    let act = $('.act').children('option:selected').val()
+    let gender = $('.gender:checked').val();
+    let url = 'http://0.0.0.0:5001/api/v1/age/' + gender + '/' + act + '/' + age
+
+    $.ajax({
+      type: "get",
+      url: url,
+      success: function (response) {
+        $('.recom').text(response.calorie_amount);
+      }
+    });
+  });
 });
