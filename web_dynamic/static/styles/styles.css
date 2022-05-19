@@ -203,7 +203,20 @@ nav {
   font-weight: 25px;
   margin: 20px 0;
 }
-.for-pregnant h3 {
+
+.for-pregnant {
+  display: none;
+}
+
+.term {
+  display: none;
+}
+.for-all {
+  display: block;
+}
+
+.for-pregnant h3,
+.term h3 {
   text-align: center;
   margin: 20px 0;
   font-size: 20px;
@@ -215,7 +228,13 @@ nav {
   margin: 20px 0;
   font-size: 30px;
 }
+
+.predictor-form .term label {
+  margin-left: 60px;
+}
+
 .predictor-form label,
+.for-pregnant label,
 .for-all label {
   margin-left: 90px;
 }

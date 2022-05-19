@@ -108,12 +108,29 @@ $(document).ready(function () {
     $('.total .total-value ').text(totalCal + ' Calories');
   });
 
+  const gender = document.getElementById('gender')
+  const forPregnancy = document.getElementById('for-pregnant')
+  const forAll = document.getElementById('for-all')
+  const term = document.getElementById('term')
+  $('#gender').click(function () {
+    forPregnancy.style.display = "block";
+    forAll.style.display = "none";
+  });
+  $('#Yes').click(function () {
+    term.style.display = "inline";
+  });
+  $('#No').click(function () {
+    forPregnancy.style.display = "none";
+    term.style.display = "none";
+    forAll.style.display = "block";
+  });
   // predictor
   $('.submittion').click(function () {
     let age = $('.age').val();
     let act = $('.act').children('option:selected').val()
     let gender = $('.gender:checked').val();
-    let url = 'http://0.0.0.0:5001/api/v1/age/' + gender + '/' + act + '/' + age
+    const term = $('.trimester:checked').val();
+    let url = 'http://192.168.33.10:5001/api/v1/age/' + gender + '/' + act + '/' + age
     if (age < 4 || age > 100) {
       $('.calorie-amount').text("Age range should be between 4 and 100");
     }
@@ -124,6 +141,13 @@ $(document).ready(function () {
         $('.calorie-amount').text(response.calorie_amount);
       }
     });
+    if (term == "First") {
+      $('.calorie-amount').text("You daily intake should be 1800 calories");
+    } else if (term == "Second") {
+      $('.calorie-amount').text("You daily intake should be 2200 calories");
+    } else if (term == "Third"){
+      $('.calorie-amount').text("You daily intake should be 2400 calories");
+    }
   });
 
   // SEARCH FOR RECIPE
