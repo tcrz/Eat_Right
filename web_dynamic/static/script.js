@@ -154,15 +154,16 @@ $(document).ready(function () {
   $('.search_text').on("input", function () {
     text = $('.search_text').val();
     if (text.length > 0) {
+      $('.recipes_list').hide()
       $.ajax({
         type: "POST",
         url: "/livesearch",
         data: { text: text },
         success: function (response) {
-          $('.recipes_list').empty();
+          $('.recipes_search').empty();
           $.each(response, function (indexInArray, valueOfElement) {
             let mimetype = '.png'
-            $('.recipes_list').append(
+            $('.recipes_search').append(
               '<article class="recipe" id=' + valueOfElement.id + '>' +
               '<div class="category">' +
               '<img src=../static/images/' + valueOfElement.category + mimetype + ' alt="recipe logo" />' +
@@ -177,6 +178,10 @@ $(document).ready(function () {
           });
         }
       });
+    }
+    else{
+      $('.recipes_search').empty();
+      $('.recipes_list').show()
     }
   });
 });

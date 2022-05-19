@@ -263,8 +263,10 @@ Stir quickly" required></textarea><br />
         augue libero, eget tempus velit eleifend nec. Donec elementum ligula.
       </p>
       <div class="search_box">
-        <input type="text" name="search" class="search_text">
+        <label>Search:</label>
+        <input type="text" name="search" class="search_text" placeholder="search recipe">
       </div>
+      <div class="recipes_search"></div>
       <div class="recipes_list">
         {% for recipe in recipes.values() %}
         <article class="recipe" id="{{ recipe.id }}">

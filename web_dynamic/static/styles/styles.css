@@ -425,7 +425,7 @@ td button {
   background: white;
 }
 
-.recipes_list {
+.recipes_list, .recipes_search {
   /* background: yellow; */
   margin: 25px 100px;
   display: grid;
@@ -519,6 +519,26 @@ td button {
   padding: 5px;
 }
 
+/* RECIPE SEARCH FIELD */
+.search_box {
+  display: flex;
+  justify-content: center;
+  gap:1%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.search_text {
+  font-size: 20px;
+  padding-left: 13px;
+  border-radius: 20px;
+}
+
+.search_box input[type="text"]:focus{
+  outline: none;
+  border-radius: 20px;
+  border:2px solid #70cf70
+}
 /****************************
  * RECIPE SUBMISSION POP-UP *
 *****************************/
@@ -919,17 +939,4 @@ td button {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-}
-
-.search_box {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.search_text {
-  font-size: 20px;
-  padding-left: 13px;
-  border-radius: 20px;
 }
