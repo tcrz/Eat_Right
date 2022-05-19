@@ -55,13 +55,16 @@
     </div>
   </header>
   <section class="calorie-predictor">
-    <p class="enter-info">Please Fill out this form</p>
+    <!-- <h1 class="heading">Calorie Predictor</h1> -->
+    <p>Please Fill out this form</p>
     <div class="predictor-form">
-      <h3>Gender</h3>
-      <label for="gender">Male</label>
-      <input type="radio" name="gender" class="gender" value="Male" id="Male"/>
-      <label for="gender">Female</label>
-      <input type="radio" name="gender" class="gender" value="Female" id="gender"/><br />
+      <div class="gender">
+        <h3>Gender</h3>
+        <label for="gender">Male</label>
+        <input type="radio" name="gender" class="gender" value="Male" id="Male"/>
+        <label for="gender">Female</label>
+        <input type="radio" name="gender" class="gender" value="Female" id="gender"/><br />
+      </div>
       <div class=for-pregnant id="for-pregnant">
         <h3>Are You Pregnant?</h3>
         <label for="ans">Yes</label>
@@ -70,7 +73,7 @@
         <input type="radio" name="ans" class="ans" value="No" id="No"/><br />
       </div>
       <div class="term" id="term">
-        <h3>What is the Term of Prenancy?</h3>
+        <h3>What is the Term of Pregnancy?</h3>
         <label for="term">First</label>
         <input type="radio" name="term" class="trimester" value="First" />
         <label for="term">Second</label>
@@ -79,15 +82,19 @@
         <input type="radio" name="term" class="trimester" value="Third" />
       </div>
       <div class="for-all" id="for-all">
-        <h3>Age</h3>
-        <input type="number" name="digit" class="age" required />
-        <h3>Activity Level</h3>
-        <select name="activity" class="act" required>
-          <option value="" disabled selected>Select your option</option>
-          <option value="Sedentary">Sedentary</option>
-          <option value="Moderate-Activity">Moderate-Activity</option>
-          <option value="Active">Active</option>
-        </select><br />
+        <div class="age-field">
+          <h3>Age</h3>
+          <input type="number" name="digit" class="age" required />
+        </div>
+        <div class="activity">
+          <h3>Activity Level</h3>
+          <select name="activity" class="act" required>
+            <option value="" disabled selected>Select your option</option>
+            <option value="Sedentary">Sedentary</option>
+            <option value="Moderate-Activity">Moderate-Activity</option>
+            <option value="Active">Active</option>
+          </select><br />
+        </div>
       </div>
       <button class="submittion">Submit</button>
     </div>
