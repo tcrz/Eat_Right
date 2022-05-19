@@ -130,7 +130,7 @@ $(document).ready(function () {
     let act = $('.act').children('option:selected').val()
     let gender = $('.gender:checked').val();
     const term = $('.trimester:checked').val();
-    let url = 'http://192.168.33.10:5001/api/v1/age/' + gender + '/' + act + '/' + age
+    let url = 'http://0.0.0.0:5001/api/v1/age/' + gender + '/' + act + '/' + age
     if (age < 4 || age > 100) {
       $('.calorie-amount').text("Age range should be between 4 and 100");
     }

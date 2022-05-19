@@ -46,7 +46,7 @@ class StorageHandler:
         """Search a recipe"""
         dic = {}
         recipes = self.__session.query(Recipe).filter(
-            Recipe.name.ilike('%{}%'.format(key))).order_by(Recipe.name).all()
+            Recipe.name.ilike('{}%'.format(key))).order_by(Recipe.name).all()
         for recipe in recipes:
             k = recipe.name
             dic[k] = recipe.make_dict()
