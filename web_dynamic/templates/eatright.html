@@ -55,21 +55,24 @@
     </div>
   </header>
   <section class="calorie-predictor">
+    <p class="enter-info">Please Fill out this form</p>
     <div class="predictor-form">
       <h3>Gender</h3>
       <label for="gender">Male</label>
       <input type="radio" name="gender" class="gender" value="Male" />
       <label for="gender">Female</label>
       <input type="radio" name="gender" class="gender" value="Female" /><br />
-      <h3>Age</h3>
-      <input type="number" max="100" min="4" name="digit" class="age" required />
-      <h3>Activity Level</h3>
-      <select name="activity" class="act" required>
-        <option value="" disabled selected>Select your option</option>
-        <option value="Sedentary">Sedentary</option>
-        <option value="Moderate-Activity">Moderate-Activity</option>
-        <option value="Active">Active</option>
-      </select><br />
+      <div class="for-all">
+        <h3>Age</h3>
+        <input type="number" name="digit" class="age" required />
+        <h3>Activity Level</h3>
+        <select name="activity" class="act" required>
+          <option value="" disabled selected>Select your option</option>
+          <option value="Sedentary">Sedentary</option>
+          <option value="Moderate-Activity">Moderate-Activity</option>
+          <option value="Active">Active</option>
+        </select><br />
+      </div>
       <button class="submittion">Submit</button>
     </div>
     <p class="calorie-amount"></p>

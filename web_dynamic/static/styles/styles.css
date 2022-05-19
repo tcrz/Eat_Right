@@ -186,7 +186,7 @@ nav {
  ******************************/
 .calorie-predictor {
   background: white;
-  padding: 20px 20px;
+  /*padding: 20px 20px;*/
   border-bottom: 1px solid #5db85d;
 }
 
@@ -195,26 +195,39 @@ nav {
   height: 500px;
   border: 1px solid #b69382;
   margin: 0 auto;
+  background-color: #ccf5dd38;
+}
+.calorie-predictor p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 25px;
+  margin: 20px 0;
+}
+.for-pregnant h3 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 20px;
 }
 
-.predictor-form h3 {
+.predictor-form h3,
+.for-all h3{
   text-align: center;
   margin: 20px 0;
   font-size: 30px;
 }
-
-.predictor-form label {
+.predictor-form label,
+.for-all label {
   margin-left: 90px;
 }
 
-.predictor-form input[type="number"],
-.predictor-form select {
+.for-all input[type="number"],
+.for-all select {
   width: 150px;
   height: 30px;
   border-radius: 8px;
   margin-left: 150px;
+  text-align: center;
 }
-
 .predictor-form button {
   width: 70px;
   height: 35px;
