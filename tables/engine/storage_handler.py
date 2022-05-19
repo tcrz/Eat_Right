@@ -38,7 +38,7 @@ class StorageHandler:
         keys = list(all_data.keys())
         shuffle(keys)
         shuffled = dict()
-        for key in keys[:3]:
+        for key in keys:
             shuffled.update({key: all_data[key]})
         return shuffled
 
