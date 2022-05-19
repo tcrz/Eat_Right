@@ -119,7 +119,7 @@ $(document).ready(function () {
   $('#Yes').click(function () {
     term.style.display = "inline";
   });
-  $('#No').click(function () {
+  $('#No, #Male').click(function () {
     forPregnancy.style.display = "none";
     term.style.display = "none";
     forAll.style.display = "block";
@@ -139,6 +139,8 @@ $(document).ready(function () {
       url: url,
       success: function (response) {
         $('.calorie-amount').text(response.calorie_amount);
+	$('.act').val('')
+	$('.age').val('')
       }
     });
     if (term == "First") {
