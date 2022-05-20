@@ -1,4 +1,13 @@
 $(document).ready(function () {
+  // STICKY NAV
+  let num = 200
+  $(window).bind('scroll', function () {
+    if ($(window).scrollTop() > num) {
+        $('nav').addClass('sticky-nav');
+    } else {
+        $('nav').removeClass('sticky-nav');
+    }
+  });
   // RECIPE SUBMISSION POP-UP
   $('.add-recipe').click(function () {
     $('.popup-bg').fadeIn(200);

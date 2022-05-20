@@ -47,13 +47,26 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   /* background: orange; */
   max-width: 1100px;
   margin: 0 auto;
-  gap: 15%;
+  /* gap: 10%; */
   margin-top: 5px;
   margin-bottom: 20px;
+}
+ /*sticky-nav*/
+.sticky-nav {
+  justify-content: space-around;
+  position:fixed;
+  max-width:none;
+  width:100%;
+  top:0%;
+  transition: ease-out 1s;
+  margin: 0 auto;
+  padding:10px;
+  box-shadow: 0 1px 3px #c3bfbf;
+  background:white;
 }
 
 .menu-nav {
@@ -201,22 +214,25 @@ nav {
   flex-direction:column;
   justify-content:space-around;
   width: 33%;
-  height: 500px;
+  height: 470px;
   border: 1px solid #b69382;
-  margin: 0 auto;
+  margin: 10px auto;
   background-color: #ccf5dd38;
-  padding: 20px;
+  padding: 15px;
+  /* margin-top:10px */
 }
 
 .predictor-form label{
   margin-left:30px
 }
 
-.calorie-predictor p {
+.calorie-predictor p{
   text-align: center;
   font-size: 25px;
+}
+.text{
   /* font-weight: 25; */
-  margin: 20px 0;
+  padding-top: 65px;
 }
 
 .term, .for-pregnant, .for-all{
@@ -294,6 +310,7 @@ nav {
 .calorie-amount{
   color:#5db85d;
   /* color:white; */
+  padding-top:0;
   font-weight: 600;
 }
 
@@ -846,7 +863,7 @@ td button {
 }
 
 .heading {
-  padding-top: 10px;
+  padding-top: 70px;
   font-size: 300%;
   text-align:center;
 }
