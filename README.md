@@ -3,29 +3,29 @@
 <p>Here we will discuss on how the app works. We will describe the stp by step. So Hop on board and let's Begin</p>
 <p>We will first describe what the given files are when you open the Repository </p>
 <ol>
-  <li><h3>AUTHORS</h3>
+  <li><h4>AUTHORS</h4>
   <p>In this file you'll find the email and the github user names of the developers</p></li>
-  <li><h3>dumpable.sql</h3>
+  <li><h4>dumpable.sql</h4>
   <p>This is the sql file that holds the statements used to create and populate the database. Before you begin, make sure you have installed mysql server.</p>
   <p>Run this command to dump it to the server.</p>
   <p>cat dumpable.sql | mysql -uroot -p</p></li>
-  <li><h3>for_running_flask.txt</h3>
+  <li><h4>for_running_flask.txt</h4>
   <p>Inside this file you'll find the commands to run the webpage and api. You need to open two terminal. One for each to run on.</p></li>
-  <li><h3>sample_images & sample_recipes.txt</h3>
+  <li><h4>sample_images & sample_recipes.txt</h4>
   <p>These two files will contain the information you'll need to populate the submit form on the webpage. More on this later</p></li>
-  <li><h3>tables</h3>
+  <li><h4>tables</h4>
   <p>This folder will hold the backend portion of how the models are created and how the database runs.</p></li>
-  <li><h3>api</h3>
+  <li><h4>api</h4>
   <p>This folder will hold all the routes we used on the backend to make the front-end dynamic</p></li>
-  <li><h3>web_dynamic</h3>
+  <li><h4>web_dynamic</h4>
   <p>This folder holds the html, css, javascript of the webpage</p></li>
-  <li><h3>web_static</h3>
+  <li><h4>web_static</h4>
   <p>This folder hold the static onstent of the webpage, html and css</p><li>
 </ol>
 <p>Now that we are we know hwta each file does let us run and dump what we need and let's begin</p>
 
-<h4>Landing Page</h4>
-![alt text]('https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/landing_page.png?raw=true')
+<h3>Landing Page</h3>
+<img src='https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/landing_page.png'
 <p>This is the landing page. On the top are links you can click on to take you to the diffrent areas of the webpage</p>
 
 <h4>Calorie Predictor</h4>
