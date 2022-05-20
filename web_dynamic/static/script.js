@@ -13,7 +13,7 @@ $(document).ready(function () {
     $('.recipe-view-popup-bg').empty();
     const id = $(this).attr('id');
     console.log(id);
-    $.get('http://192.168.33.10:5001/api/v1/recipe/' + id, function (data) {
+    $.get('http://0.0.0.0:5001/api/v1/recipe/' + id, function (data) {
       let ingrTemplate = '';
       const ingredientsList = data.ingredients.split('\n');
       ingredientsList.forEach(function (item) {
@@ -128,7 +128,7 @@ $(document).ready(function () {
     const act = $('.act').children('option:selected').val();
     const gender = $('.gender:checked').val();
     const term = $('.trimester:checked').val();
-    const url = 'http://192.168.33.10:5001/api/v1/age/' + gender + '/' + act + '/' + age;
+    const url = 'http://0.0.0.0:5001/api/v1/age/' + gender + '/' + act + '/' + age;
     if (age < 4 || age > 100) {
       $('.calorie-amount').text('Age range should be between 4 and 100');
     }
@@ -157,7 +157,7 @@ $(document).ready(function () {
       $('.recipes_list').hide();
       $.ajax({
         type: 'POST',
-        url: 'http://192.168.33.10:5001/api/v1/livesearch',
+        url: 'http://0.0.0.0:5001/api/v1/livesearch',
         data: { text: text },
         success: function (response) {
           $('.recipes_search').empty();
