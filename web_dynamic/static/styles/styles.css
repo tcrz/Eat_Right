@@ -210,7 +210,7 @@ nav {
 .calorie-predictor p {
   text-align: center;
   font-size: 25px;
-  font-weight: 25;
+  /* font-weight: 25; */
   margin: 20px 0;
 }
 
@@ -284,6 +284,12 @@ nav {
   cursor:pointer;
   /* margin-top: 60px; */
   /* margin-left: 180px; */
+}
+
+.calorie-amount{
+  color:#5db85d;
+  /* color:white; */
+  font-weight: 600;
 }
 
 /*--------------------------------*/
@@ -523,7 +529,8 @@ td button {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   /* box-shadow: #5db85db0 -5px 5px */
   border-bottom: 2px solid #5db85d;
-  min-height: 300px
+  min-height: 300px;
+  cursor:pointer;
 }
 
 .add-recipe h2 {

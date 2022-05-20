@@ -132,21 +132,21 @@ $(document).ready(function () {
     const term = $('.trimester:checked').val();
     const url = 'http://0.0.0.0:5001/api/v1/age/' + gender + '/' + act + '/' + age;
     if (age < 4 || age > 100) {
-      $('.calorie-amount').text('Age range should be between 4 and 100');
+      $('.calorie-amount').text('Please complete the form. Age range should be between 4 and 100').css('color', 'red');
     }
     $.ajax({
       type: 'get',
       url: url,
       success: function (response) {
-        $('.calorie-amount').text(response.calorie_amount);
+        $('.calorie-amount').text(response.calorie_amount).css('color', '#5db85d');
       }
     });
     if (term === 'First') {
-      $('.calorie-amount').text('You daily intake should be 1800 calories');
+      $('.calorie-amount').text('You daily intake should be 1800 calories').css('color', '#5db85d');
     } else if (term === 'Second') {
-      $('.calorie-amount').text('You daily intake should be 2200 calories');
+      $('.calorie-amount').text('You daily intake should be 2200 calories').css('color', '#5db85d');
     } else if (term === 'Third') {
-      $('.calorie-amount').text('You daily intake should be 2400 calories');
+      $('.calorie-amount').text('You daily intake should be 2400 calories').css('color', '#5db85d');
     }
   });
 

@@ -57,25 +57,25 @@
   <section class="calorie-predictor">
     <!-- <h1 class="heading">Calorie Predictor</h1> -->
     <p>Please Fill out this form to determine what your daily calorie intake should be</p>
-    <div class="predictor-form">
+    <form onsubmit="return false;" class="predictor-form">
       <div class="gender">
         <h3>Gender</h3>
         <label for="Male">Male</label>
         <input type="radio" name="gender" class="gender" value="Male" id="Male"/>
         <label for="gender">Female</label>
-        <input type="radio" name="gender" class="gender" value="Female" id="gender"/><br />
+        <input type="radio" name="gender" class="gender" value="Female" id="gender" required/><br />
       </div>
       <div class=for-pregnant id="for-pregnant">
         <h3>Are You Pregnant?</h3>
         <label for="Yes">Yes</label>
         <input type="radio" name="ans" class="ans" value="Yes" id="Yes"/>
         <label for="No">No</label>
-        <input type="radio" name="ans" class="ans" value="No" id="No"/><br>
+        <input type="radio" name="ans" class="ans" value="No" id="No" required/><br>
       </div>
       <div class="term" id="term">
         <h3>What is the Term of Pregnancy?</h3>
         <label for="First">First</label>
-        <input type="radio" name="term" class="trimester" value="First" id="First" />
+        <input type="radio" name="term" class="trimester" value="First" id="First" required/>
         <label for="Second">Second</label>
         <input type="radio" name="term" class="trimester" value="Second" id="Second"/>
         <label for="Third">Third</label>
@@ -96,8 +96,8 @@
           </select><br>
         </div>
       </div>
-      <button class="submittion">Submit</button>
-    </div>
+      <button class="submittion" >Submit</button>
+    </form>
     <p class="calorie-amount"></p>
   </section>
   <section class="calorie-section" id="calorie-counter">
