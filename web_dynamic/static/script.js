@@ -132,7 +132,7 @@ $(document).ready(function () {
     const term = $('.trimester:checked').val();
     const url = 'http://0.0.0.0:5001/api/v1/age/' + gender + '/' + act + '/' + age;
     if (age < 4 || age > 100) {
-      $('.calorie-amount').text('Please complete the form. Age range should be between 4 and 100').css('color', 'red');
+      $('.calorie-amount').text('Please complete the form (Age range should be between 4 and 100)').css('color', 'red');
     }
     $.ajax({
       type: 'get',

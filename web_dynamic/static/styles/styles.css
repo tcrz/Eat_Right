@@ -71,13 +71,18 @@ nav {
   border-bottom: 2px solid #5db85d;
 }
 
-.menu-icons>ion-icon {
-  font-size: 130%;
+.menu-icons ion-icon{
+  font-size: 140%;
   border: 1px solid black;
   padding: 6px;
   border-radius: 50%;
   background: black;
   color: white;
+}
+
+.menu-icons ion-icon:hover {
+  color:black;
+  background:white
 }
 
 .landing {
@@ -310,10 +315,10 @@ nav {
   /* background:yellow; */
 }
 
-.heading {
+/* .heading {
   text-align: center;
-  /* border-bottom: 1px solid #5db85d; */
-}
+  border-bottom: 1px solid #5db85d;
+} */
 
 .subtext {
   text-align: center;
@@ -836,13 +841,14 @@ td button {
  **********************/
 
 .about_us {
-  border: 1px solid green;
+  border-top: 1px solid #5db85d;
   background: #ccf5dd38;
 }
 
 .heading {
-  margin-top: 10px;
+  padding-top: 10px;
   font-size: 300%;
+  text-align:center;
 }
 
 .section_title,
@@ -908,9 +914,16 @@ td button {
   margin-left: 100px; */
 }
 
+/***********************
+ *   DEVELOPERS        *
+ **********************/
 .creators {
   /* width: 100%; */
   /* padding: 100px 0px; */
+}
+
+.developers{
+  border-top: 1px solid #5db85d;
 }
 
 .title h2 {
