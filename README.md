@@ -25,19 +25,19 @@
 <p>Now that we are we know hwta each file does let us run and dump what we need and let's begin</p>
 
 <h3>Landing Page</h3>
-<img src='https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/landing_page.png'
+<img src='https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/landing_page.png'>
 <p>This is the landing page. On the top are links you can click on to take you to the diffrent areas of the webpage</p>
 
-<h4>Calorie Predictor</h4>
-![alt text]('https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/male_predictor.png?raw=true')
+<h3>Calorie Predictor</h3>
+<img src='https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/male_predictor.png'>
 <p>Here is the calorie predictor. You will click or type in your information, such as  your age, gender and activity level on daily bases and it will show you how much you calorie intake should be.</p>
-![alt text]('https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/female_predictor.png?raw=true')
+<img src='https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/female_predictor.png'>
 <p>It gives alternative options for women who are pregnant as well</p>
 <p>Ones you know how much your daily intake should be you can scroll down to the calorie counter section.</p>
 
-<h4>Calorie Counter</h4>
-![alt text]('https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/calorie_counter.png?raw=true')
-![alt text]('https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/calorie_counter_dinner.png?raw=true')
+<h3>Calorie Counter</h3>
+<img src='https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/calorie_counter.png'>
+<img src='https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/calorie_counter_dinner.png'>
 <p>Here you'll put in your meals to determine how much you ate.</p>
 <p>Example: This person had clicked on 'Add Item' and we can see that they ate Chicken for supper that is of one Unit.</p>
 <p>We can also see that, chicken of one unit is 189.2 Calories.</p>
@@ -45,23 +45,23 @@
 You will then get to see it is the amount you should be eating on daily basis, based on the calorie preditors calculation.</p>
 <p>Let us scroll down and explore more</p>
 
-<h4>Recipe</h4>
-![alt text]('https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/recipe.png?raw=true')
+<h3>Recipe</h3>
+<img src='https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/recipe.png'>
 <p>Here you will find a list of recipes people from around the world have submitted. You can even search for recipe you are looking for on the search button.</p>
 <p>Each card comes with image of the food, name of the food, user who submitted the food and a badge on top to tell you the category of the food. It can be Snack, Dish, Soup, Stew, Drink...etc.</p>
 <p>When you click on each card a pop-op will appear to show you the ingredients and preparation of the meal</p>
-![alt text]('https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/recipe_view.png?raw=true')
+<img src='https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/recipe_view.png'>
 <p>This section also comes with add recipe card where you can add your favorite dishes on the site. Click on the 'Plus sign' on the grey Add recipe and you'll find a submit form</p>
-![alt text]('https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/submit.png?raw=true')
+<img src='./web_dynamic/static/images/readme_images/submit.png'>
 <p>The Submit form has many input fields where one can fill out. There is user name, recipe name, choose image(Image of the food), category(List of categories to pick from), Ingrediets(It shows you how to place ingredients), and preparation(It also show you how to add preparation section).</p>
 <p>Once you fill out all the required input you then click submit. It will then be displayed on recipe section</p>
 <p>Above we mentioned files called sample\_images and sample\_recipe.txt. These files have sample recipes you can try on the submit form.</p>
 <p>Let us scroll down</p>
 
-<h4>About Us</h4>
-![alt text]('https://github.com/tcrz/Eat_Right/blob/dev/web_dynamic/static/images/readme_images/About_us.png?raw=true')
+<h3>About Us</h3>
+<img src='./web_dynamic/static/images/readme_images/About_us.png'>
 <p>This section briefly summerizes the app and the development of the app. You can read it for more details.</p>
 <p>Let us scroll down</p>
 
-<h4>Developers</h4>
+<h3>Developers</h3>
 <p>Here you will learn who the developers are and what they contributed to the making of the app</p>
