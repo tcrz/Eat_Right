@@ -15,16 +15,9 @@ def close(error):
 
 @app.route('/', strict_slashes=False)
 def show_html():
-    """This function will just show the html"""
-    recipes = storage.shuff(Recipe)
+    """This function will show the webpage"""
+    recipes = storage.all(Recipe)
     return render_template('eatright.html', recipes=recipes)
-
-
-@app.route('/livesearch', methods=['POST', 'GET'], strict_slashes=False)
-def livesearch():
-    searchbox = request.form.get('text')
-    recipes = storage.search(searchbox)
-    return recipes
 
 
 if __name__ == "__main__":

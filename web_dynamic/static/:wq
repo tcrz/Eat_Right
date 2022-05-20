@@ -9,11 +9,11 @@ $(document).ready(function () {
   });
 
   // RECIPE VIEW POP-UP
-  $('.recipes_list, .recipes_search').on('click', '.recipe', function () {
+  $('.recipes_list').on('click', '.recipe', function () {
     $('.recipe-view-popup-bg').empty();
     const id = $(this).attr('id');
     console.log(id);
-    $.get('http://192.168.33.10:5001/api/v1/recipe/' + id, function (data) {
+    $.get('http://0.0.0.0:5001/api/v1/recipe/' + id, function (data) {
       let ingrTemplate = '';
       const ingredientsList = data.ingredients.split('\n');
       ingredientsList.forEach(function (item) {
@@ -92,7 +92,7 @@ $(document).ready(function () {
           $('.total .total-value ').text(sum + ' Calories');
         }
       },
-      error: function ajaxError (jqXHR) {
+      error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
       }
     });
@@ -107,63 +107,46 @@ $(document).ready(function () {
     console.log('total:', totalCal);
     $('.total .total-value ').text(totalCal + ' Calories');
   });
-  // Predictor
-  const forPregnancy = document.getElementById('for-pregnant');
-  const forAll = document.getElementById('for-all');
-  const term = document.getElementById('term');
-  $('#gender').click(function () {
-    forPregnancy.style.display = 'block';
-    forAll.style.display = 'none';
-  });
-  $('#Yes').click(function () {
-    term.style.display = 'inline';
-  });
-  $('#No, #Male').click(function () {
-    forPregnancy.style.display = 'none';
-    term.style.display = 'none';
-    forAll.style.display = 'block';
-  });
+
+  const gender = document.getElementById('gender')
+  const forPregnancy = document.getElementById('for-pregnant')
+  const forAll = document.getElementById('for-all')
+  const term = document.getElementById('term')
+  if (gender.checked) {
+    forPregnancy.style.display = "block";
+    forAll.style.display = "none";
+  }
+  // predictor
   $('.submittion').click(function () {
-    const age = $('.age').val();
-    const act = $('.act').children('option:selected').val();
-    const gender = $('.gender:checked').val();
-    const term = $('.trimester:checked').val();
-    const url = 'http://192.168.33.10:5001/api/v1/age/' + gender + '/' + act + '/' + age;
+    let age = $('.age').val();
+    let act = $('.act').children('option:selected').val()
+    let gender = $('.gender:checked').val();
+    let url = 'http://0.0.0.0:5001/api/v1/age/' + gender + '/' + act + '/' + age
     if (age < 4 || age > 100) {
-      $('.calorie-amount').text('Age range should be between 4 and 100');
+      $('.calorie-amount').text("Age range should be between 4 and 100");
     }
     $.ajax({
-      type: 'get',
+      type: "get",
       url: url,
       success: function (response) {
         $('.calorie-amount').text(response.calorie_amount);
-        $('.act').val('');
-        $('.age').val('');
       }
     });
-    if (term === 'First') {
-      $('.calorie-amount').text('You daily intake should be 1800 calories');
-    } else if (term === 'Second') {
-      $('.calorie-amount').text('You daily intake should be 2200 calories');
-    } else if (term === 'Third') {
-      $('.calorie-amount').text('You daily intake should be 2400 calories');
-    }
   });
 
   // SEARCH FOR RECIPE
-  $('.search_text').on('input', function () {
-    const text = $('.search_text').val();
+  $('.search_text').on("input", function () {
+    text = $('.search_text').val();
     if (text.length > 0) {
-      $('.recipes_list').hide();
       $.ajax({
-        type: 'POST',
-        url: 'http://192.168.33.10:5001/api/v1/livesearch',
+        type: "POST",
+        url: "/livesearch",
         data: { text: text },
         success: function (response) {
-          $('.recipes_search').empty();
+          $('.recipes_list').empty();
           $.each(response, function (indexInArray, valueOfElement) {
-            const mimetype = '.png';
-            $('.recipes_search').append(
+            let mimetype = '.png'
+            $('.recipes_list').append(
               '<article class="recipe" id=' + valueOfElement.id + '>' +
               '<div class="category">' +
               '<img src=../static/images/' + valueOfElement.category + mimetype + ' alt="recipe logo" />' +
@@ -178,9 +161,6 @@ $(document).ready(function () {
           });
         }
       });
-    } else {
-      $('.recipes_search').empty();
-      $('.recipes_list').show();
     }
   });
 });

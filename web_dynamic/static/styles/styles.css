@@ -200,7 +200,7 @@ nav {
   border: 1px solid #b69382;
   margin: 0 auto;
   background-color: #ccf5dd38;
-  padding:20px
+  padding: 20px;
 }
 
 .predictor-form label{
@@ -210,8 +210,8 @@ nav {
 .calorie-predictor p {
   text-align: center;
   font-size: 25px;
-  font-weight: 25px;
-  /* margin: 20px 0; */
+  font-weight: 25;
+  margin: 20px 0;
 }
 
 .term, .for-pregnant, .for-all{
@@ -428,7 +428,7 @@ td.search select {
 }
 
 td.search-btn {
-  padding: auto 0%;
+  /*padding: auto 0%;*/
   text-align: center;
   border-width: 0px 0px 1px;
   /* margin:0 auto */
@@ -608,7 +608,7 @@ td button {
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 20px;
-  font-family: helvetica neue, helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
   box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
 }

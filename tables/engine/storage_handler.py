@@ -1,16 +1,15 @@
 #!/usr/bin/python3
 """This will contain the class StorageHandler"""
-
-from tables.basemodel import Base
-from tables.recipe import Recipe
 import os
+from random import shuffle
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
-from random import shuffle
+from tables.basemodel import Base
+from tables.recipe import Recipe
 
 
 class StorageHandler:
-    """This function will handle functions related to storage"""
+    """This class will handle storage portion"""
     __engine = None
     __session = None
 
@@ -24,7 +23,7 @@ class StorageHandler:
                                       pool_pre_ping=True)
 
     def all(self, cls=None):
-        """This function will query the dtabase and gives a dictionary"""
+        """This function will query the database and gives a dictionary"""
         new_dict = {}
         if cls:
             for value in self.__session.query(cls).all():
@@ -33,7 +32,7 @@ class StorageHandler:
         return new_dict
 
     def shuff(self, cls=None):
-        """Return random recipes"""
+        """This function will return random recipes"""
         all_data = self.all(cls)
         keys = list(all_data.keys())
         shuffle(keys)
@@ -43,7 +42,7 @@ class StorageHandler:
         return shuffled
 
     def search(self, key):
-        """Search a recipe"""
+        """This function will search a recipe based on it's name"""
         dic = {}
         recipes = self.__session.query(Recipe).filter(
             Recipe.name.ilike('{}%'.format(key))).order_by(Recipe.name).all()
@@ -53,11 +52,11 @@ class StorageHandler:
         return dic
 
     def new(self, obj):
-        """THis function will add new value to database"""
+        """This function will add new value to database"""
         self.__session.add(obj)
 
     def save(self):
-        """THis will save a new value to database"""
+        """This will save a new value to database"""
         self.__session.commit()
 
     def reload(self):

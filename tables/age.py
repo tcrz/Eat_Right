@@ -5,7 +5,7 @@ from tables.basemodel import BaseModel, Base
 
 
 class Age(BaseModel, Base):
-    """A base class for Age models"""
+    """A base class for Age model"""
     __tablename__ = "ages"
     min_age = Column(Integer, nullable=False)
     max_age = Column(Integer, nullable=False)
