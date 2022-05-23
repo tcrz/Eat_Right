@@ -232,7 +232,7 @@ nav {
 }
 .text{
   /* font-weight: 25; */
-  padding-top: 65px;
+  padding-top: 70px;
 }
 
 .term, .for-pregnant, .for-all{
@@ -481,11 +481,12 @@ td button {
 
 .recipes_list, .recipes_search {
   /* background: yellow; */
-  margin: 25px 100px;
+  place-content: center;
+  /* margin: 25px auto; */
   display: grid;
   grid-template-columns: 250px 250px 250px 250px;
   grid-gap: 30px;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 
 .recipe {
@@ -943,13 +944,13 @@ td button {
   border-top: 1px solid #5db85d;
 }
 
-.title h2 {
+/* .title h2 {
   color: black;
   font-size: 40px;
   width: 1130px;
   margin: 30px auto;
   text-align: center;
-}
+} */
 
 .box {
   display: flex;
@@ -1003,3 +1004,4 @@ td button {
   height: 20px;
   border-radius: 50%;
 }
+
