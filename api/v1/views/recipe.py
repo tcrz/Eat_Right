@@ -51,8 +51,11 @@ def delete_recipe(ids):
 
 
 def allowed_file(filename):
-        return '.' in filename and filename.rsplit('.', 1)[1].lower()\
-                in ALLOWED_EXTENSIONS
+    """This function will check if the filename given matches
+       the allowed extension provided
+    """
+    return '.' in filename and filename.rsplit('.', 1)[1].lower()\
+           in ALLOWED_EXTENSIONS
 
 
 @views.route('/recipe/', methods=['POST'])
@@ -77,3 +80,13 @@ def add_recipe():
     recipe.save()
     recipe_section = request.referrer + '#recipes'
     return redirect(recipe_section)
+
+
+@views.route('/livesearch', methods=['POST', 'GET'], strict_slashes=False)
+def livesearch():
+    """This function will use the text given to search the recipe to
+       return the recipe searched
+    """
+    searchbox = request.form.get('text')
+    recipes = storage.search(searchbox)
+    return recipes

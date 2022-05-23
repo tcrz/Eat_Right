@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """This function will hold the basemodel"""
-import uuid
 from datetime import datetime
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, DateTime, String
+from sqlalchemy.ext.declarative import declarative_base
+import uuid
 
 Base = declarative_base()
 
@@ -28,10 +28,12 @@ class BaseModel:
         storage.save()
 
     def make_dict(self):
-        """THis function will change the content of dict value of instance"""
+        """This function will change the content of dict value of instance
+           and save it in a different dictionary
+        """
         dictionary = {}
         dictionary.update(self.__dict__)
         if '_sa_instance_state' in dictionary:
-            del  dictionary['_sa_instance_state']
+            del dictionary['_sa_instance_state']
         dictionary['created_at'] = self.created_at.isoformat()
         return dictionary

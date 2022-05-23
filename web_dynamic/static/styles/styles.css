@@ -47,13 +47,26 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   /* background: orange; */
   max-width: 1100px;
   margin: 0 auto;
-  gap: 15%;
+  /* gap: 10%; */
   margin-top: 5px;
   margin-bottom: 20px;
+}
+ /*sticky-nav*/
+.sticky-nav {
+  justify-content: space-around;
+  position:fixed;
+  max-width:none;
+  width:100%;
+  top:0%;
+  transition: ease-out 1s;
+  margin: 0 auto;
+  padding:10px;
+  box-shadow: 0 1px 3px #c3bfbf;
+  background:white;
 }
 
 .menu-nav {
@@ -71,13 +84,18 @@ nav {
   border-bottom: 2px solid #5db85d;
 }
 
-.menu-icons>ion-icon {
-  font-size: 130%;
+.menu-icons ion-icon{
+  font-size: 140%;
   border: 1px solid black;
   padding: 6px;
   border-radius: 50%;
   background: black;
   color: white;
+}
+
+.menu-icons ion-icon:hover {
+  color:black;
+  background:white
 }
 
 .landing {
@@ -181,6 +199,121 @@ nav {
   color: #5db85d;
 }
 
+/*******************************
+ *      Calorie Predictor      *
+ ******************************/
+.calorie-predictor {
+  background: white;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #5db85d;
+}
+
+.predictor-form {
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  justify-content:space-around;
+  width: 33%;
+  height: 470px;
+  border: 1px solid #b69382;
+  margin: 10px auto;
+  background-color: #ccf5dd38;
+  padding: 15px;
+  /* margin-top:10px */
+}
+
+.predictor-form label{
+  margin-left:30px
+}
+
+.calorie-predictor p{
+  text-align: center;
+  font-size: 25px;
+}
+.text{
+  /* font-weight: 25; */
+  padding-top: 65px;
+}
+
+.term, .for-pregnant, .for-all{
+  text-align: center;
+}
+
+.for-pregnant {
+  display: none;
+}
+
+.term {
+  display: none;
+}
+
+.for-all {
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  /* display: block; */
+}
+
+.age-field{
+  padding-bottom:30px
+}
+
+.for-pregnant h3,
+.term h3 {
+  text-align: center;
+  /* margin: 20px 0; */
+  font-size: 20px;
+}
+
+.predictor-form h3,
+.for-all h3{
+  text-align: center;
+  /* margin: 20px 0; */
+  font-size: 30px;
+}
+
+.predictor-form .term label {
+  /* margin-left: 60px; */
+}
+
+.predictor-form label,
+.for-pregnant label,
+.for-all label {
+  /* margin-left: 90px; */
+}
+
+.for-all input[type="number"],
+.for-all select {
+  width: 150px;
+  height: 30px;
+  border-radius: 8px;
+  /* margin-left: 150px; */
+  text-align: center;
+}
+.predictor-form button {
+  /* width: 70px; */
+  /* height: 35px; */
+  all: unset;
+  padding: 5px 30px;
+  font-size:120%;
+  font-weight: 600;
+  border: 1px solid #7fcf9a;
+  border-radius: 25px;
+  background-color: #5db85d;
+  color: white;
+  text-align: center;
+  cursor:pointer;
+  /* margin-top: 60px; */
+  /* margin-left: 180px; */
+}
+
+.calorie-amount{
+  color:#5db85d;
+  /* color:white; */
+  padding-top:0;
+  font-weight: 600;
+}
+
 /*--------------------------------*/
 /*CALORIE COUNTER SECTION         */
 /*--------------------------------*/
@@ -199,10 +332,10 @@ nav {
   /* background:yellow; */
 }
 
-.heading {
+/* .heading {
   text-align: center;
-  /* border-bottom: 1px solid #5db85d; */
-}
+  border-bottom: 1px solid #5db85d;
+} */
 
 .subtext {
   text-align: center;
@@ -323,7 +456,7 @@ td.search select {
 }
 
 td.search-btn {
-  padding: auto 0%;
+  /*padding: auto 0%;*/
   text-align: center;
   border-width: 0px 0px 1px;
   /* margin:0 auto */
@@ -346,7 +479,7 @@ td button {
   background: white;
 }
 
-.recipes_list {
+.recipes_list, .recipes_search {
   /* background: yellow; */
   margin: 25px 100px;
   display: grid;
@@ -396,14 +529,14 @@ td button {
 }
 
 .category img {
-    width: 45px;
-    height: 45px;
-    padding: 4px;
-    background-color: #FC7C3C;
-    border-radius: 15px;
-    position: absolute;
-    top: 1%;
-    right: 1%;
+  width: 45px;
+  height: 45px;
+  padding: 4px;
+  background-color: #FC7C3C;
+  border-radius: 15px;
+  position: absolute;
+  top: 1%;
+  right: 1%;
 }
 
 .add-recipe {
@@ -418,7 +551,8 @@ td button {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   /* box-shadow: #5db85db0 -5px 5px */
   border-bottom: 2px solid #5db85d;
-  min-height: 300px
+  min-height: 300px;
+  cursor:pointer;
 }
 
 .add-recipe h2 {
@@ -440,6 +574,26 @@ td button {
   padding: 5px;
 }
 
+/* RECIPE SEARCH FIELD */
+.search_box {
+  display: flex;
+  justify-content: center;
+  gap:1%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.search_text {
+  font-size: 20px;
+  padding-left: 13px;
+  border-radius: 20px;
+}
+
+.search_box input[type="text"]:focus{
+  outline: none;
+  border-radius: 20px;
+  border:2px solid #70cf70
+}
 /****************************
  * RECIPE SUBMISSION POP-UP *
 *****************************/
@@ -483,7 +637,7 @@ td button {
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 20px;
-  font-family: helvetica neue, helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
   box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
 }
@@ -519,7 +673,7 @@ td button {
   margin-top: 15px;
   border-radius: 50px;
   border: none;
-  background-image: url("../images/blurred.jpg");
+  background-image: url("../images/rcpview.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -704,13 +858,14 @@ td button {
  **********************/
 
 .about_us {
-  border: 1px solid green;
+  border-top: 1px solid #5db85d;
   background: #ccf5dd38;
 }
 
 .heading {
-  margin-top: 10px;
+  padding-top: 70px;
   font-size: 300%;
+  text-align:center;
 }
 
 .section_title,
@@ -776,9 +931,16 @@ td button {
   margin-left: 100px; */
 }
 
+/***********************
+ *   DEVELOPERS        *
+ **********************/
 .creators {
   /* width: 100%; */
   /* padding: 100px 0px; */
+}
+
+.developers{
+  border-top: 1px solid #5db85d;
 }
 
 .title h2 {

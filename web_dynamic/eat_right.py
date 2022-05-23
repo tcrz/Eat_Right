@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """THis script will be able to run a flask application"""
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from tables import storage
 from tables.recipe import Recipe
 
@@ -15,7 +15,7 @@ def close(error):
 
 @app.route('/', strict_slashes=False)
 def show_html():
-    """This function will just show the html"""
+    """This function will show the webpage"""
     recipes = storage.all(Recipe)
     return render_template('eatright.html', recipes=recipes)
 
