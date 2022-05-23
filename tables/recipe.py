@@ -5,7 +5,7 @@ from tables.basemodel import BaseModel, Base
 
 
 class Recipe(BaseModel, Base):
-    """A base class for recipemodels"""
+    """A base class for recipe model"""
     __tablename__ = "recipes"
     name = Column(String(128), nullable=False)
     user_name = Column(String(128), nullable=False)
