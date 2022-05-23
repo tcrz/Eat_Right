@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../static/styles/styles.css" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="../static/script.js"></script>
-  <link rel="icon" href="../static/images/fork_knife.jpg" alt="logo" />
+  <link rel="icon" href="../static/images/fork_knife.jpg"/>
 </head>
 
 <body>
@@ -24,14 +24,16 @@
         <ion-icon name="leaf-outline"></ion-icon>Eat Right
       </h2>
       <ul class="menu-nav">
+        <li><a href="#calorie-predictor">Calorie predictor</a></li>
         <li><a href="#calorie-counter">Calorie counter</a></li>
         <li><a href="#recipes">Recipes</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#developers">Developers</a></li>
       </ul>
       <div class="menu-icons">
-        <ion-icon name="fast-food-outline"></ion-icon>
-        <ion-icon name="pizza-outline"></ion-icon>
+        <a href="https://github.com/tcrz/Eat_Right" target="_blank">
+          <ion-icon name="code-slash-outline"></ion-icon>
+        </a>
       </div>
     </nav>
     <div class="landing">
@@ -41,9 +43,9 @@
           We Are Here To Help
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta
-          augue libero, eget tempus velit eleifend nec. Donec elementum
-          ligula.
+          Welcome to Eat Right. We have provided you with calorie counter
+	  and a recipe section on our app, because we want you to stay healthy
+	  all day long.
         </p>
         <!-- <button class="CC-btn">Calorie counter</button> -->
         <a class="CC-btn" href="#calorie-counter">Calorie counter</a>
@@ -54,12 +56,89 @@
       </div>
     </div>
   </header>
+  <section class="features" id="features">
+    <h1 class="heading">Features</h1>
+    <p class="subtext">Let us explore on the working of the app.</p>
+    <div class="feature">
+      <div class="boxes">
+	<img src="../static/images/calorie_predictor.png" alt="calorie predictor" />
+	<h4>Know your daily calorie intake</h4>
+        <p>Use our extensive data to know your daily calorie intake based on your age, gender, activity level and even state of pregnancy.</p>
+      </div>
+      <div class="boxes">
+	<img src="../static/images/calorie_counter.png" alt="calorie counter" />
+	<h4>Calculate your meals</h4>
+        <p>Calculate the calorie of your meals based on what you had for breakfast, lunch and dinner.</p>
+      </div>
+      <div class="boxes">
+	<img src="../static/images/recipe_view.png" alt="Recipes book" />
+	<h4>Explore our collection of Recipes</h4>
+        <p>You will be able to view and search different recipes from all around the world.</p>
+      </div>
+      <div class="boxes">
+	<img src="../static/images/recipe_submit.png" alt="Recipe submission form" />
+	<h4>Share Your favorite Recipes</h4>
+	<p>You can also share your favorite recipes with anyone who visits the site.</p>
+      </div>
+    </div>
+    <p class="subtext">For visual explanation play the video below.</p>
+    <div class="videos">
+      <video width="500" height="300" controls>
+        <source src="../static/images/eat_right.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+  <section class="calorie-predictor" id="calorie-predictor">
+    <!-- <h1 class="heading">Calorie Predictor</h1> -->
+    <p class="text">Please Fill out this form to determine what your daily calorie intake should be</p>
+    <form onsubmit="return false;" class="predictor-form">
+      <div class="gender">
+        <h3>Gender</h3>
+        <label for="Male">Male</label>
+        <input type="radio" name="gender" class="gender" value="Male" id="Male"/>
+        <label for="gender">Female</label>
+        <input type="radio" name="gender" class="gender" value="Female" id="gender" required/><br />
+      </div>
+      <div class=for-pregnant id="for-pregnant">
+        <h3>Are You Pregnant?</h3>
+        <label for="Yes">Yes</label>
+        <input type="radio" name="ans" class="ans" value="Yes" id="Yes"/>
+        <label for="No">No</label>
+        <input type="radio" name="ans" class="ans" value="No" id="No" required/><br>
+      </div>
+      <div class="term" id="term">
+        <h3>What is the Term of Pregnancy?</h3>
+        <label for="First">First</label>
+        <input type="radio" name="term" class="trimester" value="First" id="First" required/>
+        <label for="Second">Second</label>
+        <input type="radio" name="term" class="trimester" value="Second" id="Second"/>
+        <label for="Third">Third</label>
+        <input type="radio" name="term" class="trimester" value="Third" id="Third"/>
+      </div>
+      <div class="for-all" id="for-all">
+        <div class="age-field">
+          <h3>Age</h3>
+          <input type="number" name="digit" class="age" required />
+        </div>
+        <div class="activity">
+          <h3>Activity Level</h3>
+          <select name="activity" class="act" required>
+            <option value="" disabled selected>Select your option</option>
+            <option value="Sedentary">Sedentary</option>
+            <option value="Moderate-Activity">Moderate-Activity</option>
+            <option value="Active">Active</option>
+          </select><br>
+        </div>
+      </div>
+      <button class="submittion" >Submit</button>
+    </form>
+    <p class="calorie-amount"></p>
+  </section>
   <section class="calorie-section" id="calorie-counter">
     <div class="calorie-counter">
       <h1 class="heading">Calorie counter</h1>
       <p class="subtext">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta
-        augue libero, eget tempus velit eleifend nec. Donec elementum ligula.
+        Add items to calculate the calorie amount of your meals.
       </p>
       <h2>Breakfast</h2>
       <table>
@@ -73,7 +152,7 @@
             <input type="text" />
             <label>Quantity:</label>
             <input type="number" min="1" value="1" required />
-            <label for="cars">Serving:</label>
+            <label for="serving">Serving:</label>
             <select name="serving" id="serving">
               <option value="cup">cup</option>
               <option value="tsp">tsp</option>
@@ -109,7 +188,7 @@
             <input type="text" />
             <label>Quantity:</label>
             <input type="number" min="1" value="1" required />
-            <label for="cars">Serving:</label>
+            <label for="serving">Serving:</label>
             <select name="serving" id="serving">
               <option value="cup">cup</option>
               <option value="tsp">tsp</option>
@@ -145,7 +224,7 @@
             <input type="text" />
             <label>Quantity:</label>
             <input type="number" min="1" value="1" required />
-            <label for="cars">Serving:</label>
+            <label for="serving">Serving:</label>
             <select name="serving" id="serving">
               <option value="cup">cup</option>
               <option value="tsp">tsp</option>
@@ -183,14 +262,14 @@
         <h1 style="text-align: center">Submit Recipe</h1>
         <ion-icon name="close-outline"></ion-icon>
         <form action="http://127.0.0.1:5001/api/v1/recipe/" enctype="multipart/form-data" method="POST">
-          <label for="username">Username</label><br />
-          <input type="text" name="username" required /><br />
-          <label for="recipe-name">Recipe name</label><br />
-          <input type="text" name="recipe-name" required /><br />
-          <label for="img">Upload photo of the meal</label><br />
-          <input type="file" id="img" name="img" accept="image/*" required /><br />
-          <label for="categorizing">Category</label><br />
-          <select name="category" required><br />
+          <label for="username">Username</label><br>
+          <input type="text" name="username" id="username" required /><br>
+          <label for="recipe-name">Recipe name</label><br>
+          <input type="text" name="recipe-name" id="recipe-name" required /><br>
+          <label for="img">Upload photo of the meal</label><br>
+          <input type="file" id="img" name="img" accept="image/*" required /><br>
+          <label for="categorizing">Category</label><br>
+          <select name="category" id="categorizing" required><br>
             <option value="" disabled selected>Select your option</option>
             <option value="Dessert">Dessert</option>
             <option value="Snack">Snack</option>
@@ -200,14 +279,22 @@
             <option value="Sauce">Sauce</option>
             <option value="Soup">Soup</option>
             <option value="Stew">Stew</option>
-          </select><br />
-          <label for="ingredients">Ingredients</label><br />
-          <textarea name="ingredients" rows="8" placeholder="1 Cup of rice
+          </select><br>
+          <label for="ingredients">Ingredients</label><br>
+          <textarea name="ingredients" rows="8" placeholder="Please submit each ingredient on a new line.
+
+Example
+
+1 Cup of rice
+3 Cups of water
 1 TSP of salt" required></textarea>
-          <label for="preparation">Preparation</label><br />
-          <textarea name="preparation" rows="8" placeholder="Put the rice in the bowl
-Add water and some salt
-Stir quickly" required></textarea><br />
+          <label for="preparation">Preparation</label><br>
+          <textarea name="preparation" rows="8" placeholder="Please submit each step on a new line.
+Example
+
+Put the rice in the bowl and wash it thoroughly.
+Add water, rice and some salt on a cooker on medium heat.
+Close the lid until it is cooked." required></textarea><br>
           <input type="submit" />
         </form>
       </div>
@@ -220,9 +307,14 @@ Stir quickly" required></textarea><br />
     <div class="recipes">
       <h1 class="heading">Recipes</h1>
       <p class="subtext">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta
-        augue libero, eget tempus velit eleifend nec. Donec elementum ligula.
+        Enjoy a collection of outlandish foods from all over the World.
+	Don't forget to add yours as well, so that we can experience the foods that you've experienced.
       </p>
+      <div class="search_box">
+        <label>Search:</label>
+        <input type="text" name="search" class="search_text" placeholder="search recipe">
+      </div>
+      <div class="recipes_search"></div>
       <div class="recipes_list">
         {% for recipe in recipes.values() %}
         <article class="recipe" id="{{ recipe.id }}">
@@ -269,15 +361,15 @@ Stir quickly" required></textarea><br />
             you can share your favorite recipe with anyone who vists the app.
           </p> -->
         <p>
-          Eat Right is an app that will help you count your daily calorie
+          <!--Eat Right is an app that will help you count your daily calorie
           intake. by providing you with an abundant food data and calories.
           The app is not only a calorie counter, it also has a section where
-          you can share your favorite recipe with anyone who vists the app.
+	  you can share your favorite recipe with anyone who vists the app. -->
           Our mission is to help you stay healthy and for you to join a site
           where you can discover exotic meals from all over the world with
           just a click of a button. As long as you want to maintain a healthy
           lifestyle, you have come to the right place. because We want to join
-          you on your journey foor a better life.
+          you on your journey for a better life.
         </p>
       </div>
       <div class="story">
@@ -288,7 +380,7 @@ Stir quickly" required></textarea><br />
           The idea for the app came when we were
           brainstorming individually on what to create, we realised that we all had a similar idea.
           When we discussed it, It sounded so fun, doable, and helpful.
-          It has not been an easy journey, the beginning is always the hardest part. we powered it through a
+          It has not been an easy journey and the beginning is always the hardest part. We powered through the
           difficult period and pushed on. With time, it started to come together the way we imagined it.
           Ideas we did not even think of, in the beginning, became part of it and it worked. We can only
           hope that you enjoy it as much as we enjoyed making this.
@@ -297,7 +389,7 @@ Stir quickly" required></textarea><br />
     </div>
   </section>
 
-  <section id="developers">
+  <section class="developers" id="developers">
     <div class="creators">
       <div class="title">
         <h2 class="heading">Developers</h2>
@@ -321,6 +413,9 @@ Stir quickly" required></textarea><br />
               <img src="../static/images/twitter.png" alt="twitter logo" /></a>
             <a href="https://github.com/" target="_blank">
               <img src="../static/images/github.png" alt="github logo" /></a>
+            <a href="https://linkedin.com/" target="_blank">
+              <img src="../static/images/linkedin.png" alt="linkedin logo" />
+            </a>
           </div>
         </div>
 
@@ -332,7 +427,7 @@ Stir quickly" required></textarea><br />
               Hi, I am Samra Solomon, a Software engineer student from Ethiopia. I am
               interested in Reading, Cooking, Sowing and now my new addiction Coding.
               <br>
-              I contributed the backend work and styling of certain sections of
+              I contributed the backend work, creating and styling of certain sections of
               the webpage.
             </p>
           </div>
@@ -342,6 +437,9 @@ Stir quickly" required></textarea><br />
             </a>
             <a href="https://github.com/samie-ya" target="_blank">
               <img src="../static/images/github.png" alt="github logo" />
+            </a>
+            <a href="https://linkedin.com//in/samra-solomon-24b745208/" target="_blank">
+              <img src="../static/images/linkedin.png" alt="linkedin logo" />
             </a>
           </div>
         </div>
@@ -363,6 +461,9 @@ Stir quickly" required></textarea><br />
             </a>
             <a href="https://github.com/tcrz" target="_blank">
               <img src="../static/images/github.png" alt="github logo" />
+            </a>
+            <a href="https://linkedin.com/" target="_blank">
+              <img src="../static/images/linkedin.png" alt="linkedin logo" />
             </a>
           </div>
         </div>
