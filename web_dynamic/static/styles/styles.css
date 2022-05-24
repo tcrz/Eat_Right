@@ -44,6 +44,19 @@ header {
   border-bottom: 1px solid #5db85d;
 }
 
+input[type=checkbox] {
+  display: none;
+}
+
+.three-lines {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+  position: absolute;
+  right: 20px;
+  top: 13px;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -1075,6 +1088,35 @@ td button {
     }
     .landing .hero-text-box h1{
       font-size:260%
+    }
+    .menu-nav {
+        display: none;
+        position: absolute;
+        top: 56px;
+        right: 15px;
+        background-color: white;
+    }
+
+    .menu-nav li {
+        padding: 15px 20px;
+    }
+
+    .sticky-nav {
+        justify-content: space-around;
+        margin: 0px;
+    }
+
+    input[type=checkbox]:checked ~ .menu-nav {
+        display: block;
+    }
+
+    .three-lines {
+        display: block;
+    }
+
+    iframe {
+        width: 400px;
+        height: 300px;
     }
 
     .hero-text-box p{
