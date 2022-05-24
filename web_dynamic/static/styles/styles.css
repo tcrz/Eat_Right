@@ -934,6 +934,11 @@ td button {
   text-align:center;
 }
 
+.repolink{
+  color: #5db85d;
+  text-decoration: underline;
+}
+
 .section_title,
 .section_subtitle {
   text-align: center;
