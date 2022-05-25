@@ -2,7 +2,7 @@
 <p>Eat Right is an application that is a calorie counter and also recipe viewing and submitting app.</p>
 <p>Here we will discuss on how the app works. We will describe the step by step. So Hop on board and lets Begin.</p>
 
-#Running the app  
+## Running the app  
 To run this app locally, you first need to clone this repo:
 ```shell
 crz@user:~$ git clone git@github.com:tcrz/Eat_Right.git
