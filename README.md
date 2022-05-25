@@ -14,28 +14,9 @@ Files | Description
 [api](./api) |This folder will hold all the routes we used on the backend to make the front-end dynamic
 [web_dynamic](./web_dynamic) | This folder holds the html, css, flask templates, javascript of the webpage
 [web_static](./web_static) | This folder hold the static content of the webpage, html and css
+[AUTHORS](./AUTHORS) | file contains email and the github usernames of the developers of this project.
 
 
-<ol>
-  <li><h4>AUTHORS</h4>
-  <p>In this file you'll find the email and the github user names of the developers.</p></li>
-  <li><h4>dumpable.sql</h4>
-  <p>This is the sql file that holds the statements used to create and populate the database. Before you begin, make sure you have installed mysql server.</p>
-  <p>Run this command to dump it to the server.</p>
-  <p>cat dumpable.sql | mysql -uroot -p</p></li>
-  <li><h4>for_running_flask.txt</h4>
-  <p>Inside this file you'll find the commands to run the webpage and api. You need to open two terminal, one for each to run on.</p></li>
-  <li><h4>sample_images & sample_recipes.txt</h4>
-  <p>These two files will contain the information you'll need to populate the submit form on the webpage. More on this later</p></li>
-  <li><h4>tables</h4>
-  <p>This folder will hold the backend portion of how the models are created and how the database runs.</p></li>
-  <li><h4>api</h4>
-  <p>This folder will hold all the routes we used on the backend to make the front-end dynamic</p></li>
-  <li><h4>web_dynamic</h4>
-  <p>This folder holds the html, css, javascript of the webpage</p></li>
-  <li><h4>web_static</h4>
-  <p>This folder hold the static content of the webpage, html and css</p><li>
-</ol>
 <p>Now that we are we know how each file does, lets run and dump what we need before we begin.</p>
 
 <h3>Landing Page</h3>
