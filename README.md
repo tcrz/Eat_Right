@@ -7,7 +7,7 @@ To run this app locally, you first need to clone this repo:
 ```shell
 crz@user:~$ git clone git@github.com:tcrz/Eat_Right.git
 ````
-Next, enter the directory of the cloned repo and do an export of the sql dump; ./dumpable:
+Next, enter the directory of the cloned repo and do an import of the sql dump; [dumpable.sql](./dumpable.sql):
 ```shell
 crz@user:~$ cd Eat_Right
 crz@user:~/Eat_Right$ catdumpable | sudo mysql -p
@@ -17,7 +17,7 @@ crz@user:~/Eat_Right$
 
 this will import all necessary database/tables needed for the app into mysql
 
-Next, open the file ./for_running_flask and run both commands  at the root of the repo (using two separate terminals) to start the app:
+Next, open the file; [for_running_flask.txt](./for_running_flask.txt)  and run both commands  at the root of the repo (using two separate terminals) to start the app:
 ```shell
 crz@user:~$ cd Eat_Right
 crz@user:~/Eat_Right$ cat for_running_flask
