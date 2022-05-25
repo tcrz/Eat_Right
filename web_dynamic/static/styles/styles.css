@@ -706,6 +706,7 @@ td button {
   font-family: "helvetica neue", helvetica, arial, sans-serif;
   box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
+  position: relative;
 }
 
 .recipe-submission h1 {
@@ -746,6 +747,7 @@ td button {
   font-family: helvetica neue, helvetica, arial, sans-serif;
   box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
+  position: relative;
 }
 
 .recipe-view::-webkit-scrollbar {
@@ -809,9 +811,9 @@ td button {
   outline: none;
   width: 45px;
   height: 45px;
-  position: fixed;
-  right: 400px;
-  top: 30px;
+  position: absolute;
+  right: 25px;
+  top: 20px;
 }
 
 .recipe-view ion-icon {
@@ -823,9 +825,9 @@ td button {
   outline: none;
   width: 45px;
   height: 45px;
-  position: fixed;
-  right: 300px;
-  top: 30px;
+  position: absolute;
+  right: 25px;
+  top: 20px;
 }
 
 .recipe-submission ion-icon:hover,
@@ -1194,7 +1196,46 @@ td button {
       flex-direction:column;
       align-items: center;
     }
+    .recipe-view {
+      width: 480px;
+      position: relative;
+    }
+    .head .recipe-name {
+      font-size: 30px;
+    }
+    .head img {
+      width: 250px;
+      height: 150px;
+      margin: 10px 90px 10px 90px;
+    }
 
+    .ingredients h2,
+    .preparation h2 {
+      font-size: 25px;
+    }
+
+    .ingredients li,
+    .preparation li {
+      font-size: 15px;
+    }
+
+    .recipe-view h4 {
+      font-size: 15px;
+    }
+    .recipe-view ion-icon {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+    .recipe-submission {
+      width: 480px;
+      position: relative;
+    }
+    .recipe-submission ion-icon {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
     /* about */
     .about_us > p{
       width: 90%;
@@ -1307,7 +1348,34 @@ td button {
   .recipes_list, .recipes_search{
     grid-template-columns: 250px 250px;
   }
+  .recipe-view {
+    width: 600px;
+    position: relative;
+  }
+  .head img {
+    width: 300px;
+    height: 200px;
+    margin: 10px 125px 10px 125px;
+  }
 
+  .ingredients h2,
+  .preparation h2 {
+    font-size: 25px;
+  }
+
+  .ingredients li,
+  .preparation li {
+    font-size: 15px;
+  }
+
+  .recipe-view h4 {
+    font-size: 15px;
+  }
+  .recipe-view ion-icon {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+  }
   /* about */
   .about_us > p{
     width: 90%;
