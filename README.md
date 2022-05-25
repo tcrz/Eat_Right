@@ -1,7 +1,60 @@
 <h1>Eat Right</h1>
 <p>Eat Right is an application that is a calorie counter and also recipe viewing and submitting app.</p>
 <p>Here we will discuss on how the app works. We will describe the step by step. So Hop on board and lets Begin.</p>
-<p>We will first describe what the given files are when you open the Repository. </p>
+
+#Running the app
+To run this app locally, you first need to clone this repo:
+`> git clone git@github.com:tcrz/Eat_Right.git`
+Next, enter the directory of the cloned repo and do an export of the sql dump; ./dumpable:
+```shell
+crz@user:~$ cd Eat_Right
+crz@user:~/Eat_Right$ catdumpable | sudo mysql -p
+  Enter password:
+crz@user:~/Eat_Right$
+```
+
+this will import all necessary database/tables needed for the app into mysql
+
+Next, open the file ./for_running_flask and run both commands  at the root of the repo (using two separate terminals) to start the app:
+```shell
+crz@user:~$ cd Eat_Right
+crz@user:~/Eat_Right$ cat for_running_flask
+crz@user:~/Eat_Right$ cat for_running_flask
+for running API
+
+user=eat_right_devs password=eat_right_dev_pwd host=localhost database=eat_right_db api_host=0.0.0.0 port=5001 python3 -m api.v1.app
+
+for running webpage
+
+user=eat_right_devs password=eat_right_dev_pwd host=localhost database=eat_right_db python3 -m web_dynamic.eat_right
+crz@user:~$
+```
+```shell
+#terminal 1
+crz@user:~$ user=eat_right_devs password=eat_right_dev_pwd host=localhost database=eat_right_db api_host=0.0.0.0 port=5001 python3 -m api.v1.app
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5001
+....
+
+#terminal 2
+crz@user:~$ user=eat_right_devs password=eat_right_dev_pwd host=localhost database=eat_right_db python3 -m web_dynamic.eat_right
+ * Serving Flask app 'eat_right' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ ...
+```
+The webpage will be served at http://127.0.0.1:5000
 
 ## Table of contents
 Files | Description
@@ -18,7 +71,7 @@ Files | Description
 
 
 <p>Now that we are we know how each file does, lets run and dump what we need before we begin.</p>
-
+<h2>Features</h2>
 <h3>Landing Page</h3>
 <img src='./web_dynamic/static/images/readme_images/landing_page.png'>
 <p>This is the landing page. On the top are links you can click on to take you to the different areas of the webpage</p>
@@ -37,7 +90,7 @@ Files | Description
 <p>Example: This person had clicked on 'Add Item' and we can see that they ate Chicken for supper that is of one Unit.</p>
 <p>We can also see that, chicken of one unit is 189.2 Calories.</p>
 <p>What you'll do is add your breakfast, lunch, and supper meals then the counter will display on total how much you ate.
-You will then get to see it is the amount you should be eating on daily basis, based on the calorie preditors calculation.</p>
+You will then get to see it is the amount you should be eating on daily basis, based on the calorie preditors calculation. User can remove food items by clicking on the red dash on the right of each row</p>
 <p>Let us scroll down and explore more.</p>
 
 <h3>Recipe</h3>
