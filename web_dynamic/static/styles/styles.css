@@ -50,7 +50,7 @@ input[type=checkbox] {
 
 .three-lines {
   display: none;
-  font-size: 24px;
+  font-size: 200%;
   user-select: none;
   position: absolute;
   right: 20px;
@@ -70,7 +70,7 @@ nav {
 }
  /*sticky-nav*/
 .sticky-nav {
-  justify-content: space-around;
+  /* justify-content: space-around; */
   position:fixed;
   max-width:none;
   width:100%;
@@ -1096,6 +1096,15 @@ td button {
     .landing .hero-text-box h1{
       font-size:260%
     }
+
+    nav{
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding-left:10px;
+      padding-bottom: 15px;
+      box-shadow: 0 2px 3px #c3bfbf;
+    }
+
     .menu-nav {
         display: none;
         position: absolute;
@@ -1108,8 +1117,12 @@ td button {
         padding: 15px 20px;
     }
 
+    .menu-icons {
+      padding-right: 60px;
+    }
+
     .sticky-nav {
-        justify-content: space-around;
+        /* justify-content: space-around; */
         margin: 0px;
     }
 
