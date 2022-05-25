@@ -71,7 +71,6 @@ Files | Description
 [AUTHORS](./AUTHORS) | file contains email and the github usernames of the developers of this project.
 
 
-<p>Now that we are we know how each file does, lets run and dump what we need before we begin.</p>
 <h2>Features</h2>
 <h3>Landing Page</h3>
 <img src='./web_dynamic/static/images/readme_images/landing_page.png'>
