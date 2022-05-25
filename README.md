@@ -2,14 +2,16 @@
 <p>Eat Right is an application that is a calorie counter and also recipe viewing and submitting app.</p>
 <p>Here we will discuss on how the app works. We will describe the step by step. So Hop on board and lets Begin.</p>
 
-#Running the app
+#Running the app  
 To run this app locally, you first need to clone this repo:
-`> git clone git@github.com:tcrz/Eat_Right.git`
+```shell
+crz@user:~$ git clone git@github.com:tcrz/Eat_Right.git
+````
 Next, enter the directory of the cloned repo and do an export of the sql dump; ./dumpable:
 ```shell
 crz@user:~$ cd Eat_Right
 crz@user:~/Eat_Right$ catdumpable | sudo mysql -p
-  Enter password:
+Enter password:
 crz@user:~/Eat_Right$
 ```
 
