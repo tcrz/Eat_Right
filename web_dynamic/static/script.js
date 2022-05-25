@@ -3,9 +3,9 @@ $(document).ready(function () {
   let num = 200
   $(window).bind('scroll', function () {
     if ($(window).scrollTop() > num) {
-        $('nav').addClass('sticky-nav');
+      $('nav').addClass('sticky-nav');
     } else {
-        $('nav').removeClass('sticky-nav');
+      $('nav').removeClass('sticky-nav');
     }
   });
   // RECIPE SUBMISSION POP-UP
@@ -22,7 +22,7 @@ $(document).ready(function () {
     $('.recipe-view-popup-bg').empty();
     const id = $(this).attr('id');
     console.log(id);
-    $.get('http://0.0.0.0:5001/api/v1/recipe/' + id, function (data) {
+    $.get('http://127.0.0.1:5001/api/v1/recipe/' + id, function (data) {
       let ingrTemplate = '';
       const ingredientsList = data.ingredients.split('\n');
       ingredientsList.forEach(function (item) {
@@ -101,7 +101,7 @@ $(document).ready(function () {
           $('.total .total-value ').text(sum + ' Calories');
         }
       },
-      error: function ajaxError (jqXHR) {
+      error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
       }
     });
@@ -139,7 +139,7 @@ $(document).ready(function () {
     const act = $('.act').children('option:selected').val();
     const gender = $('.gender:checked').val();
     const term = $('.trimester:checked').val();
-    const url = 'http://0.0.0.0:5001/api/v1/age/' + gender + '/' + act + '/' + age;
+    const url = 'http://127.0.0.1:5001/api/v1/age/' + gender + '/' + act + '/' + age;
     if (age < 4 || age > 100) {
       $('.calorie-amount').text('Please complete the form (Age range should be between 4 and 100)').css('color', 'red');
     }
@@ -166,7 +166,7 @@ $(document).ready(function () {
       $('.recipes_list').hide();
       $.ajax({
         type: 'POST',
-        url: 'http://0.0.0.0:5001/api/v1/livesearch',
+        url: 'http://127.0.0.1:5001/api/v1/livesearch',
         data: { text: text },
         success: function (response) {
           $('.recipes_search').empty();
