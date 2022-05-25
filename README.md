@@ -2,6 +2,20 @@
 <p>Eat Right is an application that is a calorie counter and also recipe viewing and submitting app.</p>
 <p>Here we will discuss on how the app works. We will describe the step by step. So Hop on board and lets Begin.</p>
 <p>We will first describe what the given files are when you open the Repository. </p>
+
+## Table of contents
+Files | Description
+----- | -----------
+[dumpable.sql](./dumpable.sql) | This is the sql file that holds the statements used to create and populate the database.
+[for_running_flask.txt](./for_running_flask.txt) | Inside this file you'll find the commands to run the webpage and api. You need to open two terminals, one for each to run on.
+[sample_images](./sample_images) | Sample recipe images to use for recipe submission
+[sample_recipes.txt](./sample_recipes.txt) | Sample recipes to use for recipe submission
+[tables](./tables) | This folder will hold the backend portion of how the models are created and how the database runs.
+[api](./api) |This folder will hold all the routes we used on the backend to make the front-end dynamic
+[web_dynamic](./web_dynamic) | This folder holds the html, css, flask templates, javascript of the webpage
+[web_static](./web_static) | This folder hold the static content of the webpage, html and css
+
+
 <ol>
   <li><h4>AUTHORS</h4>
   <p>In this file you'll find the email and the github user names of the developers.</p></li>
