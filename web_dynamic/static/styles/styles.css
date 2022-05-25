@@ -969,6 +969,11 @@ td button {
   width: 600px
 }
 
+.text {
+  text-align: center;
+  color: #5db85d;
+  margin: 15px 0;
+}
 .mission {
   /* border: 1px solid green; */
   /* height: 450px; */
@@ -1276,137 +1281,144 @@ td button {
     header{
       height:500px;
       border-bottom: none;
-  }
+    }
 
-  .hero-text-box{
-    width:500px;
-    padding-top: 0;
-    margin: auto 0;
-    padding-left:20px;
-  }
-  .landing {
-    border-radius: 0px;
-    border-bottom: 1px solid #5db85d;
-    gap:2%
-  }
-  .landing .hero-text-box h1{
-    font-size:260%
-  }
+    .hero-text-box{
+      width:500px;
+      padding-top: 0;
+      margin: auto 0;
+      padding-left:20px;
+    }
 
-  .hero-text-box p{
-    width: 100%;
-    margin-bottom: 25px;
-    /* padding-top: 20px */
-  }
-  .hero-text-box a {
-    font-size: 100%;
-    margin-right: 0px;
-    padding: 13px 20px;
-    /* font-weight:10px; */
-  }
+    .landing {
+      border-radius: 0px;
+      border-bottom: 1px solid #5db85d;
+      gap:2%
+    }
 
-  .hero-img{
-    width:500px;
-  }
+    .landing .hero-text-box h1{
+      font-size:260%
+    }
 
-  .hero-img img {
-    width:80%
-  }
+    .hero-text-box p{
+      width: 100%;
+      margin-bottom: 25px;
+      /* padding-top: 20px */
+    }
 
-  /* features */
-  .feature {
-    display: grid;
-    grid-template-columns: 300px 300px;
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    place-content: center;
-    /* gap:2% */
-    /* align-items: flex-start; */
-  }
+    .hero-text-box a {
+      font-size: 100%;
+      margin-right: 0px;
+      padding: 13px 20px;
+      /* font-weight:10px; */
+    }
 
-  /* //predictor */
-  .predictor-form{
-    width:75%
-  }
+    .hero-img{
+      width:500px;
+    }
 
-  .predictor-form label{
-    font-size:120%
-  }
+    .hero-img img {
+      width:80%
+    }
 
-  /* calorie counter */
-  /* .calorie-counter > h2 {
-    margin-left: 20px
-  } */
+    /* features */
+    .feature {
+      display: grid;
+      grid-template-columns: 300px 300px;
+      /* flex-direction: column; */
+      /* justify-content: center; */
+      place-content: center;
+      /* gap:2% */
+      /* align-items: flex-start; */
+    }
 
-  /* table {
-    width: 93%
-  } */
+    /* //predictor */
+    .predictor-form{
+      width:75%
+    }
 
-  td.search label {
-    font-size:80%
-  }
+    .predictor-form label{
+      font-size:120%
+    }
 
-  td.search input{
-    margin-bottom: 5px
-  }
+    /* calorie counter */
+    /* .calorie-counter > h2 {
+      margin-left: 20px
+    } */
 
-  td.search input[type="number"] {
-    width: 19%;
-  }
+    /* table {
+      width: 93%
+    } */
 
-  td.search-btn{
-    padding:0
-  }
+    td.search label {
+      font-size:80%
+    }
 
-  .recipes_list, .recipes_search{
-    grid-template-columns: 250px 250px;
-  }
-  .recipe-view {
-    width: 600px;
-    position: relative;
-  }
-  .head img {
-    width: 300px;
-    height: 200px;
-    margin: 10px 125px 10px 125px;
-  }
+    td.search input{
+      margin-bottom: 5px
+    }
 
-  .ingredients h2,
-  .preparation h2 {
-    font-size: 25px;
-  }
+    td.search input[type="number"] {
+      width: 19%;
+    }
 
-  .ingredients li,
-  .preparation li {
-    font-size: 15px;
-  }
+    td.search-btn{
+      padding:0
+    }
 
-  .recipe-view h4 {
-    font-size: 15px;
-  }
-  .recipe-view ion-icon {
-    position: absolute;
-    right: 25px;
-    top: 20px;
-  }
-  /* about */
-  .about_us > p{
-    width: 90%;
-  }
-  .about_container{
-    display: block;
-    padding-bottom:20px
-  }
+    .recipes_list, .recipes_search{
+      grid-template-columns: 250px 250px;
+    }
 
-  .mission, .story{
-    width:100%;
-    margin-bottom:20px
-  }
+    .recipe-view {
+      width: 600px;
+      position: relative;
+    }
+    .head img {
+      width: 300px;
+      height: 200px;
+      margin: 10px 125px 10px 125px;
+    }
 
-  /*developers*/
-  .creators .box{
-    display:flex;
-    flex-direction: row;
-    /* align-items:center; */
-  }
+    .ingredients h2,
+    .preparation h2 {
+      font-size: 25px;
+    }
+
+    .ingredients li,
+    .preparation li {
+      font-size: 15px;
+    }
+
+    .recipe-view h4 {
+      font-size: 15px;
+    }
+
+    .recipe-view ion-icon {
+      position: absolute;
+      right: 25px;
+      top: 20px;
+    }
+
+    /* about */
+    .about_us > p{
+      width: 90%;
+    }
+
+    .about_container{
+      display: block;
+      padding-bottom:20px
+    }
+
+    .mission, .story{
+      width:100%;
+      margin-bottom:20px
+    }
+
+    /*developers*/
+    .creators .box{
+      display:flex;
+      flex-direction: row;
+      /* align-items:center; */
+    }
 }

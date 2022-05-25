@@ -86,7 +86,7 @@
     </div>
     <p class="subtext">For visual explanation play the video below.</p>
     <div class="videos">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/rUrqp5kScu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rUrqp5kScu4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div> 
   </section>
   <section class="calorie-predictor" id="calorie-predictor">
@@ -270,7 +270,7 @@
           <label for="img">Upload photo of the meal</label><br>
           <input type="file" id="img" name="img" accept="image/*" required /><br>
           <label for="categorizing">Category</label><br>
-          <select name="category" id="categorizing" required><br>
+          <select name="category" id="categorizing" required /><br>
             <option value="" disabled selected>Select your option</option>
             <option value="Dessert">Dessert</option>
             <option value="Snack">Snack</option>
@@ -282,7 +282,7 @@
             <option value="Stew">Stew</option>
           </select><br>
           <label for="ingredients">Ingredients</label><br>
-          <textarea name="ingredients" rows="8" placeholder="Please submit each ingredient on a new line.
+          <textarea name="ingredients" rows="8" id="ingredients" placeholder="Please submit each ingredient on a new line.
 
 Example
 
@@ -290,7 +290,7 @@ Example
 3 Cups of water
 1 TSP of salt" required></textarea>
           <label for="preparation">Preparation</label><br>
-          <textarea name="preparation" rows="8" placeholder="Please submit each step on a new line.
+          <textarea name="preparation" rows="8" id="preparation" placeholder="Please submit each step on a new line.
 Example
 
 Put the rice in the bowl and wash it thoroughly.
@@ -390,7 +390,11 @@ Close the lid until it is cooked." required></textarea><br>
           hope that you enjoy it as much as we enjoyed making this.
         </p>
       </div>
-    </div>
+      </div>
+      <h3 class="text">More on this video</h3>
+      <div class="videos">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GbrRQd3GOCo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
   </section>
 
   <section class="developers" id="developers">

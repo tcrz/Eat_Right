@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """This scripe will contain the flask instance"""
-from flask import Flask, make_response, jsonify
-from tables import storage
 from api.v1.views import views
+from flask import Flask, make_response, jsonify
 from flask_cors import CORS, cross_origin
 import os
+from tables import storage
 
 app = Flask(__name__)
 app.register_blueprint(views)

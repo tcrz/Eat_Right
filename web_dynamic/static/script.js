@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // STICKY NAV
-  let num = 200
+  const num = 200;
   $(window).bind('scroll', function () {
     if ($(window).scrollTop() > num) {
       $('nav').addClass('sticky-nav');
@@ -8,6 +8,7 @@ $(document).ready(function () {
       $('nav').removeClass('sticky-nav');
     }
   });
+
   // RECIPE SUBMISSION POP-UP
   $('.add-recipe').click(function () {
     $('.popup-bg').fadeIn(200);
@@ -49,6 +50,7 @@ $(document).ready(function () {
   $('.recipe-view-popup-bg').on('click', '.recipe-view ion-icon', function () {
     $('.recipe-view-popup-bg').fadeOut(100);
   });
+
   /**************************
     DISPLAY/HIDE SEARCH FIELD
   ***************************/
@@ -101,7 +103,7 @@ $(document).ready(function () {
           $('.total .total-value ').text(sum + ' Calories');
         }
       },
-      error: function ajaxError(jqXHR) {
+      error: function ajaxError (jqXHR) {
         console.error('Error: ', jqXHR.responseText);
       }
     });
@@ -116,6 +118,7 @@ $(document).ready(function () {
     console.log('total:', totalCal);
     $('.total .total-value ').text(totalCal + ' Calories');
   });
+
   // Predictor
   const forPregnancy = document.getElementById('for-pregnant');
   const forAll = document.getElementById('for-all');

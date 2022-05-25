@@ -72,6 +72,6 @@ class StorageHandler:
         self.reload()
 
     def delete(self, obj=None):
-        """This function will delete an value from database"""
+        """This function will delete a value from database"""
         if obj is not None:
             self.__session.delete(obj)
