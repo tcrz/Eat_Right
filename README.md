@@ -21,7 +21,6 @@ Next, open the file ./for_running_flask and run both commands  at the root of th
 ```shell
 crz@user:~$ cd Eat_Right
 crz@user:~/Eat_Right$ cat for_running_flask
-crz@user:~/Eat_Right$ cat for_running_flask
 for running API
 
 user=eat_right_devs password=eat_right_dev_pwd host=localhost database=eat_right_db api_host=0.0.0.0 port=5001 python3 -m api.v1.app
