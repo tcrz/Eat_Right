@@ -14,14 +14,16 @@
   <link rel="stylesheet" href="../static/styles/styles.css" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="../static/script.js"></script>
-  <link rel="icon" href="../static/images/fork_knife.jpg"/>
+  <link rel="icon" href="../static/images/fork_knife.jpg" />
 </head>
 
 <body>
   <header id="eatright">
     <nav>
       <h2>
-        <a href="#eatright"><ion-icon name="leaf-outline"></ion-icon>Eat Right</a>
+        <a href="#eatright">
+          <ion-icon name="leaf-outline"></ion-icon>Eat Right
+        </a>
       </h2>
       <input type="checkbox" id="checkbox_toggle" />
       <label for="checkbox_toggle" class="three-lines">&#9776;</label>
@@ -48,7 +50,7 @@
         </h1>
         <p>
           Welcome to Eat Right. We have provided you with calorie counter
-	  and a recipe section on our app so you can stay healthy!
+          and a recipe section on our app so you can stay healthy!
         </p>
         <!-- <button class="CC-btn">Calorie counter</button> -->
         <a class="CC-btn" href="#calorie-counter">Calorie counter</a>
@@ -64,30 +66,33 @@
     <p class="subtext">Let us explore on the working of the app.</p>
     <div class="feature">
       <div class="boxes">
-	<img src="../static/images/calorie_predictor.png" alt="calorie predictor" />
-	<h4>Know your daily calorie intake</h4>
-        <p>Use our extensive data to know your daily calorie intake based on your age, gender, activity level and even state of pregnancy.</p>
+        <img src="../static/images/calorie_predictor.png" alt="calorie predictor" />
+        <h4>Know your daily calorie intake</h4>
+        <p>Use our extensive data to know your daily calorie intake based on your age, gender, activity level and even
+          state of pregnancy.</p>
       </div>
       <div class="boxes">
-	<img src="../static/images/calorie_counter.png" alt="calorie counter" />
-	<h4>Calculate your meals</h4>
+        <img src="../static/images/calorie_counter.png" alt="calorie counter" />
+        <h4>Calculate your meals</h4>
         <p>Calculate the calorie of your meals based on what you had for breakfast, lunch and dinner.</p>
       </div>
       <div class="boxes">
-	<img src="../static/images/recipe_view.png" alt="Recipes book" />
-	<h4>Explore our collection of Recipes</h4>
+        <img src="../static/images/recipe_view.png" alt="Recipes book" />
+        <h4>Explore our collection of Recipes</h4>
         <p>You will be able to view and search different recipes from all around the world.</p>
       </div>
       <div class="boxes">
-	<img src="../static/images/recipe_submit.png" alt="Recipe submission form" />
-	<h4>Share Your favorite Recipes</h4>
-	<p>You can also share your favorite recipes with anyone who visits the site.</p>
+        <img src="../static/images/recipe_submit.png" alt="Recipe submission form" />
+        <h4>Share Your favorite Recipes</h4>
+        <p>You can also share your favorite recipes with anyone who visits the site.</p>
       </div>
     </div>
     <p class="subtext">For visual explanation play the video below.</p>
     <div class="videos">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/rUrqp5kScu4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div> 
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rUrqp5kScu4" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
   </section>
   <section class="calorie-predictor" id="calorie-predictor">
     <!-- <h1 class="heading">Calorie Predictor</h1> -->
@@ -96,25 +101,25 @@
       <div class="gender">
         <h3>Gender</h3>
         <label for="Male">Male</label>
-        <input type="radio" name="gender" class="gender" value="Male" id="Male"/>
+        <input type="radio" name="gender" class="gender" value="Male" id="Male" />
         <label for="gender">Female</label>
-        <input type="radio" name="gender" class="gender" value="Female" id="gender" required/><br />
+        <input type="radio" name="gender" class="gender" value="Female" id="gender" required /><br />
       </div>
       <div class=for-pregnant id="for-pregnant">
         <h3>Are You Pregnant?</h3>
         <label for="Yes">Yes</label>
-        <input type="radio" name="ans" class="ans" value="Yes" id="Yes"/>
+        <input type="radio" name="ans" class="ans" value="Yes" id="Yes" />
         <label for="No">No</label>
-        <input type="radio" name="ans" class="ans" value="No" id="No" required/><br>
+        <input type="radio" name="ans" class="ans" value="No" id="No" required /><br>
       </div>
       <div class="term" id="term">
         <h3>What is the Term of Pregnancy?</h3>
         <label for="First">First</label>
-        <input type="radio" name="term" class="trimester" value="First" id="First" required/>
+        <input type="radio" name="term" class="trimester" value="First" id="First" required />
         <label for="Second">Second</label>
-        <input type="radio" name="term" class="trimester" value="Second" id="Second"/>
+        <input type="radio" name="term" class="trimester" value="Second" id="Second" />
         <label for="Third">Third</label>
-        <input type="radio" name="term" class="trimester" value="Third" id="Third"/>
+        <input type="radio" name="term" class="trimester" value="Third" id="Third" />
       </div>
       <div class="for-all" id="for-all">
         <div class="age-field">
@@ -131,7 +136,7 @@
           </select><br>
         </div>
       </div>
-      <button class="submittion" >Submit</button>
+      <button class="submittion">Submit</button>
     </form>
     <p class="calorie-amount"></p>
   </section>
@@ -271,15 +276,15 @@
           <input type="file" id="img" name="img" accept="image/*" required /><br>
           <label for="categorizing">Category</label><br>
           <select name="category" id="categorizing" required /><br>
-            <option value="" disabled selected>Select your option</option>
-            <option value="Dessert">Dessert</option>
-            <option value="Snack">Snack</option>
-            <option value="Dish">Dish</option>
-            <option value="Drink">Drink</option>
-            <option value="Salad">Salad</option>
-            <option value="Sauce">Sauce</option>
-            <option value="Soup">Soup</option>
-            <option value="Stew">Stew</option>
+          <option value="" disabled selected>Select your option</option>
+          <option value="Dessert">Dessert</option>
+          <option value="Snack">Snack</option>
+          <option value="Dish">Dish</option>
+          <option value="Drink">Drink</option>
+          <option value="Salad">Salad</option>
+          <option value="Sauce">Sauce</option>
+          <option value="Soup">Soup</option>
+          <option value="Stew">Stew</option>
           </select><br>
           <label for="ingredients">Ingredients</label><br>
           <textarea name="ingredients" rows="8" id="ingredients" placeholder="Please submit each ingredient on a new line.
@@ -309,7 +314,7 @@ Close the lid until it is cooked." required></textarea><br>
       <h1 class="heading">Recipes</h1>
       <p class="subtext">
         Enjoy a collection of outlandish foods from all over the World.
-	Don't forget to add yours as well, so that we can experience the foods that you've experienced.
+        Don't forget to add yours as well, so that we can experience the foods that you've experienced.
       </p>
       <div class="search_box">
         <label>Search:</label>
@@ -417,11 +422,11 @@ Close the lid until it is cooked." required></textarea><br>
             </p>
           </div>
           <div class="logos">
-            <a href="https://twitter.com/" target="_blank">
+            <a href="https://twitter.com/samdre60" target="_blank">
               <img src="../static/images/twitter.png" alt="twitter logo" /></a>
-            <a href="https://github.com/" target="_blank">
+            <a href="https://github.com/kalom60" target="_blank">
               <img src="../static/images/github.png" alt="github logo" /></a>
-            <a href="https://linkedin.com/" target="_blank">
+            <a href="https://linkedin.com/in/kaleab-tesfaye-3b0546201" target="_blank">
               <img src="../static/images/linkedin.png" alt="linkedin logo" />
             </a>
           </div>
