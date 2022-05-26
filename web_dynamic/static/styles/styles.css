@@ -295,7 +295,7 @@ div .boxes {
   text-align: center;
   font-size: 25px;
 }
-.text{
+.text {
   /* font-weight: 25; */
   padding-top: 70px;
 }
@@ -969,7 +969,7 @@ td button {
   width: 600px
 }
 
-.text {
+.new-text {
   text-align: center;
   color: #5db85d;
   margin: 15px 0;
@@ -1179,7 +1179,9 @@ td button {
     .predictor-form{
       width:70%
     }
-
+    .text {
+      font-size: 15px;
+    }
     .predictor-form label{
       font-size:120%
     }
