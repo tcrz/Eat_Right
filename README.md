@@ -10,7 +10,7 @@ crz@user:~$ git clone git@github.com:tcrz/Eat_Right.git
 Next, enter the directory of the cloned repo and do an import of the sql dump; [dumpable.sql](./dumpable.sql):
 ```shell
 crz@user:~$ cd Eat_Right
-crz@user:~/Eat_Right$ cat dumpable | sudo mysql -p
+crz@user:~/Eat_Right$ catdumpable | sudo mysql -p
 Enter password:
 crz@user:~/Eat_Right$
 ```
@@ -55,7 +55,7 @@ crz@user:~$ user=eat_right_devs password=eat_right_dev_pwd host=localhost databa
  * Running on http://127.0.0.1:5000
  ...
 ```
-The webpage will be served at http://127.0.0.1:5000/eat_right
+The webpage will be served at http://127.0.0.1:5000
 
 ## Table of contents
 Files | Description
