@@ -1085,6 +1085,9 @@ td button {
 /* RESPONSIVE */
 @media (min-width: 320px) and (max-width: 767px) {
   /* landing */
+    /*.heading {
+        font-size: 40px;
+    }*/
     header{
         height:500px;
         border-bottom: none;
@@ -1127,7 +1130,6 @@ td button {
     }
 
     .sticky-nav {
-        /* justify-content: space-around; */
         margin: 0px;
     }
 
@@ -1140,6 +1142,8 @@ td button {
     }
 
     iframe {
+        /*width: 300px;
+        height: 200px;*/
         width: 400px;
         height: 300px;
     }
@@ -1147,13 +1151,11 @@ td button {
     .hero-text-box p{
       width: 100%;
       margin-bottom: 25px;
-      /* padding-top: 20px */
     }
     .hero-text-box a {
       font-size: 100%;
       margin-right: 0px;
       padding: 13px 20px;
-      /* font-weight:10px; */
     }
 
     .hero-img{
@@ -1165,8 +1167,6 @@ td button {
       display: grid;
       align-items: center;
       flex-direction: column;
-      /* gap:2% */
-      /* align-items: flex-start; */
     }
 
     .videos video{
@@ -1185,7 +1185,14 @@ td button {
     .predictor-form label{
       font-size:120%
     }
-
+    /*.gender,
+    .for-pregnant,
+    .term {
+      font-size: 10px;
+    }
+    .predictor-form h3 {
+      font-size: 20px;
+    }*/
     /* calorie counter */
     .calorie-counter > h2 {
       margin-left: 20px
@@ -1193,30 +1200,43 @@ td button {
     table {
       width: 93%
     }
-
+    /*th {
+      font-size: 90%;
+    }
+    td.search {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+    }*/
     td.search label {
+      /*height: 200px;*/
       font-size:80%
     }
 
     td.search input{
-      margin-bottom: 5px
+      margin-bottom: 5px;
     }
 
     td.search input[type="number"] {
       width: 19%;
     }
-
+    /*td.search input[type=number],
+    td.search input[type=text],
+    td.search select {
+      width: 50%;
+    }*/
     td.search-btn{
       padding:0
     }
 
     /* recipes */
     .recipes_list, .recipes_search{
-      display:flex;
-      flex-direction:column;
+      display: flex;
+      flex-direction: column;
       align-items: center;
     }
     .recipe-view {
+      /*width: 400px;*/
       width: 480px;
       position: relative;
     }
@@ -1224,9 +1244,11 @@ td button {
       font-size: 30px;
     }
     .head img {
+      /*width: 200px;*/
       width: 250px;
       height: 150px;
       margin: 10px 90px 10px 90px;
+      /*margin: 10px 80px 10px 80px;*/
     }
 
     .ingredients h2,
@@ -1237,25 +1259,38 @@ td button {
     .ingredients li,
     .preparation li {
       font-size: 15px;
+      /*font-weight: 700;*/
     }
 
     .recipe-view h4 {
       font-size: 15px;
+      /*font-size: 20px;*/
     }
     .recipe-view ion-icon {
+      /*width: 35px;
+      height: 35px;*/
       position: absolute;
       right: 20px;
       top: 15px;
     }
     .recipe-submission {
       width: 480px;
+      /*width: 400px;*/
       position: relative;
     }
+    /*.recipe-submission select {
+      width: 40%;
+    }*/
     .recipe-submission ion-icon {
+      /*width: 35px;
+      height: 35px;*/
       position: absolute;
       right: 20px;
       top: 15px;
     }
+    /*.search-box {
+      padding: 0 10px;
+    }*/
     /* about */
     .about_us > p{
       width: 90%;
