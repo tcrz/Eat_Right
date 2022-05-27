@@ -9,10 +9,8 @@ from tables import storage
 from tables.recipe import Recipe
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = 'web_dynamic/static/images'
+
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 
 @views.route('/recipe', methods=['GET'])
@@ -61,6 +59,10 @@ def allowed_file(filename):
 @views.route('/recipe/', methods=['POST'])
 def add_recipe():
     """This function will add to database the content of form"""
+    from api.v1.app import app
+    UPLOAD_FOLDER = 'web_dynamic/static/images'
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+    app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
     img = request.files['img']
     filename = secure_filename(img.filename)
     if img and allowed_file(img.filename):
