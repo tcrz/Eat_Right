@@ -13,7 +13,7 @@ def close(error):
     storage.close()
 
 
-@app.route('/', strict_slashes=False)
+@app.route('/eat_right', strict_slashes=False)
 def show_html():
     """This function will show the webpage"""
     recipes = storage.all(Recipe)

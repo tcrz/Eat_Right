@@ -5,3 +5,4 @@ user=eat_right_devs password=eat_right_dev_pwd host=localhost database=eat_right
 for running webpage
 
 user=eat_right_devs password=eat_right_dev_pwd host=localhost database=eat_right_db python3 -m web_dynamic.eat_right
+
