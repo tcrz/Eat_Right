@@ -163,8 +163,9 @@ $(document).ready(function () {
   });
 
   // SEARCH FOR RECIPE
-  $('.search_text').on('input', function () {
-    const text = $('.search_text').val();
+  $('.search-text').on('input', function () {
+    const text = $('.search-text').val();
+    console.log(text)
     if (text.length > 0) {
       $('.recipes_list').hide();
       $.ajax({
