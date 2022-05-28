@@ -54,7 +54,7 @@ input[type=checkbox] {
   user-select: none;
   position: absolute;
   right: 20px;
-  top: 13px;
+  /* top: 5px; */
 }
 
 nav {
@@ -405,7 +405,7 @@ div .boxes {
 .subtext {
   text-align: center;
   margin: 0 auto;
-  width: 60%;
+  width: 65%;
   margin-bottom: 20px;
 }
 
@@ -660,8 +660,9 @@ td button {
   border-radius: 20px;
   border:2px solid #70cf70
 }
+
 /****************************
- * RECIPE SUBMISSION POP-UP *
+ * RECIPE POP-UP *
 *****************************/
 .popup-bg,
 .recipe-view-popup-bg {
@@ -688,15 +689,132 @@ td button {
     z-index:9999;
 } */
 
-.recipe-submission {
+
+.recipe-view {
   display: block;
   position: relative;
-  width: 600px;
+  width: 68%;
   height: 95%;
   margin: 0 auto;
   padding: 20px 30px;
   margin-top: 15px;
-  border-radius: 50px;
+  border-radius: 25px;
+  border: none;
+  background-image: url("../images/rcpview.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  position: relative;
+}
+
+.recipe-view::-webkit-scrollbar {
+  width: 0px;
+}
+
+.recipe-view {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+
+.head .recipe-name {
+  width:70%;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #161f47;
+}
+
+.head {
+  display: flex;
+  text-align: center;
+  height: 60%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head img {
+  width: 55%;
+  height: 75%;
+  margin: 10px 0px;
+  border-radius: 15px;
+}
+
+.ingredients {
+  margin: 10px 0 0 5px;
+}
+
+.ingredients h2,
+.preparation h2 {
+  font-size: 140%;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+  color: #161f47;
+}
+
+.ingredients li,
+.preparation li {
+  font-size: 120%;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+  font-weight: 20;
+  margin: 0 0 10px 30px;
+  color: #161f47;
+}
+
+.recipe-view h4 {
+  font-size: 20px;
+  margin: 20px 0 0 20px;
+}
+
+.recipe-submission ion-icon, .recipe-view ion-icon {
+  background: grey;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+ /* {
+  background: grey;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+} */
+
+.recipe-submission ion-icon:hover,
+.recipe-view ion-icon:hover {
+  background:red;
+}
+
+/****************************
+ * RECIPE SUBMISSION POP-UP *
+*****************************/
+.recipe-submission {
+  display: block;
+  position: relative;
+  width: 65%;
+  height: 95%;
+  margin: 0 auto;
+  padding: 20px 30px;
+  margin-top: 15px;
+  border-radius: 25px;
   border: none;
   background-image: url("../images/Blur.png");
   background-position: center;
@@ -711,6 +829,8 @@ td button {
 
 .recipe-submission h1 {
   font-size: 40px;
+  width: 90%
+
 }
 
 .recipe-submission::-webkit-scrollbar {
@@ -729,120 +849,7 @@ td button {
   font-weight: bold;
   color: #161f47;
 }
-
-.recipe-view {
-  display: block;
-  position: relative;
-  width: 800px;
-  height: 95%;
-  margin: 0 auto;
-  padding: 20px 30px;
-  margin-top: 15px;
-  border-radius: 50px;
-  border: none;
-  background-image: url("../images/rcpview.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: helvetica neue, helvetica, arial, sans-serif;
-  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.2);
-  overflow-y: scroll;
-  position: relative;
-}
-
-.recipe-view::-webkit-scrollbar {
-  width: 0px;
-}
-
-.recipe-view {
-  overflow: -moz-scrollbars-none;
-}
-
-.recipe-view {
-  -ms-overflow-style: none;
-}
-
-.head .recipe-name {
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  color: #161f47;
-}
-
-.head img {
-  width: 400px;
-  height: 300px;
-  margin: 10px 125px 10px 175px;
-  border-radius: 20px;
-}
-
-.ingredients {
-  margin: 10px 0 0 5px;
-}
-
-.ingredients h2,
-.preparation h2 {
-  font-size: 25px;
-  font-weight: bold;
-  margin: 10px 0 10px 0;
-  color: #161f47;
-}
-
-.ingredients li,
-.preparation li {
-  font-size: 20px;
-  font-family: helvetica neue, helvetica, arial, sans-serif;
-  font-weight: 20;
-  margin: 0 0 10px 30px;
-  color: #161f47;
-}
-
-.recipe-view h4 {
-  font-size: 20px;
-  margin: 20px 0 0 20px;
-}
-
-.recipe-submission ion-icon {
-  background: grey;
-  border: none;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  outline: none;
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  right: 25px;
-  top: 20px;
-}
-
-.recipe-view ion-icon {
-  background: grey;
-  border: none;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  outline: none;
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  right: 25px;
-  top: 20px;
-}
-
-.recipe-submission ion-icon:hover,
-.recipe-view ion-icon:hover {
-  color: #70cf70;
-}
-
-/***********************
- *   Form  content     *
- **********************/
-
-/* form {
-    background:red;
-} */
-
+ /* form content */
 .recipe-submission input,
 .recipe-submission textarea,
 .recipe-submission select {
@@ -1083,11 +1090,79 @@ td button {
 }
 
 /* RESPONSIVE */
+@media (min-width: 320px) and (max-width: 480px){
+    /* landing */
+    .hero-text-box{
+      padding: 0 10px;
+    }
+
+    .heading {
+        font-size: 200%;
+    }
+
+    .subtext {
+      width: 90%;
+    }
+
+    iframe {
+      width: 90%;
+      height: 90%;
+
+  }
+
+  /* predictor */
+    .gender,
+    .for-pregnant,
+    .term {
+      font-size: 80%;
+    }
+
+    .predictor-form h3 {
+      font-size: 23px;
+    }
+
+    /* calorie counter */
+    th {
+      font-size: 90%;
+    }
+
+    td.search {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    td.search input[type=number],
+    td.search input[type=text],
+    td.search select {
+      width: 50%;
+    }
+
+    td.search label {
+      height: 200px;
+    }
+
+    /* recipes */
+    .recipe-view {
+      width: 80%;
+      border-radius: 10px
+    }
+
+    .head img {
+      width: 80%
+    }
+
+    .recipe-submission select {
+      width: 40%;
+    }
+
+    .search-box {
+      padding: 0 10px;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
   /* landing */
-    /*.heading {
-        font-size: 40px;
-    }*/
     header{
         height:500px;
         border-bottom: none;
@@ -1097,10 +1172,12 @@ td button {
       padding-top: 0;
       margin: auto 0
     }
+
     .landing {
       border-radius: 0px;
       border-bottom: 1px solid #5db85d;
     }
+    
     .landing .hero-text-box h1{
       font-size:260%
     }
@@ -1142,8 +1219,6 @@ td button {
     }
 
     iframe {
-        /*width: 300px;
-        height: 200px;*/
         width: 400px;
         height: 300px;
     }
@@ -1169,13 +1244,7 @@ td button {
       flex-direction: column;
     }
 
-    .videos video{
-      width: 400px;
-      height: 250px
-    }
-    
-
-    /* //predictor */
+    /* predictor */
     .predictor-form{
       width:70%
     }
@@ -1185,14 +1254,8 @@ td button {
     .predictor-form label{
       font-size:120%
     }
-    /*.gender,
-    .for-pregnant,
-    .term {
-      font-size: 10px;
-    }
-    .predictor-form h3 {
-      font-size: 20px;
-    }*/
+
+
     /* calorie counter */
     .calorie-counter > h2 {
       margin-left: 20px
@@ -1200,16 +1263,8 @@ td button {
     table {
       width: 93%
     }
-    /*th {
-      font-size: 90%;
-    }
-    td.search {
-      height: 200px;
-      display: flex;
-      flex-direction: column;
-    }*/
+
     td.search label {
-      /*height: 200px;*/
       font-size:80%
     }
 
@@ -1217,16 +1272,24 @@ td button {
       margin-bottom: 5px;
     }
 
-    td.search input[type="number"] {
-      width: 19%;
+    td.search-btn{
+      padding:0
     }
-    /*td.search input[type=number],
+
+    td.search {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    td.search input[type=number],
     td.search input[type=text],
     td.search select {
       width: 50%;
-    }*/
-    td.search-btn{
-      padding:0
+    }
+
+    td.search label {
+      height: 200px;
     }
 
     /* recipes */
@@ -1235,52 +1298,41 @@ td button {
       flex-direction: column;
       align-items: center;
     }
-    .recipe-view {
-      /*width: 400px;*/
-      width: 480px;
-      position: relative;
+
+    .recipe-view, .recipe-submission {
+      width: 80%;
+      border-radius: 15px;
     }
-    .head .recipe-name {
-      font-size: 30px;
+
+    .head{
+      margin-bottom: 30px;
     }
     .head img {
-      /*width: 200px;*/
-      width: 250px;
-      height: 150px;
-      margin: 10px 90px 10px 90px;
-      /*margin: 10px 80px 10px 80px;*/
-    }
-
-    .ingredients h2,
-    .preparation h2 {
-      font-size: 25px;
-    }
-
-    .ingredients li,
-    .preparation li {
-      font-size: 15px;
-      /*font-weight: 700;*/
+      width: 70%;
     }
 
     .recipe-view h4 {
-      font-size: 15px;
-      /*font-size: 20px;*/
+      font-size: 120%;
     }
+
     .recipe-view ion-icon {
-      /*width: 35px;
-      height: 35px;*/
+      width: 28px;
+      height: 28px;
       position: absolute;
-      right: 20px;
-      top: 15px;
+      /* right: 20px;
+      top: 15px; */
     }
+
     .recipe-submission {
-      width: 480px;
+      /* width: 480px; */
       /*width: 400px;*/
       position: relative;
     }
+
     /*.recipe-submission select {
       width: 40%;
     }*/
+
     .recipe-submission ion-icon {
       /*width: 35px;
       height: 35px;*/
@@ -1288,9 +1340,7 @@ td button {
       right: 20px;
       top: 15px;
     }
-    /*.search-box {
-      padding: 0 10px;
-    }*/
+
     /* about */
     .about_us > p{
       width: 90%;
@@ -1311,6 +1361,13 @@ td button {
       flex-direction: column;
       align-items:center;
     }
+}
+
+@media (min-width: 641px) and (max-width: 767px){
+  .recipes_list, .recipes_search{
+    display: grid;
+    grid-template-columns: 250px 250px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
@@ -1347,7 +1404,6 @@ td button {
       font-size: 100%;
       margin-right: 0px;
       padding: 13px 20px;
-      /* font-weight:10px; */
     }
 
     .hero-img{
@@ -1407,28 +1463,8 @@ td button {
       grid-template-columns: 250px 250px;
     }
 
-    .recipe-view {
-      width: 600px;
-      position: relative;
-    }
-    .head img {
-      width: 300px;
-      height: 200px;
-      margin: 10px 125px 10px 125px;
-    }
-
-    .ingredients h2,
-    .preparation h2 {
-      font-size: 25px;
-    }
-
-    .ingredients li,
-    .preparation li {
-      font-size: 15px;
-    }
-
-    .recipe-view h4 {
-      font-size: 15px;
+    .recipe-view .head img {
+      width: 70%;
     }
 
     .recipe-view ion-icon {
