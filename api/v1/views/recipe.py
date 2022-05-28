@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """This function will create the routes for recipe API"""
-from api.v1.app import app
 from api.v1.views import views
 from flask import jsonify, abort, make_response
 from flask import request, send_from_directory, redirect
