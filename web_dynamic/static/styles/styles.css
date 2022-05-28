@@ -1092,6 +1092,228 @@ td button {
 /* RESPONSIVE */
 @media (min-width: 320px) and (max-width: 480px){
     /* landing */
+    /* For future changes uncomment and remove the code below cause they are apart of this code as well*/
+    /*
+    header{
+      height:500px;
+      border-bottom: none;
+    }
+    .hero-text-box {
+      width: 400px;
+      padding: 0 10px;
+      margin: auto 0;
+    }
+
+    .landing {
+      border-radius: 0px;
+      border-bottom: 1px solid #5db85d;
+    }
+
+    .landing .hero-text-box h1{
+      font-size: 200%;
+    }
+    .heading {
+      font-size: 200%;
+    }
+
+    .subtext {
+      width: 90%;
+    }
+
+    nav{
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding-left:10px;
+      padding-bottom: 15px;
+      box-shadow: 0 2px 3px #c3bfbf;
+    }
+
+    .menu-nav {
+      display: none;
+      position: absolute;
+      top: 56px;
+      right: 15px;
+      background-color: white;
+    } 
+
+    .menu-nav li {
+      padding: 15px 20px;
+    }
+
+    .menu-icons {
+      padding-right: 60px;
+    }
+
+    .sticky-nav {
+        margin: 0px;
+    }
+
+    input[type=checkbox]:checked ~ .menu-nav {
+        display: block;
+    }
+
+    .three-lines {
+        display: block;
+    }
+
+    iframe {
+        width: 80%;
+        height: 300px;
+    }
+
+    .hero-text-box p{
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    .hero-text-box a {
+      font-size: 80%;
+      margin-right: 0px;
+      padding: 10px 20px;
+    }
+
+    .hero-img{
+      display:none;
+    } 
+
+
+    .feature {
+      display: grid;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
+    .predictor-form{
+      width: 90%;
+    }
+    .gender,
+    .for-pregnant,
+    .term {
+      font-size: 70%;
+    }
+
+    .predictor-form h3 {
+      font-size: 23px;
+    }
+    .predictor-form label{
+      margin-left: 20px;
+      font-size: 110%;
+    }
+    .term label {
+      margin-left: 5px;
+    }
+
+
+
+    table {
+      width: 93%
+    }
+
+    td.search label {
+      font-size:80%
+    }
+
+    td.search input{
+      margin-bottom: 5px;
+    }
+       td.search-btn{
+      padding: 0px 5px;
+    }
+    th {
+      font-size: 90%;
+    }
+
+    td.search {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    td.search input[type=number],
+    td.search input[type=text],
+    td.search select {
+      width: 50%;
+    }
+
+    td.search label {
+      height: 200px;
+    }
+
+
+
+    .recipes_list, .recipes_search{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .recipe-view, .recipe-submission {
+      width: 80%;
+      border-radius: 10px;
+    }
+
+    .head{
+      margin-bottom: 30px;
+    }
+
+    .head img {
+      width: 80%;
+    } 
+    .recipe-submission select {
+      width: 40%;
+    }
+
+    .search-box {
+      padding: 0 10px;
+    }
+    .search-text {
+      font-size: 15px;
+      padding-left: 5px;
+      border-radius: 20px;
+    }
+    .recipe-view h4 {
+      font-size: 120%;
+    }
+
+    .recipe-view ion-icon {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+    }
+
+    .recipe-submission {
+      position: relative;
+    }
+
+    .recipe-submission ion-icon {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+
+
+
+    .about_us > p{
+      width: 90%;
+    }
+    .about_container{
+      display: block;
+      padding-bottom:20px
+    }
+
+    .mission, .story{
+      width:100%;
+      margin-bottom:20px
+    }
+
+
+
+    .creators .box{
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+    }*/
     .hero-text-box{
       padding: 0 10px;
     }
@@ -1160,7 +1382,8 @@ td button {
       padding: 0 10px;
     }
 }
-
+/*Replace commentedout @media query and remove the one below it*/
+/*@media (min-width: 480px) and (max-width: 767px) {*/
 @media (min-width: 320px) and (max-width: 767px) {
   /* landing */
     header{
@@ -1181,7 +1404,9 @@ td button {
     .landing .hero-text-box h1{
       font-size:260%
     }
-
+    .heading {
+      font-size: 250%;
+    }
     nav{
       margin-bottom: 0px;
       margin-top: 0px;
@@ -1219,6 +1444,8 @@ td button {
     }
 
     iframe {
+        /* Added as future*/
+        /*width: 80%;*/
         width: 400px;
         height: 300px;
     }
@@ -1255,7 +1482,12 @@ td button {
     .predictor-form label{
       font-size:120%
     }
-
+    /* added as future*/
+    /*.gender,
+    .for-pregnant,
+    .term {
+      font-size: 90%;
+    }*/
 
     /* calorie counter */
     .calorie-counter > h2 {
@@ -1365,6 +1597,13 @@ td button {
 }
 
 @media (min-width: 641px) and (max-width: 767px){
+  /* future update remove code on the bottom */
+  /*.predictor-form {
+    width: 400px;
+  }
+  iframe {
+    width: 560;
+  }*/
   .recipes_list, .recipes_search{
     display: grid;
     grid-template-columns: 250px 250px;
