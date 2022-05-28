@@ -3,6 +3,7 @@
 from flask import Flask, render_template, request
 from tables import storage
 from tables.recipe import Recipe
+import uuid
 
 app = Flask(__name__)
 
@@ -17,7 +18,8 @@ def close(error):
 def show_html():
     """This function will show the webpage"""
     recipes = storage.all(Recipe)
-    return render_template('eatright.html', recipes=recipes)
+    return render_template('eatright.html', recipes=recipes,
+                           cache_id=uuid.uuid4())
 
 
 if __name__ == "__main__":
