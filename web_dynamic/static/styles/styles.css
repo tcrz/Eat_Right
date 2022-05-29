@@ -241,7 +241,7 @@ div .boxes {
 }
 
 .boxes h4 {
-  font-weight: 10;
+  font-weight: 30;
   text-align: left;
   font-size: 20px;
   padding: 10px 0;
@@ -250,8 +250,8 @@ div .boxes {
 }
 
 .boxes img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 5px;
   margin: 20px auto;
 }
@@ -548,6 +548,7 @@ td button {
   /* background: yellow; */
   place-content: center;
   /* margin: 25px auto; */
+  margin-bottom: 30px;
   display: grid;
   grid-template-columns: 250px 250px 250px 250px;
   grid-gap: 30px;
@@ -559,11 +560,12 @@ td button {
   border: 1px solid #d4cece;
   border-radius: 15px;
   background: white;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   /* box-shadow: #5db85db0 -5px 5px */
   border-bottom: 2px solid #5db85d;
   position: relative;
+  height:100%;
 }
 
 .recipe:hover {
@@ -575,7 +577,6 @@ td button {
 .recipe img {
   width: 100%;
   height: 200px;
-  /* object-fit: fill; */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -613,11 +614,12 @@ td button {
   width: 250px;
   border: 1px solid #d4cece;
   border-radius: 15px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   /* box-shadow: #5db85db0 -5px 5px */
   border-bottom: 2px solid #5db85d;
-  min-height: 300px;
+  /* min-height: 300px; */
+  height: 100%;
   cursor:pointer;
 }
 
@@ -731,7 +733,7 @@ td button {
 .head {
   display: flex;
   text-align: center;
-  height: 60%;
+  height: 70%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -742,6 +744,7 @@ td button {
   height: 75%;
   margin: 10px 0px;
   border-radius: 15px;
+  object-fit: cover;
 }
 
 .ingredients {
@@ -780,23 +783,10 @@ td button {
   width: 33px;
   height: 33px;
   position: absolute;
-  right: 20px;
-  top: 15px;
-}
+  right: 2%;
+  top: 1%;
 
- /* {
-  background: grey;
-  border: none;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  outline: none;
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  right: 25px;
-  top: 20px;
-} */
+}
 
 .recipe-submission ion-icon:hover,
 .recipe-view ion-icon:hover {
@@ -824,7 +814,6 @@ td button {
   font-family: "helvetica neue", helvetica, arial, sans-serif;
   box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
-  position: relative;
 }
 
 .recipe-submission h1 {
@@ -1090,10 +1079,9 @@ td button {
 }
 
 /* RESPONSIVE */
-@media (min-width: 320px) and (max-width: 480px){
+@media (min-width: 320px) and (max-width: 370px){
     /* landing */
-    /* For future changes uncomment and remove the code below cause they are apart of this code as well*/
-    /*
+    
     header{
       height:500px;
       border-bottom: none;
@@ -1156,37 +1144,44 @@ td button {
         display: block;
     }
 
-    iframe {
-        width: 80%;
-        height: 300px;
-    }
-
     .hero-text-box p{
       width: 100%;
       margin-bottom: 25px;
     }
 
     .hero-text-box a {
-      font-size: 80%;
+      font-size: 85%;
       margin-right: 0px;
       padding: 10px 20px;
     }
 
     .hero-img{
       display:none;
-    } 
+    }
+    
+    /* videos */
+    iframe {
+        width: 80%;
+        height: 300px;
+    }
 
-
+    /* featues */
     .feature {
       display: grid;
       align-items: center;
       flex-direction: column;
     }
 
+    div .boxes {
+      width: 80%;
+      margin: 20px auto;
+    }
 
+    /* predictor */
     .predictor-form{
       width: 90%;
     }
+
     .gender,
     .for-pregnant,
     .term {
@@ -1196,6 +1191,7 @@ td button {
     .predictor-form h3 {
       font-size: 23px;
     }
+
     .predictor-form label{
       margin-left: 20px;
       font-size: 110%;
@@ -1204,8 +1200,7 @@ td button {
       margin-left: 5px;
     }
 
-
-
+    /* counter */
     table {
       width: 93%
     }
@@ -1217,9 +1212,11 @@ td button {
     td.search input{
       margin-bottom: 5px;
     }
-       td.search-btn{
+
+    td.search-btn{
       padding: 0px 5px;
     }
+
     th {
       font-size: 90%;
     }
@@ -1240,8 +1237,7 @@ td button {
       height: 200px;
     }
 
-
-
+    /* recipes */
     .recipes_list, .recipes_search{
       display: flex;
       flex-direction: column;
@@ -1253,13 +1249,25 @@ td button {
       border-radius: 10px;
     }
 
-    .head{
-      margin-bottom: 30px;
+    .recipe-view ion-icon {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+}
+
+    .add-recipe{
+      height:270px
     }
 
+    .head {
+      height: auto;
+    }
+    
     .head img {
       width: 80%;
+      object-fit: fill;
     } 
+
     .recipe-submission select {
       width: 40%;
     }
@@ -1286,14 +1294,7 @@ td button {
       position: relative;
     }
 
-    .recipe-submission ion-icon {
-      position: absolute;
-      right: 20px;
-      top: 15px;
-    }
-
-
-
+    /* about */
     .about_us > p{
       width: 90%;
     }
@@ -1307,13 +1308,19 @@ td button {
       margin-bottom:20px
     }
 
-
-
+    /* developers */
     .creators .box{
       display:flex;
       flex-direction: column;
       align-items:center;
-    }*/
+    }
+
+    .creators .card{
+      width: 90%
+    }
+}
+
+@media (min-width: 371px) and (max-width: 480px){
     .hero-text-box{
       padding: 0 10px;
     }
@@ -1329,8 +1336,7 @@ td button {
     iframe {
       width: 90%;
       height: 90%;
-
-  }
+    }
 
   /* predictor */
     .gender,
@@ -1382,9 +1388,8 @@ td button {
       padding: 0 10px;
     }
 }
-/*Replace commentedout @media query and remove the one below it*/
-/*@media (min-width: 480px) and (max-width: 767px) {*/
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (min-width: 371px) and (max-width: 767px) {
   /* landing */
     header{
         height:500px;
@@ -1404,9 +1409,11 @@ td button {
     .landing .hero-text-box h1{
       font-size:260%
     }
+
     .heading {
       font-size: 250%;
     }
+
     nav{
       margin-bottom: 0px;
       margin-top: 0px;
@@ -1444,9 +1451,7 @@ td button {
     }
 
     iframe {
-        /* Added as future*/
-        /*width: 80%;*/
-        width: 400px;
+        width: 80%;
         height: 300px;
     }
 
@@ -1476,18 +1481,21 @@ td button {
     .predictor-form{
       width:70%
     }
+
     .text {
       font-size: 15px;
     }
+
     .predictor-form label{
       font-size:120%
     }
+
     /* added as future*/
-    /*.gender,
+    .gender,
     .for-pregnant,
     .term {
       font-size: 90%;
-    }*/
+    }
 
     /* calorie counter */
     .calorie-counter > h2 {
@@ -1537,9 +1545,15 @@ td button {
       border-radius: 15px;
     }
 
-    .head{
-      margin-bottom: 30px;
+    .add-recipe {
+      height: 270px;
     }
+
+    .head {
+      /* margin-bottom: 30px; */
+      height: auto
+    }
+
     .head img {
       width: 70%;
     }
@@ -1560,18 +1574,6 @@ td button {
       /* width: 480px; */
       /*width: 400px;*/
       position: relative;
-    }
-
-    /*.recipe-submission select {
-      width: 40%;
-    }*/
-
-    .recipe-submission ion-icon {
-      /*width: 35px;
-      height: 35px;*/
-      position: absolute;
-      right: 20px;
-      top: 15px;
     }
 
     /* about */
@@ -1597,16 +1599,14 @@ td button {
 }
 
 @media (min-width: 641px) and (max-width: 767px){
-  /* future update remove code on the bottom */
-  /*.predictor-form {
-    width: 400px;
-  }
-  iframe {
-    width: 560;
-  }*/
+  /* recipes */
   .recipes_list, .recipes_search{
     display: grid;
     grid-template-columns: 250px 250px;
+  }
+
+  .add-recipe {
+    height: 100%;
   }
 }
 
