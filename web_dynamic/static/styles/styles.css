@@ -818,8 +818,8 @@ td button {
 
 .recipe-submission h1 {
   font-size: 40px;
-  width: 90%
-
+  margin-bottom: 15px;
+  /* width: 90% */
 }
 
 .recipe-submission::-webkit-scrollbar {
@@ -1262,7 +1262,7 @@ td button {
     .head {
       height: auto;
     }
-    
+
     .head img {
       width: 80%;
       object-fit: fill;
