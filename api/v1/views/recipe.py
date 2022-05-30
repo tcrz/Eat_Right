@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This function will create the routes for recipe API"""
+"""This script will create the routes for recipe API"""
 from api.v1.views import views
 from flask import jsonify, abort, make_response
 from flask import request, send_from_directory, redirect
@@ -7,9 +7,6 @@ import os
 from tables import storage
 from tables.recipe import Recipe
 from werkzeug.utils import secure_filename
-
-
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 
 @views.route('/recipe', methods=['GET'])
@@ -49,8 +46,9 @@ def delete_recipe(ids):
 
 def allowed_file(filename):
     """This function will check if the filename given matches
-       the allowed extension provided
+       the allowed extension provided.
     """
+    ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
     return '.' in filename and filename.rsplit('.', 1)[1].lower()\
            in ALLOWED_EXTENSIONS
 

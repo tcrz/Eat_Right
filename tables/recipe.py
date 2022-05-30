@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This function will hold the recipe model"""
+"""This script will hold the recipe model"""
 from sqlalchemy import Column, String
 from tables.basemodel import BaseModel, Base
 

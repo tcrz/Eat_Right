@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""THis script will be able to run a flask application"""
+"""This script will be able to run a flask application"""
 from flask import Flask, render_template, request
 from tables import storage
 from tables.recipe import Recipe

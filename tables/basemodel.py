@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This function will hold the basemodel"""
+"""This script will hold the basemodel"""
 from datetime import datetime
 from sqlalchemy import Column, DateTime, String
 from sqlalchemy.ext.declarative import declarative_base
@@ -14,7 +14,7 @@ class BaseModel:
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
 
     def __init__(self, *args, **kwargs):
-        """Instatntiates a new model"""
+        """Intiates a new model"""
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         if len(kwargs) != 0:
@@ -22,14 +22,14 @@ class BaseModel:
                 setattr(self, key, value)
 
     def save(self):
-        """This function will save the instance in storage"""
+        """This function will save new instance in storage"""
         from tables import storage
         storage.new(self)
         storage.save()
 
     def make_dict(self):
-        """This function will change the content of dict value of instance
-           and save it in a different dictionary
+        """This function will change the content of the self.__dict__ of instance
+           and save the information in a different dictionary
         """
         dictionary = {}
         dictionary.update(self.__dict__)

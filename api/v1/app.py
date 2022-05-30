@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This scripe will contain the flask instance"""
+"""This script will contain the flask instance"""
 from api.v1.views import views
 from flask import Flask, make_response, jsonify
 from flask_cors import CORS, cross_origin

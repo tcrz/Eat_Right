@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This function will hold the Age model"""
+"""This script will hold the Age model"""
 from sqlalchemy import Column, String, Integer
 from tables.basemodel import BaseModel, Base
 

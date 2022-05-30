@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This function will create the routes for age API"""
+"""This script will create the routes for age API"""
 from api.v1.views import views
 from flask import make_response, jsonify
 from tables import storage

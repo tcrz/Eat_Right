@@ -98,7 +98,7 @@ $(document).ready(function () {
             '<p>' + calories + '</p>' + '<ion-icon name="remove-outline" style="color:red;cursor:pointer;"></ion-icon></div></td></tr>';
           // insert the row right above search field
           $(row).insertBefore(searchField);
-          // retrieve current value 
+          // retrieve current value
           let sum = $('.total .total-value').text().split(' ')[0];
           sum = parseFloat(sum);
           sum += calories;
@@ -134,28 +134,35 @@ $(document).ready(function () {
   const forAll = document.getElementById('for-all');
   const term = document.getElementById('term');
   $('#gender').click(function () {
+    // if gender option is female ask for pregnancy status
     forPregnancy.style.display = 'block';
     forAll.style.display = 'none';
+    // if gender option is female remove the value of age and activity
     $('.act').val('');
     $('.age').val('');
   });
   $('#Yes').click(function () {
+    // if pregnant ask for stage of pregnancy
     term.style.display = 'inline';
   });
   $('#No, #Male').click(function () {
+    // if gender option is male go don't ask pregnancy status
     forPregnancy.style.display = 'none';
     term.style.display = 'none';
     forAll.style.display = 'block';
   });
   $('.submission').click(function () {
+    // get the calorie amount based on the input given
     const age = $('.age').val();
     const act = $('.act').children('option:selected').val();
     const gender = $('.gender:checked').val();
     const term = $('.trimester:checked').val();
     const url = 'http://127.0.0.1:5001/api/v1/age/' + gender + '/' + act + '/' + age;
+    // limitation for the form
     if (age < 4 || age > 100) {
       $('.calorie-amount').text('Please complete the form (Age range should be between 4 and 100)').css('color', 'red');
     }
+    // get calorie amount based on age, gender and activity level
     $.ajax({
       type: 'get',
       url: url,
@@ -163,6 +170,7 @@ $(document).ready(function () {
         $('.calorie-amount').text(response.calorie_amount).css('color', '#5db85d');
       }
     });
+    // get calorie amount based on term of pregnancy
     if (term === 'First') {
       $('.calorie-amount').text('You daily intake should be 1800 calories').css('color', '#5db85d');
     } else if (term === 'Second') {
@@ -172,10 +180,9 @@ $(document).ready(function () {
     }
   });
 
-
-/**************************
+  /**************************
         RECIPE SEARCH
-***************************/
+  ***************************/
   $('.search-text').on('input', function () {
     const text = $('.search-text').val();
     // if search bar is not empty, hide default view
@@ -208,7 +215,7 @@ $(document).ready(function () {
         }
       });
     } else {
-      //shows default recipes list, if search bar is empty.
+      // shows default recipes list, if search bar is empty.
       $('.recipes_search').empty();
       $('.recipes_list').show();
     }
