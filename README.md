@@ -1,4 +1,4 @@
-<img src='./web_dynamic/static/images/readme_images/logo.png' alt="eat right logo" align="right" height="100" width="120">
+<img src='./web_dynamic/static/images/readme_images/logo.png' alt="eat right logo" align="right" height="100" width="140">
 <h1>Eat Right</h1>
 <p>Eat Right is a calorie counter and also has a feature for recipe viewing and submitting.</p>
 
@@ -23,12 +23,12 @@
 ----
 <div align="center">
 
-[Table Content](#table-content)   •   [Pre-Requisite](#pre-requisite)   •   [Running The App](#running-app)   •   [Features](#features)
+[Table Content](#table-content)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Pre-Requisite](#pre-requisite)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Running The App](#running-app)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Features](#features)
 
 </div>
 
 ----
-<h3 id="table-content">Table of contents</h3>
+<h2 id="table-content">Table of contents</h2>
 
 Files | Description
 ----- | -----------
@@ -43,7 +43,7 @@ Files | Description
 [AUTHORS](./AUTHORS) | file contains email and the github usernames of the developers of this project.
 
 ----
-<h3 id="pre-requisite">Pre-Requisite</h3>
+<h2 id="pre-requisite">Pre-Requisite</h2>
 <ul>
   <li>Python</li>
   <ol>
@@ -59,7 +59,7 @@ Files | Description
 </ul>
 
 ---
-<h3 id="running-app">Running the app</h3>
+<h2 id="running-app">Running the app</h2>
 
 To run this app locally, you first need to clone this repo:
 ```shell
@@ -117,13 +117,14 @@ crz@user:~$ user=eat_right_devs password=eat_right_dev_pwd host=localhost databa
 The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 
 ----
-<h3 id="features">Features</h3>
-<h4>Landing Page</h4>
+<h2 id="features">Features</h2>
+
+<h3>Landing Page</h3>
 <img src='./web_dynamic/static/images/readme_images/landing_page.png' alt="landing page" align="center">
 <p>This is the landing page. On the top are links you can click on to take you to the different areas of the webpage</p>
 
 ----
-<h4>Calorie Predictor</h4>
+<h3>Calorie Predictor</h3>
 <img src='./web_dynamic/static/images/readme_images/male_predictor.png' alt="calorie predictor for all" align="center">
 
 <p>Here is the calorie predictor. You will click or type in your information, such as  your age, gender and activity level and it will show you how much your calorie intake should be.</p>
@@ -134,7 +135,7 @@ The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 <p>Once you know how much your daily intake should be, you can go to the calorie counter section.</p>
 
 ----
-<h4>Calorie Counter</h4>
+<h3>Calorie Counter</h3>
 <img src='./web_dynamic/static/images/readme_images/calorie_counter.png' alt="Calorie Counter" align="center">
 <img src='./web_dynamic/static/images/readme_images/calorie_counter_dinner.png' alt="Counting Calories" align="center">
 
@@ -144,7 +145,7 @@ The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 <p>What you'll do is add your breakfast, lunch, and supper meals then the counter will display how much you ate. You will then get to compare it with the amount of daily calories intake of calorie preditor. User can remove food items by clicking on the red dash on the right of each row.</p>
 
 ----
-<h4>Recipe</h4>
+<h3>Recipe</h3>
 <img src='./web_dynamic/static/images/readme_images/recipe.png' alt="Searching recipes" align="center">
 
 <p>Here you will find a list of recipes people from around the world have submitted. You can even search for recipe you are looking for by searching.</p>
@@ -162,11 +163,11 @@ The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 <p>Above we mentioned files called sample_images and sample_recipe.txt. These files have sample recipes you can try on the submit form.</p>
 
 ----
-<h4>About Us</h4>
+<h3>About Us</h3>
 <img src='./web_dynamic/static/images/readme_images/About_us.png' alt="About us" align="center">
 
 <p>This section briefly summerizes the app and the development of the app. You can read it for more details.</p>
 
 ----
-<h4>Developers</h4>
+<h3>Developers</h3>
 <p>Here you will learn who the developers are and what they contributed to the making of the app.</p>
