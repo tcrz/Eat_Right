@@ -1,9 +1,10 @@
-<img src='./web_dynamic/static/images/readme_images/logo.png' alt="eat right logo" align="right" height="60" width="80">
+<img src='./web_dynamic/static/images/readme_images/logo.png' alt="eat right logo" align="right" height="100" width="120">
 <h1>Eat Right</h1>
 <p>Eat Right is a calorie counter and also has a feature for recipe viewing and submitting.</p>
 
 ----
 <p><img src='./web_dynamic/static/images/fork_knife.jpg' alt="eat right icon" height="20" width="20"> Click <a href="http://web-02.yoursamie.tech/eat_right">here </a>to enjoy the deployed app.<p>
+
 ----
 <p>Get to know the developers</p>
 :boy: <b>Kaleab Tesfaye</b> <br>
@@ -18,14 +19,15 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/iam_tonnie">Twitter</a> <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/tcrz">Github</a> <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/tony-baidoo-0aaab7230">Linkedin</a> <br>
----
+
+----
 <div align="center">
 
-[Table Content](#table-content) • [Pre-Requisite](#pre-requisite) • [Running The App](#running-app) • [Features](#features)
+[Table Content](#table-content)   •   [Pre-Requisite](#pre-requisite)   •   [Running The App](#running-app)   •   [Features](#features)
 
 </div>
 
----
+----
 <h3 id="table-content">Table of contents</h3>
 
 Files | Description
@@ -40,7 +42,7 @@ Files | Description
 [web_static](./web_static) | This folder hold the static content of the webpage, html and css
 [AUTHORS](./AUTHORS) | file contains email and the github usernames of the developers of this project.
 
----
+----
 <h3 id="pre-requisite">Pre-Requisite</h3>
 <ul>
   <li>Python</li>
@@ -114,12 +116,13 @@ crz@user:~$ user=eat_right_devs password=eat_right_dev_pwd host=localhost databa
 
 The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 
----
+----
 <h3 id="features">Features</h3>
 <h4>Landing Page</h4>
 <img src='./web_dynamic/static/images/readme_images/landing_page.png' alt="landing page" align="center">
 <p>This is the landing page. On the top are links you can click on to take you to the different areas of the webpage</p>
----
+
+----
 <h4>Calorie Predictor</h4>
 <img src='./web_dynamic/static/images/readme_images/male_predictor.png' alt="calorie predictor for all" align="center">
 
@@ -129,7 +132,8 @@ The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 
 <p>It gives alternative options for women who are pregnant as well.</p>
 <p>Once you know how much your daily intake should be, you can go to the calorie counter section.</p>
----
+
+----
 <h4>Calorie Counter</h4>
 <img src='./web_dynamic/static/images/readme_images/calorie_counter.png' alt="Calorie Counter" align="center">
 <img src='./web_dynamic/static/images/readme_images/calorie_counter_dinner.png' alt="Counting Calories" align="center">
@@ -138,8 +142,8 @@ The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 <p>Example: This person had clicked on 'Add Item' and we can see that they ate Chicken for supper that is of one Unit.</p>
 <p>We can also see that, chicken of one unit is 189.2 Calories.</p>
 <p>What you'll do is add your breakfast, lunch, and supper meals then the counter will display how much you ate. You will then get to compare it with the amount of daily calories intake of calorie preditor. User can remove food items by clicking on the red dash on the right of each row.</p>
----
 
+----
 <h4>Recipe</h4>
 <img src='./web_dynamic/static/images/readme_images/recipe.png' alt="Searching recipes" align="center">
 
@@ -157,10 +161,12 @@ The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 <p>Once you fill out all the required input, you then click submit. It will then be displayed on recipe section.</p>
 <p>Above we mentioned files called sample_images and sample_recipe.txt. These files have sample recipes you can try on the submit form.</p>
 
+----
 <h4>About Us</h4>
 <img src='./web_dynamic/static/images/readme_images/About_us.png' alt="About us" align="center">
 
 <p>This section briefly summerizes the app and the development of the app. You can read it for more details.</p>
 
+----
 <h4>Developers</h4>
 <p>Here you will learn who the developers are and what they contributed to the making of the app.</p>
