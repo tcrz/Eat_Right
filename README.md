@@ -187,3 +187,7 @@ The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 ----
 <h3>Developers</h3>
 <p>Here you will learn who the developers are and what they contributed to the making of the app.</p>
+
+----
+<h3>License</h3>
+Eat Right is under the MIT license. See the [LICENSE](https://github.com/sourcerer-io/sourcerer-app/blob/develop/LICENSE.md) for more information.
