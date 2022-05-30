@@ -1,0 +1,423 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  margin-top: 15px;
+  font-family: "poppins";
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.subtext {
+  text-align: center;
+  margin: 0 auto;
+  width: 65%;
+  margin-bottom: 20px;
+}
+
+.heading {
+  padding-top: 70px;
+  font-size: 300%;
+  text-align: center;
+}
+
+/************************
+ *     Landing Page     *
+ ***********************/
+
+header {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 1px solid #5db85d;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.three-lines {
+  display: none;
+  font-size: 200%;
+  user-select: none;
+  position: absolute;
+  right: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.sticky-nav {
+  position: fixed;
+  max-width: none;
+  width: 100%;
+  top: 0%;
+  transition: ease-out 1s;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 0 1px 3px #c3bfbf;
+  background: white;
+  z-index: 9999;
+}
+
+.menu-nav {
+  display: flex;
+}
+
+.menu-nav li {
+  padding: 0 20px;
+  border-bottom: 2px solid transparent;
+  list-style: none;
+}
+
+.menu-nav li:hover {
+  padding-bottom: 1px;
+  border-bottom: 2px solid #5db85d;
+}
+
+.menu-icons ion-icon{
+  font-size: 140%;
+  border: 1px solid black;
+  padding: 6px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+}
+
+.menu-icons ion-icon:hover {
+  color: black;
+  background: white;
+}
+
+.landing {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1150px;
+  background: linear-gradient(#e6e9e3, #cecfc79d);
+  background-color: rgb(199, 240, 208);
+  margin: 0 auto;
+  border-radius: 30px;
+  height: 80%;
+}
+
+.hero-text-box {
+  width: 600px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  padding-top: 100px;
+}
+
+.landing .hero-text-box h1 {
+  font-size: 300%;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 0px;
+  margin-bottom: 5px;
+  line-height: 50px;
+}
+
+.hero-text-box p {
+  width: 550px;
+  margin-bottom: 35px;
+}
+
+.hero-img {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0px;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: rgba(10, 10, 10, 0.534) -5px 5px 9px;
+}
+
+.hero-text-box a {
+  font-size: 120%;
+  border: 1px solid #5db85d;
+  border-radius: 150px;
+  margin-right: 20px;
+  padding: 15px 40px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.2s;
+}
+
+.CC-btn {
+  background: #5db85d;
+  color: white;
+}
+
+.recipes-btn {
+  background: none;
+  color: #5db85d;
+}
+
+.recipes-btn:hover {
+  background: #5db85d;
+  color: white;
+}
+
+.CC-btn:hover {
+  background: transparent;
+  color: #5db85d;
+}
+
+/* Responsivesness */
+
+@media (min-width: 320px) and (max-width: 370px) {
+    header{
+      height: 500px;
+      border-bottom: none;
+    }
+
+    .hero-text-box {
+      width: 400px;
+      padding: 0 10px;
+      margin: auto 0;
+    }
+
+    .landing {
+      border-radius: 0px;
+      border-bottom: 1px solid #5db85d;
+    }
+
+    .landing .hero-text-box h1 {
+      font-size: 200%;
+    }
+    .heading {
+      font-size: 200%;
+    }
+
+    .subtext {
+      width: 90%;
+    }
+
+    nav {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding-left:10px;
+      padding-bottom: 15px;
+      box-shadow: 0 2px 3px #c3bfbf;
+    }
+
+    .menu-nav {
+      display: none;
+      position: absolute;
+      top: 56px;
+      right: 15px;
+      background-color: white;
+    } 
+
+    .menu-nav li {
+      padding: 15px 20px;
+    }
+
+    .menu-icons {
+      padding-right: 60px;
+    }
+
+    .sticky-nav {
+      margin: 0px;
+    }
+
+    input[type=checkbox]:checked ~ .menu-nav {
+      display: block;
+    }
+
+    .three-lines {
+      display: block;
+    }
+
+    .hero-text-box p {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    .hero-text-box a {
+      font-size: 85%;
+      margin-right: 0px;
+      padding: 10px 20px;
+    }
+
+    .hero-img {
+      display: none;
+    }
+
+    iframe {
+      width: 80%;
+      height: 300px;
+    }
+}
+
+@media (min-width: 371px) and (max-width: 480px) {
+    .hero-text-box{
+      padding: 0 10px;
+    }
+
+    .heading {
+      font-size: 200%;
+    }
+
+    .subtext {
+      width: 90%;
+    }
+
+    iframe {
+      width: 90%;
+      height: 90%;
+    }
+}
+
+/* Responsiveness */
+
+@media (min-width: 371px) and (max-width: 767px) {
+    header {
+      height:500px;
+      border-bottom: none;
+    }
+
+    .hero-text-box {
+      width: 400px;
+      padding-top: 0;
+      margin: auto 0
+    }
+
+    .landing {
+      border-radius: 0px;
+      border-bottom: 1px solid #5db85d;
+    }
+    
+    .landing .hero-text-box h1 {
+      font-size: 260%;
+    }
+
+    .heading {
+      font-size: 250%;
+    }
+
+    nav {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding-left: 10px;
+      padding-bottom: 15px;
+      box-shadow: 0 2px 3px #c3bfbf;
+    }
+
+    .menu-nav {
+      display: none;
+      position: absolute;
+      top: 56px;
+      right: 15px;
+      background-color: white;
+    }
+
+    .menu-nav li {
+      padding: 15px 20px;
+    }
+
+    .menu-icons {
+      padding-right: 60px;
+    }
+
+    .sticky-nav {
+      margin: 0px;
+    }
+
+    input[type=checkbox]:checked ~ .menu-nav {
+      display: block;
+    }
+
+    .three-lines {
+      display: block;
+    }
+
+    iframe {
+      width: 80%;
+      height: 300px;
+    }
+
+    .hero-text-box p {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    .hero-text-box a {
+      font-size: 100%;
+      margin-right: 0px;
+      padding: 13px 20px;
+    }
+
+    .hero-img {
+      display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    header {
+      height: 500px;
+      border-bottom: none;
+    }
+
+    .hero-text-box {
+      width: 500px;
+      padding-top: 0;
+      margin: auto 0;
+      padding-left: 20px;
+    }
+
+    .landing {
+      border-radius: 0px;
+      border-bottom: 1px solid #5db85d;
+      gap: 2%;
+    }
+
+    .landing .hero-text-box h1 {
+      font-size: 260%;
+    }
+
+    .hero-text-box p {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    .hero-text-box a {
+      font-size: 100%;
+      margin-right: 0px;
+      padding: 13px 20px;
+    }
+
+    .hero-img {
+      width: 500px;
+    }
+
+    .hero-img img {
+      width: 80%;
+    }
+}

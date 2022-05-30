@@ -1,0 +1,257 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  margin-top: 15px;
+  font-family: "poppins";
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.subtext {
+  text-align: center;
+  margin: 0 auto;
+  width: 65%;
+  margin-bottom: 20px;
+}
+
+.heading {
+  padding-top: 70px;
+  font-size: 300%;
+  text-align: center;
+}
+
+/*********************
+ *    Recipe View    *
+ ********************/
+
+.popup-bg,
+.recipe-view-popup-bg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(170, 192, 167, 0.486);
+  width: 100%;
+  height: 100%;
+  display: none;
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+}
+
+.recipe-view {
+  display: block;
+  position: relative;
+  width: 68%;
+  height: 95%;
+  margin: 0 auto;
+  padding: 20px 30px;
+  margin-top: 15px;
+  border-radius: 25px;
+  border: none;
+  background-image: url("../images/rcpview.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  position: relative;
+}
+
+.recipe-view::-webkit-scrollbar {
+  width: 0px;
+}
+
+.recipe-view {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+.head .recipe-name {
+  width: 70%;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #161f47;
+}
+
+.head {
+  display: flex;
+  text-align: center;
+  height: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head img {
+  width: 55%;
+  height: 75%;
+  margin: 10px 0px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.ingredients {
+  margin: 10px 0 0 5px;
+}
+
+.ingredients h2,
+.preparation h2 {
+  font-size: 140%;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+  color: #161f47;
+}
+
+.ingredients li,
+.preparation li {
+  font-size: 120%;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+  font-weight: 20;
+  margin: 0 0 10px 30px;
+  color: #161f47;
+}
+
+.recipe-view h4 {
+  font-size: 20px;
+  margin: 20px 0 0 20px;
+}
+
+.recipe-view ion-icon {
+  background: grey;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  right: 2%;
+  top: 1%;
+}
+
+.recipe-view ion-icon:hover {
+  background: red;
+}
+
+/* Responsiveness */
+
+@media (min-width: 320px) and (max-width: 370px) {
+    .heading {
+      font-size: 200%;
+    }
+
+    .subtext {
+      width: 90%;
+    }
+
+    .recipe-view {
+      width: 80%;
+      border-radius: 10px;
+    }
+
+    .recipe-view ion-icon {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+    }
+
+    .head {
+      height: auto;
+    }
+
+    .head img {
+      width: 80%;
+      object-fit: fill;
+    }
+    .recipe-view h4 {
+      font-size: 120%;
+    }
+
+    .recipe-view ion-icon {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+    }
+}
+
+@media (min-width: 371px) and (max-width: 480px) {
+    .heading {
+        font-size: 200%;
+    }
+
+    .subtext {
+      width: 90%;
+    }
+
+    .recipe-view {
+      width: 80%;
+      border-radius: 10px;
+    }
+
+    .head img {
+      width: 80%;
+    }
+}
+
+@media (min-width: 371px) and (max-width: 767px) {
+    .heading {
+      font-size: 250%;
+    }
+
+    .recipe-view {
+      width: 80%;
+      border-radius: 15px;
+    }
+    .head {
+      height: auto;
+    }
+
+    .head img {
+      width: 70%;
+    }
+
+    .recipe-view h4 {
+      font-size: 120%;
+    }
+
+    .recipe-view ion-icon {
+      width: 28px;
+      height: 28px;
+      position: absolute;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .recipe-view .head img {
+      width: 70%;
+    }
+
+    .recipe-view ion-icon {
+      position: absolute;
+      right: 25px;
+      top: 20px;
+    }
+}

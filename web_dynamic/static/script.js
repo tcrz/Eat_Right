@@ -147,7 +147,7 @@ $(document).ready(function () {
     term.style.display = 'none';
     forAll.style.display = 'block';
   });
-  $('.submittion').click(function () {
+  $('.submission').click(function () {
     const age = $('.age').val();
     const act = $('.act').children('option:selected').val();
     const gender = $('.gender:checked').val();
