@@ -70,15 +70,16 @@ $(document).ready(function () {
   });
 
   /**************************
-        CALORIE-API CALL
+        CALORIE-COUNTER
    ***************************/
   $('.search-btn > button').click(function () {
+    // grab values from all necessary search boxes
     const quantity = $(this).closest('.search-field').find('.search > input[type="number"]').val();
     const serving = $(this).closest('.search-field').find('.search > select').val();
     const foodname = $(this).closest('.search-field').find('.search > input[type="text"]').val();
     const searchField = $(this).closest('.search-field');
     const query = quantity + ' ' + serving + ' of ' + foodname;
-    console.log(query);
+    /* CALORIE-API CALL + DATA RETRIVAL */
     $.ajax({
       method: 'GET',
       url: 'https://api.calorieninjas.com/v1/nutrition?query=' + query,
@@ -88,18 +89,21 @@ $(document).ready(function () {
         if (result.items.length === 0) {
           console.log('food not found');
         } else {
+          // retrieve calorie value and foodname from api
           const calories = result.items[0].calories;
           const name = result.items[0].name;
+          // create template for food row and fill with data from api
           const row = '<tr class="food-query"><td class="food">' + name.toUpperCase() + ' <br> <span class="serving"><p>' +
             quantity + ' ' + serving + '</p></span></td>' + '<td class=calories>' + '<div style="display:flex;justify-content:space-between;">' +
             '<p>' + calories + '</p>' + '<ion-icon name="remove-outline" style="color:red;cursor:pointer;"></ion-icon></div></td></tr>';
+          // insert the row right above search field
           $(row).insertBefore(searchField);
-          // calories_list.push(calories)
+          // retrieve current value 
           let sum = $('.total .total-value').text().split(' ')[0];
           sum = parseFloat(sum);
-          console.log(sum);
           sum += calories;
           sum = sum.toFixed(1) * 1;
+          // update total calories value with new total
           $('.total .total-value ').text(sum + ' Calories');
         }
       },
@@ -109,17 +113,23 @@ $(document).ready(function () {
     });
   });
 
-  // DELETE FOOD ROW AND UPDATE CALORIES
+  /* DELETE FOOD ROW AND UPDATE TOTAL CALORIES */
   $('table').on('click', '.calories > div > ion-icon', function () {
+    // retrieve value of clicked food row
     const foodCal = $(this).closest('.food-query').find('.calories p ').text().split(' ')[0];
+    // retrieve value of total calories
     let totalCal = $('.total .total-value').text().split(' ')[0];
     $(this).closest('.food-query').remove();
+    // subtract food row calorie value from total calorie value
     totalCal = (parseFloat(totalCal) - parseFloat(foodCal)).toFixed(1);
     console.log('total:', totalCal);
+    // update total calories value with new total
     $('.total .total-value ').text(totalCal + ' Calories');
   });
 
-  // Predictor
+  /**************************
+        CALORIE-PREDICTOR
+   ***************************/
   const forPregnancy = document.getElementById('for-pregnant');
   const forAll = document.getElementById('for-all');
   const term = document.getElementById('term');
@@ -162,20 +172,26 @@ $(document).ready(function () {
     }
   });
 
-  // SEARCH FOR RECIPE
+
+/**************************
+        RECIPE SEARCH
+***************************/
   $('.search-text').on('input', function () {
     const text = $('.search-text').val();
-    console.log(text)
+    // if search bar is not empty, hide default view
     if (text.length > 0) {
       $('.recipes_list').hide();
+      // sends search query to api route
       $.ajax({
         type: 'POST',
         url: 'http://127.0.0.1:5001/api/v1/livesearch',
         data: { text: text },
         success: function (response) {
           $('.recipes_search').empty();
+          // loops through response and creates recipe template with response data
           $.each(response, function (indexInArray, valueOfElement) {
             const mimetype = '.png';
+            // add data to html template and append to recipes_search div
             $('.recipes_search').append(
               '<article class="recipe" id=' + valueOfElement.id + '>' +
               '<div class="category">' +
@@ -192,6 +208,7 @@ $(document).ready(function () {
         }
       });
     } else {
+      //shows default recipes list, if search bar is empty.
       $('.recipes_search').empty();
       $('.recipes_list').show();
     }
