@@ -47,6 +47,7 @@ Files | Description
 <ul>
   <li>Python</li>
   <ol>
+   <li>pip3</li>
    <li>Flask</li>
    <li>flask_cors</li>
    <li>Sqlalchemy</li>
@@ -57,6 +58,21 @@ Files | Description
    <li>Mysql Server</li>
   </ol>
 </ul>
+
+<p>For installation use the table below</p>
+
+
+Packages | Installation
+----- | -----------
+Python3 | sudo apt-get install python3.8
+pip3 | sudo apt install python3-pip
+Flask | pip install Flask
+MySQLdb | sudo apt-get install python3-dev
+&nbsp;  | sudo apt-get install libmysqlclient-dev
+&nbsp;  |  sudo apt-get install zlib1g-dev
+ &nbsp; |  sudo pip3 install mysqlclient
+Sqlalchemy | pip install SQLAlchemy
+flask-cors | pip install Flask-Cors
 
 ---
 <h2 id="running-app">Running the app</h2>
