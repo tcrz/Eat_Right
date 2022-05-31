@@ -1,49 +1,30 @@
 <img src='./web_dynamic/static/images/readme_images/logo.png' alt="eat right logo" align="right" height="100" width="140">
 <h1>Eat Right</h1>
-<p>Eat Right is a calorie counter and also has a feature for recipe viewing and submitting.</p>
-
-----
-<p><img src='./web_dynamic/static/images/fork_knife.jpg' alt="eat right icon" height="20" width="20"> Click <a href="http://web-02.yoursamie.tech/eat_right">here </a>to enjoy the deployed app.<p>
-
-----
-<p>Get to know the developers</p>
+<p>Eat Right is a calorie counter, calorie prediction and also has a section where you can share your favorite recipe with anyone who vists the app as well as view recipes submitted by others.</p>
+<p><img src='./web_dynamic/static/images/fork_knife.jpg' alt="eat right icon" height="20" width="20"> Click <a href="http://web-02.yoursamie.tech/eat_right">here </a>to check out the deployed app.<p>
+<p id="developers"> Get to know the developers:<p>
 :boy: <b>Kaleab Tesfaye</b> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/samdre60">Twitter</a> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/kalom60">Github</a> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/kaleab-tesfaye-3b0546201">Linkedin</a> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ <a href="https://twitter.com/samdre60">Twitter</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/kalom60">Github</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/kaleab-tesfaye-3b0546201">Linkedin</a> ]<br><br>
 :woman: <b>Samra Solomon</b> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/Samie67514029">Twitter</a> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/samie-ya">Github</a> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com//in/samra-solomon-24b745208">Linkedin</a> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ <a href="https://twitter.com/Samie67514029">Twitter</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/samie-ya">Github</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com//in/samra-solomon-24b745208">Linkedin</a> ]<br><br>
 :boy: <b>Tony Baidoo</b> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/iam_tonnie">Twitter</a> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/tcrz">Github</a> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/tony-baidoo-0aaab7230">Linkedin</a> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ <a href="https://twitter.com/iam_tonnie">Twitter</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/tcrz">Github</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/tony-baidoo-0aaab7230">Linkedin</a> ]<br><br>
 
 ----
 <div align="center">
 
-[Files Description](#table-content)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Pre-Requisite](#pre-requisite)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Running The App](#running-app)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Features](#features)
+[Pre-Requisites](#pre-requisite)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Running The App](#running-app)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Files Description](#table-content)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Features](#features)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Developers](#developers)
 
 </div>
 
 ----
-<h2 id="table-content">Files Description</h2>
-
-Files | Description
------ | -----------
-[dumpable.sql](./dumpable.sql) | This is the sql file that holds the statements used to create and populate the database.
-[for_running_flask.txt](./for_running_flask.txt) | Inside this file you'll find the commands to run the webpage and api. You need to open two terminals, one for each to run on.
-[sample_images](./sample_images) | Sample recipe images to use for recipe submission.
-[sample_recipes.txt](./sample_recipes.txt) | Sample recipes to use for recipe submission.
-[tables](./tables) | This folder will hold the backend portion of how the models are created and how the database runs.
-[api](./api) |This folder will hold all the routes we used on the backend to make the front-end dynamic.
-[web_dynamic](./web_dynamic) | This folder holds the html, css, flask templates, javascript of the webpage.
-[web_static](./web_static) | This folder hold the static content of the webpage, html and css
-[AUTHORS](./AUTHORS) | file contains email and the github usernames of the developers of this project.
-
-----
-<h2 id="pre-requisite">Pre-Requisite</h2>
+<h2 id="pre-requisite">Pre-Requisites</h2>
 <ul>
   <li>Python</li>
   <ol>
@@ -59,8 +40,8 @@ Files | Description
   </ol>
 </ul>
 
-<p>For installation use the table below</p>
-
+<h4>For installation use the table below</h4>
+<p>(NB: Installation commands are for Linux only, please find the required installation process for each package based on your OS)</p><br>
 
 Packages | Installation
 ----- | -----------
@@ -74,7 +55,7 @@ MySQLdb | sudo apt-get install python3-dev
 Sqlalchemy | pip install SQLAlchemy
 flask-cors | pip install Flask-Cors
 
----
+----
 <h2 id="running-app">Running the app</h2>
 
 To run this app locally, you first need to clone this repo:
@@ -133,6 +114,22 @@ crz@user:~$ user=eat_right_devs password=eat_right_dev_pwd host=localhost databa
 The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 
 ----
+
+<h2 id="table-content">Files Description</h2>
+
+Files | Description
+----- | -----------
+[dumpable.sql](./dumpable.sql) | This is the sql file that holds the statements used to create and populate the database.
+[for_running_flask.txt](./for_running_flask.txt) | Inside this file you'll find the commands to run the webpage and api. You need to open two terminals, one for each to run on.
+[sample_images](./sample_images) | Sample recipe images to use for recipe submission.
+[sample_recipes.txt](./sample_recipes.txt) | Sample recipes to use for recipe submission.
+[tables](./tables) | This folder will hold the backend portion of how the models are created and how the database runs.
+[api](./api) |This folder will hold all the routes we used on the backend to make the front-end dynamic.
+[web_dynamic](./web_dynamic) | This folder holds the html, css, flask templates, javascript of the webpage.
+[web_static](./web_static) | This folder hold the static content of the webpage, html and css
+[AUTHORS](./AUTHORS) | file contains email and the github usernames of the developers of this project.
+
+----
 <h2 id="features">Features</h2>
 
 <h3>Landing Page</h3>
@@ -158,7 +155,7 @@ The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 <p>Here you'll put in your meals to determine how much calories you ate.</p>
 <p>Example: This person had clicked on 'Add Item' and we can see that they ate Chicken for supper that is of one Unit.</p>
 <p>We can also see that, chicken of one unit is 189.2 Calories.</p>
-<p>What you'll do is add your breakfast, lunch, and supper meals then the counter will display how much you ate. You will then get to compare it with the amount of daily calories intake of calorie preditor. User can remove food items by clicking on the red dash on the right of each row.</p>
+<p>What you'll do is add your breakfast, lunch, and supper meals then the counter will display how much you ate. You will then get to compare it with the amount of daily calories intake of calorie predictor. User can remove food items by clicking on the red dash on the right of each row.</p>
 
 ----
 <h3>Recipe</h3>
@@ -172,22 +169,11 @@ The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 
 <p>This section also comes with add recipe card where you can add your favorite dishes on the page. Click on the 'Plus sign' on the grey Add recipe and you'll find a submit form.</p>
 
-<img src='./web_dynamic/static/images/readme_images/submit.png' alt="Adding Recipnse</h3>
-Eat Right is under the MIT license. See the [LICENSE](https://github.com/sourcerer-io/sourcerer-app/blob/develop/LICENSE.md) for more information.e" align="center">
+<img src='./web_dynamic/static/images/readme_images/submit.png' alt="Adding Recipnse">
 
 <p>The Submit form has many input fields where one can fill out. There is user name, recipe name, choose image(Image of the food), category(List of categories to pick from), Ingredients(It shows you how to place ingredients), and preparation(It also show you how to add preparation section).</p>
 <p>Once you fill out all the required input, you then click submit. It will then be displayed on recipe section.</p>
 <p>Above we mentioned files called sample_images and sample_recipe.txt. These files have sample recipes you can try on the submit form.</p>
-
-----
-<h3>About Us</h3>
-<img src='./web_dynamic/static/images/readme_images/About_us.png' alt="About us" align="center">
-
-<p>This section briefly summerizes the app and the development of the app. You can read it for more details.</p>
-
-----
-<h3>Developers</h3>
-<p>Here you will learn who the developers are and what they contributed to the making of the app.</p>
 
 ----
 <h3>License</h3>
