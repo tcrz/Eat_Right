@@ -23,12 +23,12 @@
 ----
 <div align="center">
 
-[Table Content](#table-content)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Pre-Requisite](#pre-requisite)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Running The App](#running-app)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Features](#features)
+[Files Description](#table-content)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Pre-Requisite](#pre-requisite)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Running The App](#running-app)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Features](#features)
 
 </div>
 
 ----
-<h2 id="table-content">Table of contents</h2>
+<h2 id="table-content">Files Description</h2>
 
 Files | Description
 ----- | -----------
