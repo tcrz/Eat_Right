@@ -2,7 +2,7 @@
 <h1>Eat Right</h1>
 <p>Eat Right is a calorie counter, calorie prediction and also has a section where you can share your favorite recipe with anyone who vists the app as well as view recipes submitted by others.</p>
 <p><img src='./web_dynamic/static/images/fork_knife.jpg' alt="eat right icon" height="20" width="20"> Click <a href="http://web-02.yoursamie.tech/eat_right">here </a>to check out the deployed app.<p>
-<p id="developers"> Get to know the developers:<p>
+<p> Get to know the developers:<p>
 :boy: <b>Kaleab Tesfaye</b> <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ <a href="https://twitter.com/samdre60">Twitter</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/kalom60">Github</a>
@@ -19,7 +19,7 @@
 ----
 <div align="center">
 
-[Pre-Requisites](#pre-requisite)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Running The App](#running-app)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Files Description](#table-content)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Features](#features)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Developers](#developers)
+[Pre-Requisites](#pre-requisite)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Running The App](#running-app)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Files Description](#table-content)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Features](#features)
 
 </div>
 
