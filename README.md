@@ -172,8 +172,7 @@ The webpage will be served at <strong>http://127.0.0.1:5000</strong>
 
 <p>This section also comes with add recipe card where you can add your favorite dishes on the page. Click on the 'Plus sign' on the grey Add recipe and you'll find a submit form.</p>
 
-<img src='./web_dynamic/static/images/readme_images/submit.png' alt="Adding Recipnse</h3>
-Eat Right is under the MIT license. See the [LICENSE](https://github.com/sourcerer-io/sourcerer-app/blob/develop/LICENSE.md) for more information.e" align="center">
+<img src='./web_dynamic/static/images/readme_images/submit.png' alt="Adding Recipes" align="center">
 
 <p>The Submit form has many input fields where one can fill out. There is user name, recipe name, choose image(Image of the food), category(List of categories to pick from), Ingredients(It shows you how to place ingredients), and preparation(It also show you how to add preparation section).</p>
 <p>Once you fill out all the required input, you then click submit. It will then be displayed on recipe section.</p>
