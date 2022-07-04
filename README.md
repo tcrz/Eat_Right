@@ -1,6 +1,7 @@
 <img src='./web_dynamic/static/images/readme_images/logo.png' alt="eat right logo" align="right" height="100" width="140">
 <h1>Eat Right</h1>
-<p>Eat Right is a calorie counter, calorie prediction and also has a section where you can share your favorite recipe with anyone who vists the app as well as view recipes submitted by others.</p>
+<p>Eat Right is a calorie counter, calorie prediction and also has a section where you can share your favorite recipe with anyone who vists the app as well as view recipes submitted by others. When we are brainstorming about what project to make, We tried to focus on projects that would be useful to anyone who used it regardless of their background or age. We wanted to the project to have a purpose and We felt this could be a useful project. We have always been an advocate of eating and staying healthy, this project felt as an opportunity to help solve a problem related to what We have an interest in. Everybody loves food, everybody eats but is everybody aware of their daily calorie intake or how many calories are contained in what they eat? Probably not. Not knowing this information means you are going to be eating way above your calorie limit or way below, neither of which is great for your health. This project seeked to solve that problem, provide useful food information and also healthy food recipes from around the world.</p>
+<p>Here we will discuss on how the app works. We will describe the step by step. So Hop on board and lets Begin.</p>
 <p><img src='./web_dynamic/static/images/fork_knife.jpg' alt="eat right icon" height="20" width="20"> Click <a href="http://web-02.yoursamie.tech/eat_right">here </a>to check out the deployed app.<p>
 <p> Get to know the developers:<p>
 :boy: <b>Kaleab Tesfaye</b> <br>
