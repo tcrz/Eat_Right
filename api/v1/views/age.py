@@ -15,4 +15,4 @@ def get_calorie_amount(gender, activity, digit):
     for age in storage.all(Age).values():
         if age.gender == gender and age.activity_level == activity:
             if age.min_age <= digit and digit <= age.max_age:
-                return age.make_dict()
+                return jsonify(age.make_dict())
