@@ -88,4 +88,4 @@ def livesearch():
     """
     searchbox = request.form.get('text')
     recipes = storage.search(searchbox)
-    return recipes
+    return jsonify(recipes)
