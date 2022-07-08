@@ -25,7 +25,7 @@ def find_recipe(ids):
     for recipe in storage.all(Recipe).values():
         recipe_id.append(recipe.id)
         if (ids == recipe.id):
-            return recipe.make_dict()
+            return jsonify(recipe.make_dict())
     if ids not in recipe_id:
         return abort(404)
 

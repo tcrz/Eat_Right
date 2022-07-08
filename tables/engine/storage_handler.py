@@ -16,10 +16,10 @@ class StorageHandler:
     def __init__(self):
         """This function will initialize the engine"""
         self.__engine = create_engine('mysql+mysqldb://{}:{}@{}:3306/{}'
-                                      .format(os.getenv('user'),
-                                              os.getenv('password'),
-                                              os.getenv('host'),
-                                              os.getenv('database')),
+                                      .format(os.getenv('user', 'eat_right_devs'),
+                                              os.getenv('password', 'eat_right_dev_pwd'),
+                                              os.getenv('host', 'localhost'),
+                                              os.getenv('database', 'eat_right_db')),
                                       pool_pre_ping=True)
 
     def all(self, cls=None):
