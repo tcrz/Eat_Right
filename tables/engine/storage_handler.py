@@ -26,7 +26,7 @@ class StorageHandler:
         #                                       os.getenv('database', 'eat_right_db')),
         #                               pool_pre_ping=True)
 #        self.__engine = create_engine("sqlite:///{}".format(os.path.join(project_dir, database_filename)))
-        self.__engine = create_engine("postgres://jdrawklfmnnlbr:6678da66f7f342f89e7be361942264bcda13ad39062622408df939a768694a48@ec2-44-209-186-51.compute-1.amazonaws.com:5432/d575a3ogarpq4d")
+        self.__engine = create_engine("postgresql://jdrawklfmnnlbr:6678da66f7f342f89e7be361942264bcda13ad39062622408df939a768694a48@ec2-44-209-186-51.compute-1.amazonaws.com:5432/d575a3ogarpq4d")
 
     def all(self, cls=None):
         """This function will query the database and gives a dictionary"""
