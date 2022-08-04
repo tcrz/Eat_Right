@@ -11,11 +11,11 @@ $(document).ready(function () {
 
   // RECIPE SUBMISSION POP-UP
   $('.add-recipe').click(function () {
-    $('.popup-bg').fadeIn(200);
+    $('.popup-bg').fadeIn(90);
   });
 
   $('.recipe-submission ion-icon').click(function () {
-    $('.popup-bg').fadeOut(100);
+    $('.popup-bg').fadeOut(90);
   });
 
   // RECIPE VIEW POP-UP
@@ -23,7 +23,7 @@ $(document).ready(function () {
     $('.recipe-view-popup-bg').empty();
     const id = $(this).attr('id');
     console.log(id);
-    $.get('http://127.0.0.1:5001/api/v1/recipe/' + id, function (data) {
+    $.get('https://eatright-api.herokuapp.com/api/v1/recipe/' + id, function (data) {
       let ingrTemplate = '';
       const ingredientsList = data.ingredients.split('\n');
       ingredientsList.forEach(function (item) {
@@ -43,12 +43,12 @@ $(document).ready(function () {
         '</ol>' + '</div>' + '<h4>' + 'By ' + data.user_name + '</h4>' + '<ion-icon name="close-outline"></ion-icon>' + '</div>';
       $('.recipe-view-popup-bg').append(popupTemplate);
     });
-    $('.recipe-view-popup-bg').fadeIn(200);
+    $('.recipe-view-popup-bg').fadeIn(50);
   });
 
   // RECIPE VIEW POP-UP EXIT
   $('.recipe-view-popup-bg').on('click', '.recipe-view ion-icon', function () {
-    $('.recipe-view-popup-bg').fadeOut(100);
+    $('.recipe-view-popup-bg').fadeOut(50);
   });
 
   /**************************
@@ -157,7 +157,7 @@ $(document).ready(function () {
     const act = $('.act').children('option:selected').val();
     const gender = $('.gender:checked').val();
     const term = $('.trimester:checked').val();
-    const url = 'http://127.0.0.1:5001/api/v1/age/' + gender + '/' + act + '/' + age;
+    const url = 'https://eatright-api.herokuapp.com/api/v1/age/' + gender + '/' + act + '/' + age;
     // limitation for the form
     if (age < 4 || age > 100) {
       $('.calorie-amount').text('Please complete the form (Age range should be between 4 and 100)').css('color', 'red');
@@ -183,41 +183,49 @@ $(document).ready(function () {
   /**************************
         RECIPE SEARCH
   ***************************/
-  $('.search-text').on('input', function () {
-    const text = $('.search-text').val();
-    // if search bar is not empty, hide default view
-    if (text.length > 0) {
-      $('.recipes_list').hide();
-      // sends search query to api route
-      $.ajax({
-        type: 'POST',
-        url: 'http://127.0.0.1:5001/api/v1/livesearch',
-        data: { text: text },
-        success: function (response) {
-          $('.recipes_search').empty();
-          // loops through response and creates recipe template with response data
-          $.each(response, function (indexInArray, valueOfElement) {
-            const mimetype = '.png';
-            // add data to html template and append to recipes_search div
-            $('.recipes_search').append(
-              '<article class="recipe" id=' + valueOfElement.id + '>' +
-              '<div class="category">' +
-              '<img src=../static/images/' + valueOfElement.category + mimetype + ' alt="recipe logo" />' +
-              '</div>' +
-              '<img src=../static/images/' + valueOfElement.filename + ' alt="recipe imgaes">' +
-              '<div class="content"> <div class="food_name">' +
-              '<h2>' + valueOfElement.name + '</h2> </div>' +
-              '<div class="author">' +
-              '<p>' + 'By ' + valueOfElement.user_name + '</p> </div>' +
-              '</div> </article>'
-            );
-          });
-        }
-      });
-    } else {
-      // shows default recipes list, if search bar is empty.
-      $('.recipes_search').empty();
-      $('.recipes_list').show();
-    }
-  });
+//   $('.search-text').on('input', function () {
+//     let text = $('.search-text').val();
+//     //console.log(text) 
+//    // if search bar is not empty, hide default view
+//     if (text.length > 0) {
+//       $('.recipes_list').hide();
+//       // sends search query to api route
+//       $.ajax({
+//         type: 'POST',
+//         url: 'https://eatright-api.herokuapp.com/api/v1/livesearch',
+//         data: { text: text },
+//         success: function (response) {
+//           if (!jQuery.isEmptyObject(response)) {
+//             console.log(response)
+//             $('.recipes_search').empty();
+//             // loops through response and creates recipe template with response data
+//             $.each(response, function (indexInArray, valueOfElement) {
+//               const mimetype = '.png';
+//               // add data to html template and append to recipes_search div
+//               $('.recipes_search').append(
+//                 '<article class="recipe" id=' + valueOfElement.id + '>' +
+//                 '<div class="category">' +
+//                 '<img src=../static/images/' + valueOfElement.category + mimetype + ' alt="recipe logo" />' +
+//                 '</div>' +
+//                 '<img src=../static/images/' + valueOfElement.filename + ' alt="recipe imgaes">' +
+//                 '<div class="content"> <div class="food_name">' +
+//                 '<h2>' + valueOfElement.name + '</h2> </div>' +
+//                 '<div class="author">' +
+//                 '<p>' + 'By ' + valueOfElement.user_name + '</p> </div>' +
+//                 '</div> </article>'
+//               );
+//             });
+//           } else {
+//             // $('.recipes_search').append('<p>NO MEAL FOUND</p>') 
+//           }
+//         }
+//       });
+//     } else {
+//       // shows default recipes list, if search bar is empty.
+//       text=''
+//       console.log('empty search')
+//       $('.recipes_search').empty();
+//       $('.recipes_list').show();
+//     }
+//   });
 });
