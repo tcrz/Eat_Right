@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This script will create the routes for age API"""
 from api.v1.views import views
-from flask import make_response, jsonify
+from flask import make_response, jsonify, abort
 from tables import storage
 from tables.age import Age
 
@@ -16,3 +16,4 @@ def get_calorie_amount(gender, activity, digit):
         if age.gender == gender and age.activity_level == activity:
             if age.min_age <= digit and digit <= age.max_age:
                 return jsonify(age.make_dict())
+    return abort(404)
