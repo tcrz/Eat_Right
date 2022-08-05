@@ -1,1 +1,1 @@
-web: gunicorn web_dynamic.eat_right:app
+web: gunicorn api.v1.app:app
