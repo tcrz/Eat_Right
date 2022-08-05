@@ -9,8 +9,7 @@ from tables import storage
 app = Flask(__name__)
 app.register_blueprint(views)
 CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
-app.url_map.strict_slashes = False
-
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 @app.errorhandler(404)
 def error(error):
