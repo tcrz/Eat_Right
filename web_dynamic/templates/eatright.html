@@ -292,13 +292,13 @@
       <div class="recipe-submission">
         <h1 style="text-align: center">Submit Recipe</h1>
         <ion-icon name="close-outline"></ion-icon>
-        <form action="https://eatright-api.herokuapp.com/api/v1/recipe/" enctype="multipart/form-data" method="POST">
+        <form action="http://127.0.0.1:5001/api/v1/recipe/" enctype="multipart/form-data" method="POST">
           <label for="username">Username</label><br>
           <input type="text" name="username" id="username" required /><br>
           <label for="recipe-name">Recipe name</label><br>
           <input type="text" name="recipe-name" id="recipe-name" required /><br>
-          <label for="img">Upload photo of the meal</label><br>
-          <input type="file" id="img" name="img" accept="image/*" required /><br>
+          <label for="img">Add image url of meal photo</label><br>
+          <input type="text" id="img" name="image_url" accept="image/*" required /><br>
           <label for="categorizing">Category</label><br>
           <select name="category" id="categorizing" required /><br>
           <option value="" disabled selected>Select your option</option>
@@ -352,7 +352,7 @@ Close the lid until it is cooked." required></textarea><br>
           <div class="category">
             <img src="../static/images/{{ recipe.category }}.png" alt="recipe logo" />
           </div>
-          <img src="..{{url_for('static', filename='images/' + recipe.filename)}}" alt="recipe images" />
+          <img src="{{recipe.image_url}}" alt="recipe images" />
           <div class="content">
             <div class="food_name">
               <h2>{{ recipe.name }}</h2>

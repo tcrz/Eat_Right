@@ -56,24 +56,15 @@ def allowed_file(filename):
 @views.route('/recipe/', methods=['POST'])
 def add_recipe():
     """This function will add to database the content of form"""
-    from api.v1.app import app
-    UPLOAD_FOLDER = 'web_dynamic/static/images'
-    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-    app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
-    img = request.files['img']
-    filename = secure_filename(img.filename)
-    if img and allowed_file(img.filename):
-        path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        img.save(path)
     category = request.form.get("category")
     user_name = request.form.get("username")
     name = request.form.get("recipe-name")
     ingredients = request.form.get("ingredients")
     preparation = request.form.get("preparation")
-    mimetype = img.mimetype
+    image_url = request.form.get("image_url")
     new_dict = {'name': name, 'user_name': user_name,
                 'ingredients': ingredients, 'preparation': preparation,
-                'filename': filename, 'mimetype': mimetype,
+                'image_url': image_url,
                 'category': category}
     recipe = Recipe(**new_dict)
     recipe.save()
