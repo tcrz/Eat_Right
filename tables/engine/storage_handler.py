@@ -7,13 +7,17 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from tables.basemodel import Base
 from tables.recipe import Recipe
 from tables.age import Age
+
+#sqlite
 # database_filename = "eat_right.db"
 # project_dir = os.path.dirname(os.path.abspath(__file__))
-DB_NAME = os.getenv('DB_NAME', 'eatright')
-DB_HOST = os.getenv('DB_HOST', '127.0.0.1:5432')
-DB_USER = os.getenv('DB_USER', 'postgres')
-DB_PASSWORD = os.getenv('DB_PASSWORD', 'postgres')
-DB_PATH = 'postgresql://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME)
+
+#postgres
+#DB_NAME = os.getenv('DB_NAME', 'eatright')
+#DB_HOST = os.getenv('DB_HOST', '127.0.0.1:5432')
+#DB_USER = os.getenv('DB_USER', 'postgres')
+#DB_PASSWORD = os.getenv('DB_PASSWORD', 'postgres')
+#DB_PATH = 'postgresql://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME)
 
 
 
@@ -31,8 +35,8 @@ class StorageHandler:
         #                                       os.getenv('database', 'eat_right_db')),
         #                               pool_pre_ping=True)
         # self.__engine = create_engine("sqlite:///{}".format(os.path.join(project_dir, database_filename)))
-        # self.__engine = create_engine("postgresql://jdrawklfmnnlbr:6678da66f7f342f89e7be361942264bcda13ad39062622408df939a768694a48@ec2-44-209-186-51.compute-1.amazonaws.com:5432/d575a3ogarpq4d")
-        self.__engine = create_engine(DB_PATH)
+        self.__engine = create_engine("postgresql://jdrawklfmnnlbr:6678da66f7f342f89e7be361942264bcda13ad39062622408df939a768694a48@ec2-44-209-186-51.compute-1.amazonaws.com:5432/d575a3ogarpq4d")
+#        self.__engine = create_engine(DB_PATH)
 
     def all(self, cls=None):
         """This function will query the database and gives a dictionary"""
