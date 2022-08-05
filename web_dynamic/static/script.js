@@ -36,9 +36,8 @@ $(document).ready(function () {
         const li = '<li>' + step + '</li>\n';
         preprTemplate += li;
       });
-      const imgpath = '../static/images/' + data.filename;
       const popupTemplate = '<div class="recipe-view"><div class="head">' + '<h1 class="recipe-name">' + data.name + '</h1>' +
-        '<img src=' + imgpath + ' alt="recipe-image">' + '</div>' + '<div class="ingredients">' + '<h2>Ingredients</h2>' +
+        '<img src=' + data.image_url + ' alt="recipe-image">' + '</div>' + '<div class="ingredients">' + '<h2>Ingredients</h2>' +
         '<ul>' + ingrTemplate + '</ul>' + '</div>' + '<div class="preparation">' + '<h2>Preparation</h2>' + '<ol>' + preprTemplate +
         '</ol>' + '</div>' + '<h4>' + 'By ' + data.user_name + '</h4>' + '<ion-icon name="close-outline"></ion-icon>' + '</div>';
       $('.recipe-view-popup-bg').append(popupTemplate);
