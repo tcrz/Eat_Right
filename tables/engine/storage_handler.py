@@ -35,7 +35,7 @@ class StorageHandler:
         #                                       os.getenv('database', 'eat_right_db')),
         #                               pool_pre_ping=True)
         # self.__engine = create_engine("sqlite:///{}".format(os.path.join(project_dir, database_filename)))
-        self.__engine = create_engine("postgres://eat_right_db_user:E87IR3NH2UAOlIPbWiadGEKBFZnIXzx5@dpg-ce5ov6arrk071o4050c0-a.oregon-postgres.render.com/eat_right_db")
+        self.__engine = create_engine("postgresql://eat_right_db_user:E87IR3NH2UAOlIPbWiadGEKBFZnIXzx5@dpg-ce5ov6arrk071o4050c0-a.oregon-postgres.render.com/eat_right_db")
 #        self.__engine = create_engine(DB_PATH)
 
     def all(self, cls=None):
