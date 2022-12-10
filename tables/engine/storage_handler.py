@@ -28,7 +28,7 @@ class StorageHandler:
 
     def __init__(self):
         """This function will initialize the engine"""
-        self.__engine = create_engine("postgres://uzijsogh:JP4l4NmpDDE-EXIJ_C6hIs0aGb-f_Afp@mouse.db.elephantsql.com/uzijsogh")
+        self.__engine = create_engine("postgresql://uzijsogh:JP4l4NmpDDE-EXIJ_C6hIs0aGb-f_Afp@mouse.db.elephantsql.com/uzijsogh")
 
 
     def all(self, cls=None):
