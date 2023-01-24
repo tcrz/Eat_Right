@@ -156,7 +156,7 @@ $(document).ready(function () {
     const act = $('.act').children('option:selected').val();
     const gender = $('.gender:checked').val();
     const term = $('.trimester:checked').val();
-    const url = 'https://eatright-api.herokuapp.com/api/v1/age/' + gender + '/' + act + '/' + age;
+    const url = 'https://eat-right-api-q5n8.onrender.com/api/v1/age/' + gender + '/' + act + '/' + age;
     // limitation for the form
     if (age < 4 || age > 100) {
       $('.calorie-amount').text('Please complete the form (Age range should be between 4 and 100)').css('color', 'red');
@@ -191,7 +191,7 @@ $(document).ready(function () {
 //       // sends search query to api route
 //       $.ajax({
 //         type: 'POST',
-//         url: 'https://eatright-api.herokuapp.com/api/v1/livesearch',
+//         url: 'https://eat-right-api-q5n8.onrender.com/api/v1/livesearch',
 //         data: { text: text },
 //         success: function (response) {
 //           if (!jQuery.isEmptyObject(response)) {

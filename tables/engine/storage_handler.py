@@ -28,15 +28,8 @@ class StorageHandler:
 
     def __init__(self):
         """This function will initialize the engine"""
-        # self.__engine = create_engine('sqlite:///{}:{}@{}:3306/{}'
-        #                               .format(os.getenv('user', 'eat_right_devs'),
-        #                                       os.getenv('password', 'eat_right_dev_pwd'),
-        #                                       os.getenv('host', 'localhost'),
-        #                                       os.getenv('database', 'eat_right_db')),
-        #                               pool_pre_ping=True)
-        # self.__engine = create_engine("sqlite:///{}".format(os.path.join(project_dir, database_filename)))
-        self.__engine = create_engine("postgresql://jdrawklfmnnlbr:6678da66f7f342f89e7be361942264bcda13ad39062622408df939a768694a48@ec2-44-209-186-51.compute-1.amazonaws.com:5432/d575a3ogarpq4d")
-#        self.__engine = create_engine(DB_PATH)
+        self.__engine = create_engine("postgresql://uzijsogh:JP4l4NmpDDE-EXIJ_C6hIs0aGb-f_Afp@mouse.db.elephantsql.com/uzijsogh")
+
 
     def all(self, cls=None):
         """This function will query the database and gives a dictionary"""
