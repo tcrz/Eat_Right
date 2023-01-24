@@ -23,7 +23,7 @@ $(document).ready(function () {
     $('.recipe-view-popup-bg').empty();
     const id = $(this).attr('id');
     console.log(id);
-    $.get('https://eatright-api.herokuapp.com/api/v1/recipe/' + id, function (data) {
+    $.get('https://eat-right-api-q5n8.onrender.com/api/v1/recipe/' + id, function (data) {
       let ingrTemplate = '';
       const ingredientsList = data.ingredients.split('\n');
       ingredientsList.forEach(function (item) {
