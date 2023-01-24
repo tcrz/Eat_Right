@@ -86,7 +86,7 @@ $(document).ready(function () {
       contentType: 'application/json',
       success: function (result) {
         if (result.items.length === 0) {
-          console.log('food not found');
+          alert('Sorry, food item not found');
         } else {
           // retrieve calorie value and foodname from api
           const calories = result.items[0].calories;
